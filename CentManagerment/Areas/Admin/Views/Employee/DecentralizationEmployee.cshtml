@@ -1,0 +1,123 @@
+﻿
+@{
+    ViewBag.Title = "Phân Quyền";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+    var listUser = (List<CentManagerment.BU.DTO.UserManagerDTO>)ViewBag.ListUser;
+    var demclick = 0;
+}
+
+<div class="content-header content-header-wrap">
+    <h1 class="fleft">Nhân viên</h1><a class="btn--primary__edit btn--add" href="@Url.Action("InsertEmployee","Employee")">Thêm mới</a>
+    <div class="clearfix"></div>
+</div>
+<section class="nhanvien" id="nhanvien">
+    <div class="section-nhanvien__row">
+        <div class="section-nhanvien__row--col-9">
+            <h2>Danh sách tài khoản</h2>
+            <div class="list-rent__content section-table table-extend doanhnghiep__table">
+                <table>
+                    <tr>
+                        <th>
+                            Chọn NV
+                        </th>
+                        <th>Mã NV</th>
+                        <th>Họ Tên</th>
+                        <th>Tài khoản</th>
+                        <th>Vai trò</th>
+                        <th>Số điện thoại</th>
+                    </tr>
+                    @foreach (var item in listUser)
+                    {
+                        if (item.UserType == 2)
+                        {
+                            var type = "";
+                            if (item.UserType.Equals(1))
+                            {
+                                type = "Quản Trị Viên";
+                            }
+                            else if (item.UserType.Equals(2))
+                            {
+                                type = "Nhân Viên";
+                            }
+                            else
+                            {
+                                type = "Không xác định";
+                            }
+                            <tr class="userPanel">
+                                <td>
+                                    <input class="item-checkbox radioCheck" type="radio" name="Decentralization" value="item" onclick="return SelectEmployee(@demclick)" />
+                                </td>
+                                <td>@item.UserId</td>
+                                <td>@item.FullName</td>
+                                <td>@item.UserName</td>
+                                <input type="hidden" name="name" class="UserName" value="@item.UserName" />
+                                <td>@type</td>
+                                <td>@item.UserPhoneNumber</td>                                
+                            </tr>
+                            demclick++;
+                        }
+                    }
+                </table>
+                <div class="list-rent__bottom">
+                    <div class="list-rent__bottom--content section-buttons text-right">
+                        <span class="total-file">147 mục</span>
+                        <button><i class="fa fa-angle-double-left"></i></button>
+                        <button><i class="fa fa-angle-left"></i></button><span>1 trên 8</span>
+                        <button><i class="fa fa-angle-right"></i></button>
+                        <button><i class="fa fa-angle-double-right">     </i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section-nhanvien__row--col-3">
+            <h2>Quyền thay đổi trạng thái chỉ định</h2>
+            <div class="lists-checkbox lists-checkbox__nhanvien">
+                <ul>
+                    <li>
+                        <label for="StudentHandle">
+                            <input id="StudentHandle" class="HandlerType" type="checkbox" value="1">Quản lý học sinh
+                        </label>
+                    </li>
+                    <li>
+                        <label for="CourseHandle">
+                            <input id="CourseHandle" class="HandlerType" type="checkbox" value="2">Quản lý khóa học
+                        </label>
+                    </li>
+                    <li>
+                        <label for="NewsHandle">
+                            <input id="NewsHandle" class="HandlerType" type="checkbox" value="3">Quản lý tin tức
+                        </label>
+                    </li>
+                    <li>
+                        <label for="TeacherHandle">
+                            <input id="TeacherHandle" class="HandlerType" type="checkbox" value="4">Quản lý giáo viên
+                        </label>
+                    </li>
+                    <li>
+                        <label for="SignupHandle">
+                            <input id="SignupHandle" class="HandlerType" type="checkbox" value="5">Quản lý đăng ký
+                        </label>
+                    </li>
+                    <li>
+                        <label for="RevenueHandle">
+                            <input id="RevenueHandle" class="HandlerType" type="checkbox" value="6">Quản lý doanh thu
+                        </label>
+                    </li>
+                    <li>
+                        <label for="EmployeeHandle">
+                            <input id="EmployeeHandle" class="HandlerType" type="checkbox" value="7">Quản lý nhân viên
+                        </label>
+                    </li>
+                    <li>
+                        <label for="CustomsHandle">
+                            <input id="CustomsHandle" class="HandlerType" type="checkbox" value="8">Thiết Lập
+                        </label>
+                    </li>
+                </ul>
+            </div>
+            <input type="button" name="name" value="Áp dụng" id="submitHandle" />
+        </div>
+        <div class="clearfix"></div>
+    </div>
+</section>
+

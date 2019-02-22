@@ -1,0 +1,65 @@
+﻿@using CentManagerment.BU.DTO
+@using CentManagerment.BU.DataManager
+
+@model List<CentManagerment.BU.DTO.RevenueDTO>
+
+@{
+    ViewBag.Title = "Doanh thu theo lớp";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+    var soThuTu = 0;
+    int totalRevenue = 0;
+}
+
+<div class="content-header content-header-wrap">
+    <h1 class="fleft">Doanh thu theo lớp học</h1>
+    <div class="clearfix"></div>
+</div>
+<br />
+
+<section class="giaovien" id="giaovien">
+    <div class="list-rent__content section-table table-extend">
+        <table>
+            <tr>
+                <th>STT</th>
+                <th>Lớp học</th>
+                <th>Tổng tiền phải thu</th>
+                <th>Tổng tiền đã thu</th>
+                <th>Tổng tiền còn lại</th>
+            </tr>
+            @foreach (var tc in Model)
+            {
+                soThuTu = soThuTu + 1;
+                totalRevenue += tc.FinishPrice;
+
+<tr>
+    <td>@soThuTu</td>
+    <td>@tc.ClassName</td>
+    <td>@tc.TotalPrice</td>
+    <td>@tc.FinishPrice</td>
+    <td>@tc.InDebt</td>
+</tr>
+}
+
+        </table>
+        <h2>Tổng doanh thu: @totalRevenue</h2>
+        <div class="list-rent__bottom">
+            <div class="list-rent__bottom--content section-buttons text-right">
+                @{
+                    int pagePrev = 0;
+                    if (Convert.ToInt32(ViewBag.Page) > 0)
+                    {
+                        pagePrev = ViewBag.Page - 1;
+                    }
+                    int pageNext = ViewBag.Page + 1;
+                }
+                <span class="total-file">Tổng @ViewBag.NumRevenueAll</span>
+                <button><a href="/Admin/Revenue/RevenueClass?page=1"><i class="fa fa-angle-double-left"></i></a></button>
+                <button><a href="/Admin/Revenue/RevenueClass?page=@pagePrev"><i class="fa fa-angle-left"></i></a></button>
+                <span>@ViewBag.Page trên @ViewBag.NumPage</span>
+                <button><a href="/Admin/Revenue/RevenueClass?page=@pageNext"><i class="fa fa-angle-right"></i></a></button>
+                <button><a href="/Admin/Revenue/RevenueClass?page=@ViewBag.NumPage"><i class="fa fa-angle-double-right"></i></a></button>
+            </div>
+        </div>
+    </div>
+</section>
+

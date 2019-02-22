@@ -1,0 +1,54 @@
+﻿@model CentManagerment.BU.DTO.CourseDTO
+
+@{
+    /**/
+
+    ViewBag.Title = "UpdateView";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+@using (Html.BeginForm("Update", "CourseManagerment", FormMethod.Post))
+{
+    <section class="nhanvien-chinhsua" id="nhanvien-chinhsua">
+        <div class="nhanvien-chinhsua__header">
+            <h2>Chỉnh sửa khoá học</h2>
+        </div>
+        <div class="nhanvien-chinhsua__content">
+            <form id="nv-add" action="">
+                @Html.HiddenFor(model => model.CourseId)
+                <div class="form-group nhanvien-chinhsua__input">
+                    <label class="fleft">Thời gian học</label>
+                    <div class="input-box fleft">
+                        @Html.EditorFor(model => model.StartDate, new { htmlAttributes = new { @class = "form-control" } })
+                    </div>
+                    <div class="clear-fix"></div>
+                </div>
+                <div class="form-group nhanvien-chinhsua__input">
+                    <label class="fleft">Thời gian học</label>
+                    <div class="input-box fleft">
+                        @Html.EditorFor(model => model.EndDate, new { htmlAttributes = new { @class = "form-control" } })
+                    </div>
+                    <div class="clear-fix"></div>
+                </div>
+                <div class="form-group nhanvien-chinhsua__input">
+                    <label class="fleft">Tên khóa học</label>
+                    <div class="input-box fleft">
+                        @Html.EditorFor(model => model.CourseName, new { htmlAttributes = new { @class = "form-control" } })
+                    </div>
+                    <div class="clear-fix"></div>
+                </div>
+                <div class="form-group nhanvien-chinhsua__input">
+                    <label class="fleft">Học phí</label>
+                    <div class="input-box fleft">
+                        @Html.EditorFor(model => model.Price, new { htmlAttributes = new { @class = "form-control" } })
+                    </div>
+                    <div class="clear-fix"></div>
+                </div>
+                <div class="nhanvien-chinhsua__btn">
+                    <button class="btn btn-primary btn--luu" type="submit">Chỉnh sửa khóa học</button>
+                    <button class="btn btn-primary btn--xoa" type="submit">@Html.ActionLink("Hủy", "Index")</button>
+                </div>
+            </form>
+        </div>
+    </section>
+}
+

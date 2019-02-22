@@ -1,0 +1,8 @@
+/.vs
+/CentManagerment/bin
+/CentManagerment/obj
+/CentManagerment.BU/bin
+/CentManagerment.BU/obj
+/CentManagerment.Model/bin
+/CentManagerment.Model/obj
+/packages/*

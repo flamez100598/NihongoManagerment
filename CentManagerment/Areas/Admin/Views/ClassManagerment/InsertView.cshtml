@@ -1,0 +1,75 @@
+﻿@model CentManagerment.BU.DTO.ClassDTO
+
+@{
+    ViewBag.Title = "Insert";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+@using (Html.BeginForm("Insert", "ClassManagerment", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+
+    <section class="nhanvien-chinhsua" id="nhanvien-chinhsua">
+        <div class="nhanvien-chinhsua__header">
+            <h2>Thêm nhân viên</h2>
+        </div>
+        <div class="nhanvien-chinhsua__content">
+            <form id="nv-add" action="">
+                <div class="form-group nhanvien-chinhsua__input">
+                    <label class="fleft">Tên lớp</label>
+                    <div class="input-box fleft">
+                        <input class="form-control" type="text" name="ClassName" />
+                    </div>
+                    <div class="clear-fix"></div>
+                </div>
+                <div class="form-group nhanvien-chinhsua__input">
+                    <label class="fleft">Số học sinh trong một lớp</label>
+                    <div class="input-box fleft">
+                        <input class="form-control" type="text" name="ClassAmountStudent" />
+                    </div>
+                    <div class="clear-fix"></div>
+                </div>
+                <div class="form-group nhanvien-chinhsua__input">
+                    <label class="fleft">Tên khóa học</label>
+                    <div class="input-box fleft">
+                        @Html.DropDownList("CourseName", (IEnumerable<SelectListItem>)ViewBag.CourseName, "-- Chọn tên khóa học --", new { @class = "form-control", @id = "courseId" })
+                    </div>
+                    <div class="clear-fix"></div>
+                </div>
+                <div class="form-group nhanvien-chinhsua__input">
+                    <label class="fleft">Mã khóa học</label>
+                    <div class="input-box fleft">
+                        <input class="form-control" type="text" name="ClassCourseId" value="" id="Id" />
+                    </div>
+                    <div class="clear-fix"></div>
+                </div>
+                <div class="form-group nhanvien-chinhsua__input">
+                    <label class="fleft">Thời gian bắt đầu</label>
+                    <div class="input-box fleft">
+                        <input class="form-control" type="text" name="" value="" id="courseStartDate" />
+                    </div>
+                    <div class="clear-fix"></div>
+                </div>
+                <div class="form-group nhanvien-chinhsua__input">
+                    <label class="fleft">Thời gian kết thúc</label>
+                    <div class="input-box fleft">
+                        <input class="form-control" type="text" name="" value="" id="courseEndDate" />
+                    </div>
+                    <div class="clear-fix"></div>
+                </div>
+                <div class="form-group nhanvien-chinhsua__input">
+                    <label class="fleft">Học phí</label>
+                    <div class="input-box fleft">
+                        <input class="form-control" type="text" name="" value="" id="coursePrice" />
+                    </div>
+                    <div class="clear-fix"></div>
+                </div>
+                <div class="nhanvien-chinhsua__btn">
+                    <button class="btn btn-primary btn--luu" type="submit">Thêm lớp học</button>
+                    <button class="btn btn-primary btn--xoa" type="submit">@Html.ActionLink("Hủy", "Index")</button>
+                </div>
+            </form>
+        </div>
+    </section>
+}
+

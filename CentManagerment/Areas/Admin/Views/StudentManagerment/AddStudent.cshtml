@@ -1,0 +1,91 @@
+﻿@{
+    ViewBag.Title = "Quản lý học sinh || Thêm học viên";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<section class="nhanvien-chinhsua" id="nhanvien-chinhsua">
+    <div class="nhanvien-chinhsua__header">
+        <h2>Thêm học sinh</h2>
+    </div>
+    <div class="nhanvien-chinhsua__content">
+        <form id="nv-add" action="" novalidate="novalidate">
+            <div class="form-group nhanvien-chinhsua__input">
+                <label class="fleft">Họ và tên</label>
+                <div class="input-box fleft">
+                    <input class="form-control" type="text" name="name" id="stname">
+                </div>
+                <div class="clear-fix"></div>
+            </div>
+            <div class="form-group nhanvien-chinhsua__input">
+                <label class="fleft">Email</label>
+                <div class="input-box fleft">
+                    <input class="form-control" type="text" name="email" id="stmail">
+                </div>
+                <div class="clear-fix"></div>
+            </div>
+            <div class="form-group nhanvien-chinhsua__input">
+                <label class="fleft">Số điện thoại</label>
+                <div class="input-box fleft">
+                    <input class="form-control" type="text" name="tel" id="stphone">
+                </div>
+                <div class="clear-fix"></div>
+            </div>
+            <div class="form-group nhanvien-chinhsua__input">
+                <label class="fleft">Địa chỉ</label>
+                <div class="input-box fleft">
+                    <input class="form-control" type="text" id="staddress">
+                </div>
+                <div class="clear-fix"></div>
+            </div>
+            <div class="form-group nhanvien-chinhsua__input">
+                <label class="fleft">Số tiền</label>
+                <div class="input-box fleft">
+                    <input class="form-control" type="text" id="stschoolfee" name="number">
+                </div>
+                <div class="clear-fix"></div>
+            </div>
+            <div class="form-group nhanvien-chinhsua__input">
+                <label class="fleft">Điểm</label>
+                <div class="input-box fleft">
+                    <input class="form-control" type="text" id="stmark" name="number">
+                </div>
+                <div class="clear-fix"></div>
+            </div>
+            <div class="form-group nhanvien-chinhsua__input">
+                <label class="fleft">Lớp</label>
+                <div class="input-box fleft">
+                    @Html.DropDownList("ClassName", (IEnumerable<SelectListItem>)ViewBag.ClassName, "-- Chọn tên lớp học --", new { @class = "form-control", @id = "classId" })
+                </div>
+                <div class="clear-fix"></div>
+            </div>
+            @*<div class="form-group nhanvien-chinhsua__input" style="display:none">
+                <label class="fleft">Trạng thái</label>
+                <div class="input-box fleft">
+                    <select id="ststatus">
+                        <option value="0">False</option>
+                        <option value="1">True</option>
+                    </select>
+                </div>
+                <div class="clear-fix"></div>
+            </div>*@
+
+            @*<div class="form-group nhanvien-chinhsua__input">
+            <label class="fleft">Trạng thái</label>
+            <div class="input-box fleft">
+                <select class="form-control" name="status">
+                    <option value="stt1">Hoạt động</option>
+                    <option value="stt2">Hoạt động</option>
+                    <option value="stt3">Hoạt động</option>
+                </select>
+            </div>
+            <div class="clear-fix"></div>
+        </div>*@
+
+            <div class="nhanvien-chinhsua__btn">
+                <button class="btn btn-primary btn--luu" type="button" id="addst">Thêm sinh viên</button>
+                <button class="btn btn-primary btn--xoa" type="reset">Hủy</button>
+            </div>
+        </form>
+    </div>
+</section>
+

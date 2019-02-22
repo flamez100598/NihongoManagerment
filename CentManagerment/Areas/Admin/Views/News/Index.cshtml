@@ -1,0 +1,110 @@
+﻿@model PagedList.IPagedList<CentManagerment.BU.DTO.NewsDTO>
+@using PagedList.Mvc;
+@{
+    ViewBag.Title = "Tất cả bài viết tin tức";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<div class="content-header content-header-wrap">
+    <h1 class="fleft">Tất cả bài viết</h1>
+    <div class="fright nav-right"><a href="#"><i class="fa fa-tachometer"></i><span>Home</span></a><i class="fa fa-angle-right"></i><a href="/admin/news/status-news/all-news-1"><span>Tin tức</span></a></div>
+    <div class="clear-fix"></div>
+</div>
+<!--.content-header-wrap-->
+<div class="section-top">
+    <div class="section-top__content">
+        @*@Html.Partial("_LayoutMenuTinTuc")*@
+        <div class="row-section">
+            <div class="section-top__control">
+                @using (Html.BeginForm("TatCaBaiViet", "TinTucAdmin", FormMethod.Post))
+                {
+                    @*<select class="padding border--base" id="danhmuc" name="danhmuc">
+                            <option value="">Chọn danh mục</option>
+                            @foreach (var dm in ListDMTinTuc)
+                            {
+                                <option value="@dm.Id">@dm.TenChuDe</option>
+                            }
+                        </select>
+                        <script>
+                            $('#danhmuc > option[value="@ViewBag.IdDanhMuc"]').attr('selected', 'selected');
+                        </script>
+                        <select class="padding border--base" id="personpost" name="personpost">
+                            <option value="">Người đăng</option>
+                            @foreach (var mn in ListManager)
+                            {
+                                <option value="@mn.Id">@mn.UserName</option>
+                            }
+                        </select>
+                        <script>
+                            $('#personpost > option[value="@ViewBag.IdPerson"]').attr('selected', 'selected');
+                        </script>*@
+                    @*<div class="section-top__control--fromdate">
+                        <span>
+                            Từ ngày
+                            <div class="fromDate">
+                                <i class="fa fa-calendar"></i>
+                                <input class="padding border--base" id="datepicker1" type="text" name="datepicker1" value="@ViewBag.FromDate" />
+                            </div>
+                        </span>
+                    </div>
+                    <div class="section-top__control--todate">
+                        <span>
+                            Đến ngày
+                            <div class="toDate">
+                                <i class="fa fa-calendar"></i>
+                                <input class="padding border--base" id="datepicker2" type="text" name="datepicker2" value="@ViewBag.ToDate" />
+                            </div>
+                        </span>
+                    </div>*@
+                    <input class="submit-control border--base" type="submit" value="Lọc" id="submit-loc" />
+                }
+            </div>
+        </div>
+        <div class="row-section">
+            @*<div class="section-top__action" style="display:inline-block">
+                    <select class="padding border--base" id="action" name="action">
+                        <option value="">Tác vụ</option>
+                        <option value="@Viad.Common.Enum.TinTuc.ThungRac">Bỏ vào thùng rác</option>
+                    </select>
+                    <input class="submit-action border--base" type="submit" value="Áp dụng" id="submit-tacvu" />
+                </div>*@
+            @using (Html.BeginForm("Index", "News", FormMethod.Post, new { @style = "display: inline-block" }))
+            {
+                <input class="border--base" type="search" placeholder="Tìm kiếm..." name="searchString" value="@ViewBag.searchString" />
+                <input class="submit-search border--base" type="submit" value="Tìm tin tức" />
+            }
+        </div>
+    </div>
+</div>
+
+<div class="posts__content section-table">
+    <table>
+        <tr>
+            <th>Mã tin tức</th>
+            <th>Tiêu đề tin</th>
+            <th>Thời gian đăng</th>
+            <th>Người đăng</th>
+            <th>Tùy chọn</th>
+        </tr>
+        @foreach (var tt in Model)
+        {
+            <tr>
+                <td id="idtt-@tt.NewsId">@tt.NewsId</td>
+                <td><a href="#" target="_blank">@tt.NewsTitle</a></td>
+                <td><abbr>@tt.NewsPostDate.Value.ToString()</abbr></td>
+                <td>@tt.NewsNameUserPost</td>
+                <td>
+                    <span class="icon-menu">
+                        <i class="fa fa-plus-circle"></i>
+                        <ul>
+                            <li><a href="@Url.Action("UpdateNew", "News", new { idNews = tt.NewsId })">Chỉnh sửa</a></li>
+                            <li class="xoatt" id="xoa-@tt.NewsId">Xóa</li>
+                        </ul>
+                    </span>
+                </td>
+            </tr>
+        }
+    </table>
+    @Html.PagedListPager(Model, page => Url.Action("Index", new { page, searchString = ViewBag.searchString }))
+</div>
+

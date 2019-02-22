@@ -1,0 +1,64 @@
+﻿
+@{
+    ViewBag.Title = "Thêm giáo viên";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="content-header content-header-wrap">
+    <h1 class="fleft">Thêm giáo viên</h1>
+    <div class="clearfix"></div>
+</div>
+<br />
+
+<section class="giaovien" id="giaovien">
+    <div class="list-rent__content section-table table-extend">
+        <div class="form__table--content">
+            <form action="/Admin/TeacherManagerment/AddTeacher" method="post">
+                <div class="form__table-col-6">
+                    <label for="">Họ và tên:</label>
+                    <input type="text" value="" name="TeacherName" />
+                </div>
+                <div class="form__table-col-6">
+                    <label for="">Tuổi:</label>
+                    <input type="text" value="" name="Age" />
+                </div>
+                <div class="form__table-col-6">
+                    <label for="">Số điện thoại:</label>
+                    <input type="text" value="" name="PhoneNumber" />
+                </div>
+                <div class="form__table-col-6">
+                    <label for="">Email:</label>
+                    <input type="text" value="" name="Email" />
+                </div>
+                <div class="form__table-col-6">
+                    <label for="">Địa chỉ:</label>
+                    <input type="text" value="" name="Address" />
+                </div>
+                <div class="form__table-col-6">
+                    <label for="">Trình độ:</label>
+                    <input type="text" value="" name="LevelEducation" />
+                </div>
+                <div class="form__table-col-6">
+                    <label for="">Giờ dạy(h):</label>
+                    <input type="number" value="" name="TimeToWork" />
+                </div>
+                <div class="form__table-col-6">
+                    <label for="">Giá(đ/h):</label>
+                    <input type="number" value="" name="PricePerHour" />
+                </div>
+                <div class="form__table-col-6">
+                    <label for="">Trạng thái:</label>
+                    <select name="Status">
+                        <option value="1">Hoạt động</option>
+                        <option value="0">Kết thúc</option>
+                    </select>
+                </div>
+                <div class="form__table-col-6">
+                    <label></label>
+                    <input type="submit" value="Thêm mới" class="fixnv">
+                </div>
+            </form>
+        </div>
+    </div>
+</section>

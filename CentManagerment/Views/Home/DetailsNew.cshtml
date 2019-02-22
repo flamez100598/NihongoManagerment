@@ -1,0 +1,26 @@
+﻿@model CentManagerment.BU.DTO.NewsDTO
+@{
+    ViewBag.Title = "Chi tiết tin tức";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<section id="section_tinchitiet">
+    <div class="container">
+        <div class="row">
+            <div class="section__contents-left">
+                <section>
+                    <h3>@Html.DisplayFor(model => model.NewsTitle)</h3>
+                    <div class="news-infor">
+                        <p class="date">@Html.DisplayFor(model => model.NewsPostDate).ToString()</p>
+                        
+                    </div>
+                    <div class="content">
+                        <p><b>@Model.NewsShortContent</b></p>
+                        @Html.Raw(Model.NewsContent)
+                    </div>
+                </section>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+</section>

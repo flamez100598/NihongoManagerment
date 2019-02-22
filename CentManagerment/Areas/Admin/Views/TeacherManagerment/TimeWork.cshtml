@@ -1,0 +1,139 @@
+﻿
+@{
+    ViewBag.Title = "Quản lý thời gian";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+    var soThuTu = 0;
+
+}
+
+
+<div class="content-header content-header-wrap">
+    <h1 class="fleft">Quản lý giáo viên</h1><a class="btn--primary__edit btn--add" href="/Admin/TeacherManagerment/AddTeacher">Thêm mới</a>
+    <div class="clearfix"></div>
+</div>
+<br />
+<section class="giaovien" id="giaovien">
+    <div class="list-rent__content section-table table-extend">
+        <div class="form-group nhanvien-chinhsua__input">
+            <div class="input-box fleft">
+                @Html.DropDownList("TeacherSearch", (IEnumerable<SelectListItem>)ViewBag.listTeacher, "-- Chọn tên giáo viên --", new { @class = "form-control", @id = "teacherId" })
+            </div>
+            <div class="clear-fix"></div>
+        </div>
+        <table>
+            <tr>
+                <th>STT</th>
+                <th>Mã GV</th>
+                <th>Tên GV</th>
+                <th>TG dạy(h)</th>
+                <th>Ngày</th>
+                <th>Trạng thái</th>
+                <th>Tùy chọn</th>
+            </tr>
+            <tr>
+
+            @*@foreach (var tc in Model)
+            {
+                soThuTu = soThuTu + 1;
+                <tr>
+                    <td>@soThuTu</td>
+                    <td>@tc.TeacherId</td>
+                    <td>@tc.TeacherName</td>
+                    <td>@tc.TimeToWork</td>
+                    <td>@tc.PricePerHour</td>
+                    <td>@tc.Total</td>
+                    <td>@tc.StatusName</td>
+                    <td>
+                        <span class="icon-menu">
+                            <i class="fa fa-plus-circle"></i>
+                            <ul>
+                                <li>Sửa</li>
+                            </ul>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="row-edit row-edit2 white disabled" colspan="14">
+                        <div class="text-left">
+                            <div class="form__table--content">
+                                <div class="form__table-col-6">
+                                    <label for="">Họ và tên:</label>
+                                    <input type="text" value="@tc.TeacherName" id="tcName_@tc.TeacherId" />
+                                </div>
+                                <div class="form__table-col-6">
+                                    <label for="">Tuổi:</label>
+                                    <input type="text" value="@tc.Age" id="tcAge_@tc.TeacherId" />
+                                </div>
+                                <div class="form__table-col-6">
+                                    <label for="">Số điện thoại:</label>
+                                    <input type="text" value="@tc.PhoneNumber" id="tcPhone_@tc.TeacherId" />
+                                </div>
+                                <div class="form__table-col-6">
+                                    <label for="">Email:</label>
+                                    <input type="text" value="@tc.Email" id="tcEmail_@tc.TeacherId" />
+                                </div>
+                                <div class="form__table-col-6">
+                                    <label for="">Địa chỉ:</label>
+                                    <input type="text" value="@tc.Address" id="tcAddress_@tc.TeacherId" />
+                                </div>
+                                <div class="form__table-col-6">
+                                    <label for="">Trình độ:</label>
+                                    <input type="text" value="@tc.LevelEducation" id="tcLevel_@tc.TeacherId" />
+                                </div>
+                                <div class="form__table-col-6">
+                                    <label for="">Giờ dạy(h):</label>
+                                    <input type="number" value="@tc.TimeToWork" id="tcTime_@tc.TeacherId" />
+                                </div>
+                                <div class="form__table-col-6">
+                                    <label for="">Giá(đ/h):</label>
+                                    <input type="number" value="@tc.PricePerHour" id="tcPrice_@tc.TeacherId" />
+                                </div>
+                                <div class="form__table-col-6">
+                                    <label for="">Trạng thái:</label>
+                                    <select id="tcStatus_@tc.TeacherId">
+                                        @if (tc.Status == 1)
+                                        {
+                                            <option value="1" selected>Hoạt động</option>
+                                            <option value="0">Kết thúc</option>
+                                        }
+                                        else
+                                        {
+                                            <option value="1">Hoạt động</option>
+                                            <option value="0" selected>Kết thúc</option>
+                                        }
+                                    </select>
+                                </div>
+                                <div class="form__table-col-6 inputtwo">
+                                    <label></label>
+                                    <input type="button" value="Hủy" style="margin-right: 59px;">
+                                    <input type="submit" value="Lưu chỉnh sửa" class="fixnv" onclick="EditTeacher(@tc.TeacherId)">
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            }*@
+
+        </table>
+        @*<div class="list-rent__bottom">
+            <div class="list-rent__bottom--content section-buttons text-right">
+                @{
+                    int pagePrev = 0;
+                    if (Convert.ToInt32(ViewBag.Page) > 0)
+                    {
+                        pagePrev = ViewBag.Page - 1;
+                    }
+                    int pageNext = ViewBag.Page + 1;
+                }
+                <span class="total-file">Tổng @ViewBag.NumTeacherAll người</span>
+                <button><a href="/Admin/TeacherManagerment/Index?page=1"><i class="fa fa-angle-double-left"></i></a></button>
+                <button><a href="/Admin/TeacherManagerment/Index?page=@pagePrev"><i class="fa fa-angle-left"></i></a></button>
+                <span>@ViewBag.Page trên @ViewBag.NumPage</span>
+                <button><a href="/Admin/TeacherManagerment/Index?page=@pageNext"><i class="fa fa-angle-right"></i></a></button>
+                <button><a href="/Admin/TeacherManagerment/Index?page=@ViewBag.NumPage"><i class="fa fa-angle-double-right"></i></a></button>
+            </div>
+        </div>*@
+    </div>
+</section>
+
+

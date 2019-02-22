@@ -1,0 +1,138 @@
+﻿@model PagedList.IPagedList<CentManagerment.BU.DTO.ClassDTO>
+@using PagedList.Mvc;
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<div class="content-header content-header-wrap">
+    <h1 class="fleft">Quản lý lớp học</h1>
+    <button class="btn--primary__edit btn--add">@Html.ActionLink("Thêm mới", "InsertView", "ClassManagerment")</button>
+    <div class="clearfix"></div>
+</div>
+<section class="nhanvien" id="nhanvien">
+    <div class="section-top3 section-top3-wrap">
+        <div class="section-top3__content">
+            <div class="row-section">
+                <div class="section-top3__control">
+                    <form action="" name="control">
+                        <div class="form__row-top">
+                            <div class="form__row-top__item">
+                                <input class="border--base padding" type="text" name="searchString" placeholder="Từ khóa tìm kiếm" value="@ViewBag.searchString" />
+                            </div>
+                            @*<div class="form__row-top__item">
+                                    <div class="section-top__control--fromdate">
+                                        <span>
+                                            Từ ngày
+                                            <div class="fromDate">
+                                                <i class="fa fa-calendar"></i>
+                                                <input class="padding border--base" id="datepicker1" type="text" required="required" />
+                                            </div>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="form__row-top__item">
+                                    <div class="section-top__control--todate">
+                                        <span>
+                                            Đến ngày
+                                            <div class="toDate">
+                                                <i class="fa fa-calendar"></i>
+                                                <input class="padding border--base" id="datepicker2" type="text" required="required" />
+                                            </div>
+                                        </span>
+                                    </div>
+                                </div>*@
+                            <div class="form__row-top__item">
+                                <input class="submit-control border--base" type="submit" value="Lọc" />
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--.section-top3-wrap-->
+    <div class="list-rent__content section-table table-extend doanhnghiep__table">
+        <table>
+            <tr>
+                <th>Mã lớp</th>
+                <th>Tên lớp</th>
+                <th>Số học viên</th>
+                <th>Tên khóa học</th>
+                <th>Thời gian bắt đầu</th>
+                <th>Thời gian kết thúc</th>
+                <th>Học phí</th>
+            </tr>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td><a style="cursor:pointer;">@item.ClassId</a></td>
+                    <td>@item.ClassName</td>
+                    <td>@item.ClassAmountStudent</td>
+                    @if (item.CourseDTO != null)
+                    {
+                        <td>@item.CourseDTO.CourseName</td>
+                        <td>@item.CourseDTO.StartDate.Value.ToString("dd/MM/yyyy")</td>
+                        <td>@item.CourseDTO.EndDate.Value.ToString("dd/MM/yyyy")</td>
+                        <td>@item.CourseDTO.Price</td>
+                    }
+                    <td>
+                        <span class="icon-menu">
+                            <i class="fa fa-plus-circle"></i>
+                            <ul>
+                                <li onclick="GetList(@item.ClassId)">Xem danh sách </li>
+
+                                <li>@Html.ActionLink("Chỉnh sửa", "UpdateView", new { id = item.ClassId })</li>
+                                <li onclick="DeleteClass(@item.ClassId)">Bỏ thùng rác</li>
+
+                            </ul>
+                        </span>
+                    </td>
+                    @*hien thi danh sach*@
+
+                </tr>
+                <tr>
+                    <td class="row-edit row-edit2 white disabled editUserPanel" colspan="10">
+                        <div class="text-left">
+                            <form class="form__table--detail" action="">
+                                <table id="tb_@item.ClassId">
+                                    <thead>
+                                        <tr>
+                                            <th>Mã học sinh</th>
+                                            <th>Tên học sinh</th>
+                                            <th>Điểm</th>
+                                            <th>Mã lớp</th>
+                                            <th>Học phí</th>
+                                            <th>Trạng thái</th>
+                                        </tr>
+                                    </thead>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>1</td>
+                                        <td>1</td>
+                                        <td>1</td>
+                                        <td>1</td>
+                                        <td>1</td>
+                                    </tr>
+                                </table>
+                                <div class="fixed__button text-right">
+                                    <input type="reset" value="Hủy" class="cancelEditUser" id="resetList" />
+                                </div>
+                            </form>
+                        </div>
+                    </td>
+                </tr>
+            }
+        </table>
+        @Html.PagedListPager(Model, page => Url.Action("Index", new { page, searchString = ViewBag.searchString }))
+        @*<div class="list-rent__bottom">
+                <div class="list-rent__bottom--content section-buttons text-right">
+                    <span class="total-file">147 mục</span>
+                    <button><i class="fa fa-angle-double-left"></i></button>
+                    <button><i class="fa fa-angle-left"></i></button><span>1 trên 8</span>
+                    <button><i class="fa fa-angle-right"></i></button>
+                    <button><i class="fa fa-angle-double-right">     </i></button>
+                </div>
+            </div>*@
+    </div>
+</section>
