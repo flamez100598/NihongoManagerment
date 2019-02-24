@@ -83,16 +83,79 @@ namespace CentManagerment.Areas.Admin.Controllers
             return Json(true, JsonRequestBehavior.AllowGet);
         }
 
+        /// <summary>
+        /// QUản lý thời gian giảng dạy của giáo viên
+        /// </summary>
+        /// <returns></returns>
         public ActionResult TimeWork()
         {
             SelectList listTeacher = new SelectList(new TeacherManager().GetListTeacher(), "TeacherId", "TeacherName");
             ViewBag.listTeacher = listTeacher;
+
             return View();
         }
+
+        [HttpPost]
         public JsonResult SelectTeacher(int teacherId)
         {
-            var jsonResult = new TeacherManager().GetTeacherById(teacherId);
+            var jsonResult = new TimeWorkManager().GetAllByIdTeacher(teacherId);
             return Json(jsonResult, JsonRequestBehavior.AllowGet);
+        }
+
+        [HttpPost]
+        public JsonResult GetTimeWork(int id)
+        {
+            var json = new TimeWorkManager().GetTimeWork(id);
+            return Json(json, JsonRequestBehavior.AllowGet);
+        }
+
+        [HttpPost]
+        public JsonResult Edit(double time, DateTime date, int id)
+        {
+            var check = new TimeWorkManager().Edit(time, date, id);
+            var result = new List<TimeWorkDTO>();
+            if (check)
+            {
+                var info = new TimeWorkManager().GetTimeWork(id);
+                result = new TimeWorkManager().GetAllByIdTeacher((int)info.TeacherId);   
+            }
+            if (result.Count < 1)
+            {
+                result = null;
+            }
+            return Json(new { check, result }, JsonRequestBehavior.AllowGet);
+        }
+
+        [HttpPost]
+        public JsonResult Create(double time, DateTime date, int id)
+        {
+            var check = new TimeWorkManager().Create(time, date, id);
+            var result = new List<TimeWorkDTO>();
+            if (check)
+            {
+                result = new TimeWorkManager().GetAllByIdTeacher(id);
+            }
+            if (result.Count < 1)
+            {
+                result = null;
+            }
+            return Json(new { check, result }, JsonRequestBehavior.AllowGet);
+        }
+        [HttpPost]
+        public JsonResult Delete(int id)
+        {
+            var idTeacher = new TimeWorkManager().GetTimeWork(id).TeacherId;
+            var check = new TimeWorkManager().Delete(id);
+            var result = new List<TimeWorkDTO>();
+            if (check)
+            {
+                result = new TimeWorkManager().GetAllByIdTeacher((int)idTeacher);
+            }
+            if (result.Count < 1)
+            {
+                result = null;
+            }
+            return Json(new { check, result }, JsonRequestBehavior.AllowGet);
         }
     }
 }

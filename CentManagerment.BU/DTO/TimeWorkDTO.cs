@@ -11,7 +11,8 @@ namespace CentManagerment.BU.DTO
         public int Id { get; set; }
         public Nullable<double> Hours { get; set; }
         public Nullable<System.DateTime> Date { get; set; }
+        public string DateStr { get; set; }
         public Nullable<int> TeacherId { get; set; }
-        public virtual TeacherDTO TeacherDTO { get; set; }
+        public string TeacherName { get; set; }
     }
 }

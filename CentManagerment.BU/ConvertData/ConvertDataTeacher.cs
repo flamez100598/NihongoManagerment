@@ -1,4 +1,5 @@
-﻿using CentManagerment.BU.DTO;
+﻿using CentManagerment.BU.DataManager;
+using CentManagerment.BU.DTO;
 using CentManagerment.Model.EF;
 using System;
 using System.Collections.Generic;
@@ -27,10 +28,19 @@ namespace CentManagerment.BU.ConvertData
                 LevelEducation = cl.LevelEducation,
                 PricePerHour = cl.PricePerHour,
                 TeacherName = cl.TeacherName,
-                TimeToWork = cl.TimeToWork,
                 TeacherId = cl.TeacherId,
-                Status = cl.Status
+                Status = cl.Status,
+                TimeToWork = 0
             };
+            int monthNow = DateTime.Now.Month;
+            var listTimeWork = new TimeWorkManager().GetAllByMonth(monthNow,cl.TeacherId);
+            if(listTimeWork != null && listTimeWork.Count > 0)
+            {
+                foreach(var item in listTimeWork)
+                {
+                    TeacherDTO.TimeToWork += item.Hours;
+                }
+            }
             // Chuyển trạng thái về text
             switch (TeacherDTO.Status)
             {
@@ -62,7 +72,6 @@ namespace CentManagerment.BU.ConvertData
                 LevelEducation = TeacherDTO.LevelEducation,
                 PricePerHour = TeacherDTO.PricePerHour,
                 TeacherName = TeacherDTO.TeacherName,
-                TimeToWork = TeacherDTO.TimeToWork,
                 Status = TeacherDTO.Status
             };
             if (TeacherDTO.TeacherId > 0)

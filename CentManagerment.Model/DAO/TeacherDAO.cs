@@ -44,7 +44,6 @@ namespace CentManagerment.Model.DAO
                     teacherUpdate.PhoneNumber = teacher.PhoneNumber;
                     teacherUpdate.Address = teacher.Address;
                     teacherUpdate.Email = teacher.Email;
-                    teacherUpdate.TimeToWork = teacher.TimeToWork;
                     teacherUpdate.PricePerHour = teacher.PricePerHour;
                     teacherUpdate.LevelEducation = teacher.LevelEducation;
                     teacherUpdate.Status = teacher.Status;

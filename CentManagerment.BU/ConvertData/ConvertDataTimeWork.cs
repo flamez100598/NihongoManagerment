@@ -17,7 +17,9 @@ namespace CentManagerment.BU.ConvertData
                 Id = cl.Id,
                 Date = cl.Date,
                 Hours = cl.Hours,
-                TeacherDTO = new ConvertDataTeacher().ConvertDataTeacherToDTO(cl.Teacher)
+                TeacherId = cl.Teacher.TeacherId,
+                TeacherName = cl.Teacher.TeacherName,
+                DateStr = ((DateTime)cl.Date).ToString("yyyy-MM-dd")
             };
             return TimeWorkDTO;
         }
@@ -27,8 +29,7 @@ namespace CentManagerment.BU.ConvertData
             {
                 Id = TimeWorkDTO.Id,
                 Date = TimeWorkDTO.Date,
-                Hours = TimeWorkDTO.Hours,
-                Teacher = new ConvertDataTeacher().ConvertDataTeacherToEF(TimeWorkDTO.TeacherDTO)
+                Hours = TimeWorkDTO.Hours
             };
             if (TimeWorkDTO.Id > 0)
             {

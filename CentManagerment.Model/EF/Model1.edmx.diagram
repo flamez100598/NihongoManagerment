@@ -13,12 +13,11 @@
         <EntityTypeShape EntityType="CentManagermentModel.Role" Width="1.5" PointX="0.75" PointY="4.75" />
         <EntityTypeShape EntityType="CentManagermentModel.RoleManager" Width="1.5" PointX="5.75" PointY="8.75" />
         <EntityTypeShape EntityType="CentManagermentModel.Student" Width="1.5" PointX="5.25" PointY="1" />
-        <EntityTypeShape EntityType="CentManagermentModel.sysdiagram" Width="1.5" PointX="7.75" PointY="8.75" />
         <EntityTypeShape EntityType="CentManagermentModel.Teacher" Width="1.5" PointX="0.75" PointY="9" />
         <EntityTypeShape EntityType="CentManagermentModel.TimeWork" Width="1.5" PointX="3" PointY="9.5" />
-        <EntityTypeShape EntityType="CentManagermentModel.Transaction" Width="1.5" PointX="9.75" PointY="0.75" />
+        <EntityTypeShape EntityType="CentManagermentModel.Transaction" Width="1.5" PointX="7.75" PointY="8.75" />
         <EntityTypeShape EntityType="CentManagermentModel.UserManager" Width="1.5" PointX="7.75" PointY="5" />
-        <EntityTypeShape EntityType="CentManagermentModel.RegisterManagerment" Width="1.5" PointX="9.75" PointY="8.75" />
+        <EntityTypeShape EntityType="CentManagermentModel.RegisterManagerment" Width="1.5" PointX="9.75" PointY="0.75" />
         <AssociationConnector Association="CentManagermentModel.FK_Classes_Courses" />
         <AssociationConnector Association="CentManagermentModel.FK_Students_Classes" />
         <AssociationConnector Association="CentManagermentModel.FK_Revenue_Expenditure" />

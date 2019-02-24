@@ -69,12 +69,6 @@ namespace CentManagerment.BU.DataManager
             }
             return listTeacherDTO;
         }
-        public TeacherDTO GetTeacherById(int teacherId)
-        {
-            using (var db = new CentManagermentEntities())
-            {
-                return new ConvertDataTeacher().ConvertDataTeacherToDTO(db.Teachers.Find(teacherId));
-            }
-        }
+        
     }
 }
