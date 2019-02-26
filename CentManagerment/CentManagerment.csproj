@@ -183,6 +183,7 @@
     <Compile Include="Areas\Admin\Controllers\RevenueController.cs" />
     <Compile Include="Areas\Admin\Controllers\StudentManagermentController.cs" />
     <Compile Include="Areas\Admin\Controllers\TeacherManagermentController.cs" />
+    <Compile Include="Areas\Admin\Controllers\TimekeepingController.cs" />
     <Compile Include="Controllers\CourseController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
@@ -3128,6 +3129,8 @@
     <Content Include="Areas\Admin\Views\EditProfile\Index.cshtml" />
     <Content Include="Areas\Admin\Views\Revenue\RevenueClass.cshtml" />
     <Content Include="Areas\Admin\Views\TeacherManagerment\TimeWork.cshtml" />
+    <Content Include="Areas\Admin\Views\Timekeeping\Index.cshtml" />
+    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
     <None Include="_bin_deployableAssemblies\x86\sqlcese40.dll" />
     <None Include="_bin_deployableAssemblies\x86\sqlceqp40.dll" />
     <None Include="_bin_deployableAssemblies\x86\sqlceme40.dll" />
@@ -3161,7 +3164,9 @@
     <Content Include="Scripts\moment.js" />
     <Content Include="Scripts\moment.min.js" />
     <Content Include="Scripts\style.css" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>

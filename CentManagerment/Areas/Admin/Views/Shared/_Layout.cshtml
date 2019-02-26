@@ -1,5 +1,5 @@
-﻿@{ 
-    var sessionUser = (CentManagerment.BU.DTO.UserManagerDTO) Session[CentManagerment.BU.Common.CommonUserLogin.USER_SESSION];
+﻿@{
+    var sessionUser = (CentManagerment.BU.DTO.UserManagerDTO)Session[CentManagerment.BU.Common.CommonUserLogin.USER_SESSION];
     var sessionRole = (List<int>)Session[CentManagerment.BU.Common.CommonUserLogin.USER_LISTROLE];
     var type = "";
 }
@@ -246,7 +246,7 @@
                     </div>
                 </div>
                 <!-- search form-->
-                <form class="sidebar-form" action="/Admin/StudentManagerment" method="get">
+                <form class="sidebar-form" action="#" method="get">
                     <div class="input-group">
                         <input class="form-control" type="text" name="q" placeholder="Search..." /><span class="input-group-btn">
                             <button class="btn btn-flat" id="search-btn" type="submit" name="search"><i class="fa fa-search"></i></button>
@@ -264,7 +264,7 @@
                             <a href="#"><i class="fa fa-files-o"></i><span>Quản lý học sinh</span><span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span></a>
                             <ul class="treeview-menu">
                                 <li><a href="@Url.Action("Index", "StudentManagerment")"><i class="fa fa-circle-o"></i> Danh sách học sinh</a></li>
-                                <li><a href="@Url.Action("AddStudent", "StudentManagerment")"><i class="fa fa-circle-o"></i> Thêm học sinh</a></li>
+                                <li><a href="@Url.Action("AddStudent","StudentManagerment")"><i class="fa fa-circle-o"></i> Thêm học sinh</a></li>
                             </ul>
                         </li>
 
@@ -275,7 +275,7 @@
                             <a href="#"><i class="fa fa-files-o"></i><span>Quản lý lớp học </span><span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span></a>
                             <ul class="treeview-menu">
                                 <li><a href="@Url.Action("Index", "ClassManagerment")"><i class="fa fa-circle-o"></i> Danh sách lớp</a></li>
-                                <li><a href="@Url.Action(" InsertView", "ClassManagerment" )"><i class="fa fa-circle-o"></i> Thêm lớp</a></li>
+                                <li><a href="@Url.Action("InsertView","ClassManagerment" )"><i class="fa fa-circle-o"></i> Thêm lớp</a></li>
                             </ul>
                         </li>
 
@@ -286,6 +286,7 @@
                             <a href="#"><i class="fa fa-files-o"></i><span>Quản lý khóa học</span><span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span></a>
                             <ul class="treeview-menu">
                                 <li><a href="@Url.Action("Index", "CourseManagerment")"><i class="fa fa-circle-o"></i> Danh sách Khóa học</a></li>
+                                <li><a href="@Url.Action("InsertView", "CourseManagerment" )"><i class="fa fa-circle-o"></i> Thêm khóa học</a></li>
                             </ul>
                         </li>
                     }
@@ -327,6 +328,12 @@
                 </ul>*@
                         </li>
                     }
+                    @if (sessionRole.Contains((int)CentManagerment.Areas.Admin.Common.CommonEnum.Role.Quanlychamconggiaovien))
+                    {
+                        <li>
+                            <a href="/Admin/Timekeeping/"><i class="fa fa-folder"></i><span>Chấm công giáo viên</span></a>
+                        </li>
+                    }
                     @if (sessionRole.Contains((int)CentManagerment.Areas.Admin.Common.CommonEnum.Role.Quanlynhanvien))
                     {
                         <li class="treeview">
@@ -347,6 +354,7 @@
                             </ul>
                         </li>
                     }
+
                 </ul>
             </section>
             <!-- /.sidebar-->
@@ -359,7 +367,6 @@
             <div class="pull-right hidden-xs"><b>Version</b> 2.4.0</div><strong>Copyright © 2014-2019 <a href="https://facebook.com/dunghorn.net">ASP 3F Group</a>.</strong> All rights
             reserved.
         </footer>
-
         <!--
         Add the sidebar's background. This div must be placed
         immediately after the control sidebar

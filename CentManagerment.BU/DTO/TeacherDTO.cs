@@ -14,9 +14,9 @@ namespace CentManagerment.BU.DTO
         public string PhoneNumber { get; set; }
         public string Email { get; set; }
         public string Address { get; set; }
-        public double? TimeToWork { get; set; }
+        public int? TimeToWork { get; set; }
         public int? PricePerHour { get; set; }
-        public double? Total { get; set; }
+        public int? Total { get; set; }
         public string LevelEducation { get; set; }
         public int? Status { get; set; }
         public string StatusName { get; set; }

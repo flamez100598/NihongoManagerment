@@ -76,7 +76,7 @@
     <Compile Include="ConvertData\ConvertDataRoleManager.cs" />
     <Compile Include="ConvertData\ConvertDataStudent.cs" />
     <Compile Include="ConvertData\ConvertDataTeacher.cs" />
-    <Compile Include="ConvertData\ConvertDataTimeWork.cs" />
+    <Compile Include="ConvertData\ConvertDataTimekeeping.cs" />
     <Compile Include="ConvertData\ConvertDataUserManager.cs" />
     <Compile Include="DataManager\ClassManager.cs" />
     <Compile Include="DataManager\CourseManager.cs" />
@@ -88,7 +88,7 @@
     <Compile Include="DataManager\RoleManagerManager.cs" />
     <Compile Include="DataManager\StudentManager.cs" />
     <Compile Include="DataManager\TeacherManager.cs" />
-    <Compile Include="DataManager\TimeWorkManager.cs" />
+    <Compile Include="DataManager\TimekeepingManager.cs" />
     <Compile Include="DataManager\UserManagerManager.cs" />
     <Compile Include="DTO\ClassDTO.cs" />
     <Compile Include="DTO\CourseDTO.cs" />
@@ -101,7 +101,7 @@
     <Compile Include="DTO\RoleManagerDTO.cs" />
     <Compile Include="DTO\StudentDTO.cs" />
     <Compile Include="DTO\TeacherDTO.cs" />
-    <Compile Include="DTO\TimeWorkDTO.cs" />
+    <Compile Include="DTO\TimekeepingDTO.cs" />
     <Compile Include="DTO\UserManagerDTO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

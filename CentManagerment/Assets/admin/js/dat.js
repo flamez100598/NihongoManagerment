@@ -243,3 +243,10 @@ function GetFileImage(btn) {
         }
     });
 }
+
+
+////time work
+////get list time work by id teacher
+//$('#teacherId').change(function () {
+//    console.log($(this).val());
+//});

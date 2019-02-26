@@ -137,7 +137,9 @@ namespace CentManagerment.BU.DataManager
         {
             try
             {
+                db = new CentManagermentEntities();
                 var user = new UserManager();
+                var getList = db.UserManagers.ToList();
                 user = db.UserManagers.FirstOrDefault(x => x.UserName == loginModel.UserName && x.UserPassword == loginModel.UserPassword);
                 if (user != null)
                 {
@@ -147,7 +149,7 @@ namespace CentManagerment.BU.DataManager
                 else
                     return null;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
                 return null;
             }

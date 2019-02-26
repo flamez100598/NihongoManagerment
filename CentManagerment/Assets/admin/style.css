@@ -5044,3 +5044,26 @@ td.row-edit {
 .inputtwo input {
     width: 150px;
 }
+
+
+/*create by Dat*/
+.timework{
+    padding: 10px 0;
+}
+.twname{
+
+}
+.twval{
+
+}
+.btnaddtw{
+    margin-left: 15px;
+}
+.nameteacher{
+    margin-top: 10px;
+}
+label.error {
+    right: 15px;
+    font-weight: 400;
+    padding-top: 5px;
+}

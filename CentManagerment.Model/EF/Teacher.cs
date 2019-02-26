@@ -17,7 +17,7 @@ namespace CentManagerment.Model.EF
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Teacher()
         {
-            this.TimeWorks = new HashSet<TimeWork>();
+            this.Timekeepings = new HashSet<Timekeeping>();
         }
     
         public int TeacherId { get; set; }
@@ -26,11 +26,12 @@ namespace CentManagerment.Model.EF
         public string PhoneNumber { get; set; }
         public string Email { get; set; }
         public string Address { get; set; }
+        public Nullable<int> TimeToWork { get; set; }
         public Nullable<int> PricePerHour { get; set; }
         public string LevelEducation { get; set; }
         public Nullable<int> Status { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<TimeWork> TimeWorks { get; set; }
+        public virtual ICollection<Timekeeping> Timekeepings { get; set; }
     }
 }

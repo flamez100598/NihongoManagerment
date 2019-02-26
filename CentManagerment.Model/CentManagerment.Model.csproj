@@ -75,87 +75,87 @@
     <Compile Include="DAO\RoleManagerDAO.cs" />
     <Compile Include="DAO\StudentDAO.cs" />
     <Compile Include="DAO\TeacherDAO.cs" />
-    <Compile Include="DAO\TimeWorkDAO.cs" />
+    <Compile Include="DAO\TimekeepingDAO.cs" />
     <Compile Include="DAO\UserManagerDAO.cs" />
+    <Compile Include="EF\CentManagerment.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CentManagerment.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\CentManagerment.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CentManagerment.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\CentManagerment.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CentManagerment.edmx</DependentUpon>
+    </Compile>
     <Compile Include="EF\Class.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>CentManagerment.tt</DependentUpon>
     </Compile>
     <Compile Include="EF\Course.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>CentManagerment.tt</DependentUpon>
     </Compile>
     <Compile Include="EF\Expenditure.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
-    <Compile Include="EF\Model1.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Model1.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="EF\Model1.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
-    <Compile Include="EF\Model1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Model1.edmx</DependentUpon>
+      <DependentUpon>CentManagerment.tt</DependentUpon>
     </Compile>
     <Compile Include="EF\News.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>CentManagerment.tt</DependentUpon>
     </Compile>
     <Compile Include="EF\RegisterManagerment.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>CentManagerment.tt</DependentUpon>
     </Compile>
     <Compile Include="EF\Revenue.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>CentManagerment.tt</DependentUpon>
     </Compile>
     <Compile Include="EF\Role.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>CentManagerment.tt</DependentUpon>
     </Compile>
     <Compile Include="EF\RoleManager.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>CentManagerment.tt</DependentUpon>
     </Compile>
     <Compile Include="EF\Student.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>CentManagerment.tt</DependentUpon>
     </Compile>
     <Compile Include="EF\Teacher.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>CentManagerment.tt</DependentUpon>
     </Compile>
-    <Compile Include="EF\TimeWork.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+    <Compile Include="EF\Timekeeping.cs">
+      <DependentUpon>CentManagerment.tt</DependentUpon>
     </Compile>
     <Compile Include="EF\Transaction.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>CentManagerment.tt</DependentUpon>
     </Compile>
     <Compile Include="EF\UserManager.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>CentManagerment.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\PagedList.css" />
-    <Content Include="EF\Model1.Context.tt">
+    <Content Include="EF\CentManagerment.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Model1.edmx</DependentUpon>
-      <LastGenOutput>Model1.Context.cs</LastGenOutput>
+      <DependentUpon>CentManagerment.edmx</DependentUpon>
+      <LastGenOutput>CentManagerment.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="EF\Model1.tt">
+    <Content Include="EF\CentManagerment.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Model1.edmx</DependentUpon>
-      <LastGenOutput>Model1.cs</LastGenOutput>
+      <DependentUpon>CentManagerment.edmx</DependentUpon>
+      <LastGenOutput>CentManagerment.cs</LastGenOutput>
     </Content>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.Config">
       <SubType>Designer</SubType>
     </None>
-    <EntityDeploy Include="EF\Model1.edmx">
+    <EntityDeploy Include="EF\CentManagerment.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
+      <LastGenOutput>CentManagerment.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="EF\Model1.edmx.diagram">
-      <DependentUpon>Model1.edmx</DependentUpon>
+    <None Include="EF\CentManagerment.edmx.diagram">
+      <DependentUpon>CentManagerment.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
   </ItemGroup>

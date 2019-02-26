@@ -12,12 +12,12 @@ namespace CentManagerment.Model.EF
     using System;
     using System.Collections.Generic;
     
-    public partial class TimeWork
+    public partial class Timekeeping
     {
-        public int Id { get; set; }
-        public Nullable<double> Hours { get; set; }
-        public Nullable<System.DateTime> Date { get; set; }
-        public Nullable<int> TeacherId { get; set; }
+        public int ID { get; set; }
+        public Nullable<System.DateTime> TimeIn { get; set; }
+        public Nullable<System.DateTime> TimeOut { get; set; }
+        public Nullable<int> TeacherID { get; set; }
     
         public virtual Teacher Teacher { get; set; }
     }

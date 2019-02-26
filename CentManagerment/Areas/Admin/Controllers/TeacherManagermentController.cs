@@ -47,7 +47,7 @@ namespace CentManagerment.Areas.Admin.Controllers
         public JsonResult EditTeacher(TeacherDTO teacherDTO)
         {
             var checkEdit = false;
-            if(teacherDTO.Age > 0 && teacherDTO.PricePerHour >= 0 && teacherDTO.TimeToWork >= 0)
+            if (teacherDTO.Age > 0 && teacherDTO.PricePerHour >= 0 && teacherDTO.TimeToWork >= 0)
             {
                 checkEdit = new TeacherManager().TeacherManagerUpdate(teacherDTO);
             }
@@ -64,7 +64,7 @@ namespace CentManagerment.Areas.Admin.Controllers
         public ActionResult AddTeacher(TeacherDTO teacherDTO)
         {
             var checkAdd = false;
-            if(teacherDTO.Age > 0 && teacherDTO.PricePerHour >= 0 && teacherDTO.TimeToWork >= 0)
+            if (teacherDTO.Age > 0 && teacherDTO.PricePerHour >= 0 && teacherDTO.TimeToWork >= 0)
             {
                 checkAdd = new TeacherManager().TeacherManagerInsert(teacherDTO);
             }
@@ -78,84 +78,69 @@ namespace CentManagerment.Areas.Admin.Controllers
             }
         }
         //insert time work
-        public JsonResult AddTimeWork(TimeWorkDTO dto)
+        public JsonResult AddTimeWork(TimekeepingDTO dto)
         {
             return Json(true, JsonRequestBehavior.AllowGet);
         }
 
-        /// <summary>
-        /// QUản lý thời gian giảng dạy của giáo viên
-        /// </summary>
-        /// <returns></returns>
         public ActionResult TimeWork()
         {
             SelectList listTeacher = new SelectList(new TeacherManager().GetListTeacher(), "TeacherId", "TeacherName");
             ViewBag.listTeacher = listTeacher;
-
             return View();
         }
-
-        [HttpPost]
-        public JsonResult SelectTeacher(int teacherId)
+        public JsonResult SelectTeacher(int? teacherId)
         {
-            var jsonResult = new TimeWorkManager().GetAllByIdTeacher(teacherId);
+            if (teacherId == null)
+                return Json(null, JsonRequestBehavior.AllowGet);
+            var jsonResult = new TeacherManager().GetListTimekeepingByIdTeacher((int)teacherId);
             return Json(jsonResult, JsonRequestBehavior.AllowGet);
         }
 
-        [HttpPost]
-        public JsonResult GetTimeWork(int id)
-        {
-            var json = new TimeWorkManager().GetTimeWork(id);
-            return Json(json, JsonRequestBehavior.AllowGet);
-        }
 
-        [HttpPost]
-        public JsonResult Edit(double time, DateTime date, int id)
+        public JsonResult CreateTimekeeping(TimekeepingDTO timekeepingDTO)
         {
-            var check = new TimeWorkManager().Edit(time, date, id);
-            var result = new List<TimeWorkDTO>();
-            if (check)
-            {
-                var info = new TimeWorkManager().GetTimeWork(id);
-                result = new TimeWorkManager().GetAllByIdTeacher((int)info.TeacherId);   
-            }
-            if (result.Count < 1)
-            {
-                result = null;
-            }
-            return Json(new { check, result }, JsonRequestBehavior.AllowGet);
-        }
+            var resultCode = 0;
+            var resultMessage = "";
+            var status = "error";
+            var result = false;
+            var jsonresult = new List<TimekeepingDTO>();
+            
+            //split time in : yyyy-MM-ddTHH:mm
+            string[] timeIn = timekeepingDTO.TimeInStr.Split('T');
+            timekeepingDTO.TimeIn = DateTime.ParseExact(timeIn[0], "yyyy-MM-dd",System.Globalization.CultureInfo.InvariantCulture) + TimeSpan.Parse(timeIn[1]);
 
-        [HttpPost]
-        public JsonResult Create(double time, DateTime date, int id)
-        {
-            var check = new TimeWorkManager().Create(time, date, id);
-            var result = new List<TimeWorkDTO>();
-            if (check)
+            var timeInDate = timekeepingDTO.TimeIn.Value.Date;
+            //split time out : yyyy-MM-ddTHH:mm
+            string[] timeOut = timekeepingDTO.TimeOutStr.Split('T');
+            timekeepingDTO.TimeOut = DateTime.ParseExact(timeOut[0], "yyyy-MM-dd", System.Globalization.CultureInfo.InvariantCulture) + TimeSpan.Parse(timeOut[1]);
+
+            var timeOutDate = timekeepingDTO.TimeOut.Value.Date;
+
+            if (timekeepingDTO.TimeIn > timekeepingDTO.TimeOut)
             {
-                result = new TimeWorkManager().GetAllByIdTeacher(id);
-            }
-            if (result.Count < 1)
+                resultMessage = "Thời gian bắt đầu phải nhỏ hơn thời gian kết thúc";
+            }else if(timeInDate != timeOutDate)
             {
-                result = null;
+                resultMessage = "Chỉ cho phép thời gian giáo viên làm việc trong 1 ngày";
             }
-            return Json(new { check, result }, JsonRequestBehavior.AllowGet);
-        }
-        [HttpPost]
-        public JsonResult Delete(int id)
-        {
-            var idTeacher = new TimeWorkManager().GetTimeWork(id).TeacherId;
-            var check = new TimeWorkManager().Delete(id);
-            var result = new List<TimeWorkDTO>();
-            if (check)
+            else
             {
-                result = new TimeWorkManager().GetAllByIdTeacher((int)idTeacher);
+                result = new TimekeepingManager().Insert(timekeepingDTO);
+                if (result)
+                {
+                    resultMessage = "Thêm thành công";
+                    resultCode = 1;
+                    status = "success";
+                    jsonresult = new TeacherManager().GetListTimekeepingByIdTeacher((int)timekeepingDTO.TeacherID);
+                }
+                else
+                {
+                    resultMessage = "Thêm không thành công";
+                }
             }
-            if (result.Count < 1)
-            {
-                result = null;
-            }
-            return Json(new { check, result }, JsonRequestBehavior.AllowGet);
+            //}else if(timekeepingDTO.TimeIn.Value.day)
+            return Json(new { message = resultMessage, code = resultCode, json = jsonresult, status = status }, JsonRequestBehavior.AllowGet);
         }
     }
 }

@@ -59,16 +59,34 @@ namespace CentManagerment.BU.DataManager
             {
                 listTeacher = db.Teachers.ToList();
             }
-            foreach(var tc in listTeacher)
+            foreach (var tc in listTeacher)
             {
                 var teacherDTO = new ConvertDataTeacher().ConvertDataTeacherToDTO(tc);
-                if(teacherDTO != null)
+                if (teacherDTO != null)
                 {
                     listTeacherDTO.Add(teacherDTO);
                 }
             }
             return listTeacherDTO;
         }
-        
+        public TeacherDTO GetTeacherById(int teacherId)
+        {
+            using (var db = new CentManagermentEntities())
+            {
+                return new ConvertDataTeacher().ConvertDataTeacherToDTO(db.Teachers.Find(teacherId));
+            }
+        }
+
+        public List<TimekeepingDTO> GetListTimekeepingByIdTeacher(int teacherId)
+        {
+            db = new CentManagermentEntities();
+            var getListTimes = db.Timekeepings.Where(x=>x.TeacherID == teacherId);
+            var listDTO = new List<TimekeepingDTO>();
+            foreach (var time in getListTimes)
+            {
+                listDTO.Add(new ConvertDataTimekeeping().ConvertDataTimekeepingToDTO(time));
+            }
+            return listDTO;
+        }
     }
 }

@@ -17,7 +17,8 @@ namespace CentManagerment.Areas.Admin.Common
             Quanlydoanhthu = 6,
             Quanlynhanvien = 7,
             Quanlytuychinh = 8,
-            Quanlylophoc = 9
+            Quanlylophoc = 9,
+            Quanlychamconggiaovien = 10
         }
     }
 }

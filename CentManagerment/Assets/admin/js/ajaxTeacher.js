@@ -33,175 +33,111 @@ function EditTeacher(idTeacher) {
 
 // thêm thông tin thời gian làm việc
 $('#teacherId').change(function () {
-    var teacherId = $('#teacherId').val();
-    $.ajax({
-        url: "/Admin/TeacherManagerment/SelectTeacher",
-        type: 'POST',
-        data: { teacherId: teacherId },
-        success: function (result) {
-            var html = "";
-            for (var i = 0; i < result.length; i++) {
-                html += '<tr>';
-                html += '<td>' + (i + 1) + '</td>';
-                html += '<td id="idtimework" style="color:blue; cursor:pointer">' + result[i].Id + '</td>';
-                html += '<td>' + result[i].Hours + '</td>';
-                html += '<td><input type="date" value="' + result[i].DateStr + '" readonly style="border:none;background:transparent;padding-left: 70px;"/></td>';
-                html += '<td>';
-                html += '<i class="fa fa-trash" aria-hidden="true" id="deltimework" id-time="' + result[i].Id + '" style="cursor:pointer"></i>';
-                html += '</td>';
-                html += '</tr>';
+    var TM = true;
+    var getteacherId = $('#teacherId').val();
+    var teacherId;
+    console.log(getteacherId);
+    if (getteacherId == null || getteacherId == '') {
+        TM = false;
+        $('#tbodytimework').empty();
+    } else {
+        teacherId = parseInt(getteacherId);
+    }
+    if (TM) {
+        $.ajax({
+            type: 'POST',
+            url: "/Admin/TeacherManagerment/SelectTeacher",
+            data: {
+                teacherId: teacherId
+            },
+            success: function (result) {
+                var html = "";
+                $('#tbodytimework').empty();
+                var count = 0;
+                $.each(result, function (key, value) {
+                    count++;
+                    html += '<tr><td>' + count + '</td><td>' + value.TimeHours + '</td><td>' + value.TimeInStr + '</td><td>' + value.TimeOutStr + '</td><td>' + value.Days + '</td><td><span class=icon-menu><i class="fa fa-plus-circle"></i><ul><li>Thêm</li></ul></span></td></tr><tr><td class="row-edit row-edit2 white disabled" id=tw' + value.ID + ' colspan="14"><div class="text-left"><div class="form__table--content"><div class="form__table-col-6"><label for="">Họ và tên:</label><input type="text" value="1" id="1" /></div><div class="form__table-col-6"><label for="">Tuổi:</label><input type="text" value="1" id="1" /></div><div class="form__table-col-6 inputtwo"><label></label><input type="button" value="Hủy" style="margin-right: 59px;"><input type="submit" value="Lưu chỉnh sửa" class="fixnv"></div></div></div></td></tr>';
+                });
+                $('#tbodytimework').append(html);
             }
-            $("#body-table").html(html);
-        }
-    })
-})
+        });
+    }
+});
 
-var idTimeWork;
-$(document).on('click', '#idtimework', function () {
-    idTimeWork = this.innerText;
+$('#tbodytimework').on('click', '.icon-menu', function () {
+    var idteacher = $(this).parent().prev().find('td:first-child');
+    console.log(idteacher);
+    jQuery('#testID2').find('#tw' + idteacher).removeClass('disable');
+});
+
+//validate
+jQuery.extend(jQuery.validator.messages, {
+    required: "Không được để trống",
+    //remote: "Please fix this field.",
+    //email: "Please enter a valid email address.",
+    //url: "Please enter a valid URL.",
+    //date: "Please enter a valid date.",
+    //dateISO: "Please enter a valid date (ISO).",
+    number: "Chỉ được nhập chữ số.",
+    //digits: "Please enter only digits.",
+    //creditcard: "Please enter a valid credit card number.",
+    //equalTo: "Please enter the same value again.",
+    //accept: "Please enter a value with a valid extension.",
+    maxlength: jQuery.validator.format("Không nhập quá {0} kí tự."),
+    minlength: jQuery.validator.format("Nhập tối tiểu {0} kí tự."),
+    //rangelength: jQuery.validator.format("Please enter a value between {0} and {1} characters long."),
+    //range: jQuery.validator.format("Please enter a value between {0} and {1}."),
+    //max: jQuery.validator.format("Please enter a value less than or equal to {0}."),
+    min: jQuery.validator.format("Không được nhập quá {0}.")
+});
+$('#CreateTimeWork').validate({
+    rules: {
+        TimeIn: {
+            required: true
+        },
+        TimeOut: {
+            required: true
+        },
+        TeacherAddTW: {
+            required: true
+        }
+    },
+    messages: {
+    },
+    submitHandler: function (form) {
+        CreateTimeWork();
+    }
+});
+function CreateTimeWork() {
+
+    var timekeepingDTO = {
+        TimeInStr: $('#datevalin').val(),
+        TimeOutStr: $('#datevalout').val(),
+        TeacherID: $('#tearcheridaddtw').val()
+    };
     $.ajax({
-        type: 'post',
-        url: '/Admin/TeacherManagerment/GetTimeWork',
-        data: { id: idTimeWork },
-        success: function (resp) {
-            $("#idwork").val(idTimeWork);
-            $("#timework").val(resp.Hours);
-            $("#datework").val(resp.DateStr);
+        type: 'POST',
+        url: "/Admin/TeacherManagerment/CreateTimekeeping",
+        data: {
+            timekeepingDTO: timekeepingDTO
+        },
+        success: function (result) {
+            $.notify(result.message, result.status);
+            if (result.code === 1) {
+                $("#exampleModalCenter").css("display", "none");
+                $(".modal-backdrop").css("display", "none");
+                $('#CreateTimeWork')[0].reset();
+                var html = "";
+                $('#tbodytimework').empty();
+                var count = 0;
+                $.each(result.json, function (key, value) {
+                    count++;
+                    html += '<tr><td>' + count + '</td><td>' + value.TimeHours + '</td><td>' + value.TimeInStr + '</td><td>' + value.TimeOutStr + '</td><td>' + value.Days + '</td><td><span class=icon-menu><i class="fa fa-plus-circle"></i><ul><li>Thêm</li></ul></span></td></tr><tr><td class="row-edit row-edit2 white disabled" id=tw' + value.ID + ' colspan="14"><div class="text-left"><div class="form__table--content"><div class="form__table-col-6"><label for="">Họ và tên:</label><input type="text" value="1" id="1" /></div><div class="form__table-col-6"><label for="">Tuổi:</label><input type="text" value="1" id="1" /></div><div class="form__table-col-6 inputtwo"><label></label><input type="button" value="Hủy" style="margin-right: 59px;"><input type="submit" value="Lưu chỉnh sửa" class="fixnv"></div></div></div></td></tr>';
+                });
+                $('#tbodytimework').append(html);
+                $("div.teacherchoose select").val(timekeepingDTO.TeacherID);
+            }
+
         }
     });
-})
-
-$("#edit-timework").click(function () {
-    var time = $("#timework").val();
-    var date = $("#datework").val();
-    if (time != "") {
-        try {
-            $.ajax({
-                type: 'post',
-                url: '/Admin/TeacherManagerment/Edit',
-                data: { time: time, date: date, id: idTimeWork },
-                success: function (resp) {
-                    if (resp.check) {
-                        var html = "";
-                        if (resp.result != null) {
-                            for (var i = 0; i < resp.result.length; i++) {
-                                html += '<tr>';
-                                html += '<td>' + (i + 1) + '</td>';
-                                html += '<td id="idtimework" style="color:blue; cursor:pointer">' + resp.result[i].Id + '</td>';
-                                html += '<td>' + resp.result[i].Hours + '</td>';
-                                html += '<td><input type="date" value="' + resp.result[i].DateStr + '" readonly style="border:none;background:transparent;padding-left: 70px;"/></td>';
-                                html += '<td>';
-                                html += '<i class="fa fa-trash" aria-hidden="true" id="deltimework" id-time="' + resp.result[i].Id + '" style="cursor:pointer"></i>';
-                                html += '</td>';
-                                html += '</tr>';
-                            }
-                        }
-                        $("#body-table").html(html);
-                        alert("Sửa thành công!");
-                    }
-                    else {
-                        alert("Sửa thất bại!");
-                    }
-                },
-                error: function () {
-                    alert("Kiểm tra lại dữ liệu!");
-                }
-            })
-        }
-        catch (e) {
-            alert("Kiểm tra lại dữ liệu!");
-        }
-    } else {
-        alert("Kiểm tra lại dữ liệu!");
-    }
-
-
-})
-
-
-
-$("#add-timework").click(function () {
-    var time = $("#timework").val();
-    var date = $("#datework").val();
-    var idTeacher = $('#teacherId').val();
-    if (time != "" && date != null && date != "") {
-        $.ajax({
-            type: 'post',
-            url: '/Admin/TeacherManagerment/Create',
-            data: { time: time, date: date, id: idTeacher },
-            success: function (resp) {
-                if (resp.check) {
-                    var html = "";
-                    if (resp.result != null) {
-                        
-                        for (var i = 0; i < resp.result.length; i++) {
-                            html += '<tr>';
-                            html += '<td>' + (i + 1) + '</td>';
-                            html += '<td id="idtimework" style="color:blue; cursor:pointer">' + resp.result[i].Id + '</td>';
-                            html += '<td>' + resp.result[i].Hours + '</td>';
-                            html += '<td><input type="date" value="' + resp.result[i].DateStr + '" readonly style="border:none;background:transparent;padding-left: 70px;"/></td>';
-                            html += '<td>';
-                            html += '<i class="fa fa-trash" aria-hidden="true" id="deltimework" id-time="' + resp.result[i].Id + '" style="cursor:pointer"></i>';
-                            html += '</td>';
-                            html += '</tr>';
-                        }
-                        
-                    }
-                    $("#body-table").html(html);
-                    $("#timework").val("");
-                    $("#datework").val("");
-                    alert("Thêm thành công!");
-                }
-                else {
-                    alert("Thêm thất bại!");
-                }
-            }
-        })
-    }
-})
-
-$("#clear-timework").click(function () {
-    $("#idwork").val("");
-    $("#timework").val("");
-    $("#datework").val("");
-    idTimeWork = null;
-})
-
-$(document).on('click', '#deltimework', function () {
-    var idTimeWork = this.getAttribute("id-time");
-    var a = window.confirm("Bạn có muốn xóa bản ghi này không ?");
-    if (a) {
-        $.ajax({
-            type: 'post',
-            url: '/Admin/TeacherManagerment/Delete',
-            data: { id: idTimeWork },
-            success: function (resp) {
-                if (resp.check) {
-                    var html = "";
-                    if (resp.result != null) {
-                        
-                        for (var i = 0; i < resp.result.length; i++) {
-                            html += '<tr>';
-                            html += '<td>' + (i + 1) + '</td>';
-                            html += '<td id="idtimework" style="color:blue; cursor:pointer">' + resp.result[i].Id + '</td>';
-                            html += '<td>' + resp.result[i].Hours + '</td>';
-                            html += '<td><input type="date" value="' + resp.result[i].DateStr + '" readonly style="border:none;background:transparent;padding-left: 70px;"/></td>';
-                            html += '<td>';
-                            html += '<i class="fa fa-trash" aria-hidden="true" id="deltimework" id-time="' + resp.result[i].Id + '" style="cursor:pointer"></i>';
-                            html += '</td>';
-                            html += '</tr>';
-                        }
-                    }
-                    $("#body-table").html(html);
-                    $("#timework").val("");
-                    $("#datework").val("");
-                    alert("Xóa thành công!");
-
-                }
-                else {
-                    alert("Xóa thất bại!");
-                }
-            }
-        })
-    }
-})
+}

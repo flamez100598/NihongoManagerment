@@ -7,27 +7,35 @@ using System.Threading.Tasks;
 
 namespace CentManagerment.Model.DAO
 {
-    public class TimeWorkDAO
+    public class TimekeepingDAO
     {
         CentManagermentEntities db = null;
-        public bool Insert(TimeWork cl)
+        public bool Insert(Timekeeping cl)
         {
-            using (db = new CentManagermentEntities())
+            try
             {
-                db.TimeWorks.Add(cl);
-                db.SaveChanges();
+                using (db = new CentManagermentEntities())
+                {
+                    db.Timekeepings.Add(cl);
+                    db.SaveChanges();
+                }
+                return true;
             }
-            return true;
+            catch (Exception)
+            {
+                return false;
+            }
+
 
         }
         // use using to open and close connection
-        public bool Update(TimeWork cl)
+        public bool Update(Timekeeping cl)
         {
             using (db = new CentManagermentEntities())
             {
-                var clUpdate = db.TimeWorks.FirstOrDefault(x => x.Id == cl.Id);
-                clUpdate.Hours = cl.Hours;
-                clUpdate.Date = cl.Date;
+                var clUpdate = db.Timekeepings.FirstOrDefault(x => x.ID == cl.ID);
+                //clUpdate.Hours = cl.Hours;
+                //clUpdate.Date = cl.Date;
                 db.SaveChanges();
             }
             return true;
@@ -39,8 +47,8 @@ namespace CentManagerment.Model.DAO
         {
             using (db = new CentManagermentEntities())
             {
-                var delete = db.TimeWorks.Find(cl);
-                db.TimeWorks.Remove(delete);
+                var delete = db.Timekeepings.Find(cl);
+                db.Timekeepings.Remove(delete);
                 db.SaveChanges();
             }
             return true;
