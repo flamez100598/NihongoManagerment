@@ -18,6 +18,7 @@ namespace CentManagerment.Model.EF
         public Class()
         {
             this.Students = new HashSet<Student>();
+            this.RevenueMonths = new HashSet<RevenueMonth>();
         }
     
         public int ClassId { get; set; }
@@ -28,5 +29,7 @@ namespace CentManagerment.Model.EF
         public virtual Course Course { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Student> Students { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<RevenueMonth> RevenueMonths { get; set; }
     }
 }

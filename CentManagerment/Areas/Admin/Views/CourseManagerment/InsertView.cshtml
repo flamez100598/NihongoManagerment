@@ -1,11 +1,9 @@
 ﻿@model CentManagerment.BU.DTO.CourseDTO
 
 @{
-    ViewBag.Title = "InsertView";
+    ViewBag.Title = "Thêm khóa học";
     Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
 }
-
-<h2>InsertView</h2>
 
 @using (Html.BeginForm("Insert", "CourseManagerment", FormMethod.Post))
 {
@@ -20,14 +18,21 @@
                 <div class="form-group nhanvien-chinhsua__input">
                     <label class="fleft">Thời gian học</label>
                     <div class="input-box fleft">
-                        <input class="form-control" type="text" name="CourseTime" />
+                        <input class="form-control" type="date" name="CourseTime" />
                     </div>
                     <div class="clear-fix"></div>
                 </div>
                 <div class="form-group nhanvien-chinhsua__input">
                     <label class="fleft">Tên khóa học</label>
                     <div class="input-box fleft">
-                        <input class="form-control" type="text" name="CourseName" />
+                        <input class="form-control" type="date" name="CourseName" />
+                    </div>
+                    <div class="clear-fix"></div>
+                </div>
+                <div class="form-group nhanvien-chinhsua__input">
+                    <label class="fleft">Tên khóa học</label>
+                    <div class="input-box fleft">
+                        <input class="form-control" type="text" name="CousePrice" />
                     </div>
                     <div class="clear-fix"></div>
                 </div>

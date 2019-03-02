@@ -11,14 +11,17 @@ namespace CentManagerment.Model.DAO
     {
         CentManagermentEntities db = null;
         // use using to open and close connection
-        public bool Insert(Class cl)
+        public int Insert(Class cl)
         {
+            var id = 0;
             using ( db = new CentManagermentEntities())
             {
                 db.Classes.Add(cl);
                 db.SaveChanges();
+
+                id = db.Classes.OrderByDescending(x => x.ClassId).FirstOrDefault().ClassId;
+                return id;
             }
-            return true;
 
         }
         // use using to open and close connection

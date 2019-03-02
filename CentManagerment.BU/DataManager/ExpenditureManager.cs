@@ -12,7 +12,7 @@ namespace CentManagerment.BU.DataManager
 {
     public class ExpenditureManager
     {
-        CentManagermentEntities db = null;
+        //CentManagermentEntities db = null;
         public bool ExpenditureManagerInsert(ExpenditureDTO Expenditure)
         {
             try

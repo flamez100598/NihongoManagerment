@@ -37,6 +37,7 @@ namespace CentManagerment.Model.EF
         public virtual DbSet<Timekeeping> Timekeepings { get; set; }
         public virtual DbSet<Transaction> Transactions { get; set; }
         public virtual DbSet<UserManager> UserManagers { get; set; }
+        public virtual DbSet<RevenueMonth> RevenueMonths { get; set; }
         public virtual DbSet<RegisterManagerment> RegisterManagerments { get; set; }
     }
 }
