@@ -1,4 +1,5 @@
-﻿using CentManagerment.BU.DataManager;
+﻿using CentManagerment.Areas.Admin.Common;
+using CentManagerment.BU.DataManager;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,7 +8,9 @@ using System.Web.Mvc;
 
 namespace CentManagerment.Areas.Admin.Controllers
 {
-    public class RevenueController : Controller
+    [Role(RoleID = (int)CommonEnum.Role.Quanlydoanhthu)]
+
+    public class RevenueController : BaseController
     {
         public ActionResult RevenueClass(int page = 1)
         {
@@ -33,5 +36,22 @@ namespace CentManagerment.Areas.Admin.Controllers
             listRevenue = listRevenue.Skip((page - 1) * sizePage).Take(sizePage).ToList();
             return View(listRevenue);
         }
+
+
+        public ActionResult RevenueMonth(DateTime? date)
+        {
+            ViewBag.Date = date;
+            ViewBag.ListRevenueMonths = new RevenueMonthManage().ListRevenueMonth(date);
+            return View();
+        }
+
+        public ActionResult ChangePeriod(string Period, string IdRM, DateTime? dateFind)
+        {
+            var update = new RevenueMonthManage().Update(int.Parse(Period), int.Parse(IdRM));
+            return RedirectToAction("RevenueMonth", new { date = dateFind });
+        }
+
+
+
     }
 }

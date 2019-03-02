@@ -14,6 +14,8 @@ namespace CentManagerment.BU.DTO
         public Nullable<System.DateTime> StartDate { get; set; }
         public Nullable<System.DateTime> EndDate { get; set; }
         public Nullable<bool> IsActive { get; set; }
+        public Nullable<int> TotalPeriod { get; set; }
+
 
         //public virtual ICollection<Class> Classes { get; set; }
     }

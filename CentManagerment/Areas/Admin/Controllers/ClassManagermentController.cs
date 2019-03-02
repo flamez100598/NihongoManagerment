@@ -50,7 +50,32 @@ namespace CentManagerment.Areas.Admin.Controllers
         public ActionResult Insert(ClassDTO classDto)
         {
             var model = classManager.ClassManagerInsert(classDto);
+
+            if(model != 0)
+            {
+                var GetClass = new ClassManager().GetClassById(model);
+                //add list date to revenue month
+                var GetDates = GetListDateBetweenTwoDates((DateTime)GetClass.CourseDTO.StartDate, (DateTime)GetClass.CourseDTO.EndDate);
+                foreach (var date in GetDates)
+                {
+                    var RevenueMonthDTO = new RevenueMonthDTO()
+                    {
+                        Period = 0,
+                        Time = date,
+                        ClassId = model
+                    };
+                    new RevenueMonthManage().Insert(RevenueMonthDTO);
+                }
+            }
             return RedirectToAction("Index");
+        }
+
+        public List<DateTime> GetListDateBetweenTwoDates(DateTime DateStart, DateTime DateFinish)
+        {
+            List<DateTime> allDates = new List<DateTime>();
+            for (DateTime date =  DateStart ; date <= DateFinish; date = date.AddMonths(1))
+                allDates.Add(date);
+            return allDates;
         }
         /// <summary>
         /// man hinh chinh sua

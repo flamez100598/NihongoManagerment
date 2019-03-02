@@ -149,7 +149,7 @@ namespace CentManagerment.BU.DataManager
                 else
                     return null;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return null;
             }

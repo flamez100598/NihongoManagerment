@@ -12,7 +12,7 @@ namespace CentManagerment.BU.DataManager
 {
     public class TimekeepingManager
     {
-        CentManagermentEntities db = null;
+        //CentManagermentEntities db = null;
         TimekeepingDAO dao = new TimekeepingDAO();
         ConvertDataTimekeeping convert = new ConvertDataTimekeeping();
         //insert Time Work

@@ -40,6 +40,7 @@ namespace CentManagerment.Areas.Admin.Controllers
         public ActionResult Insert(CourseDTO courseDto)
         {
             var model = courseManager.CourseManagerInsert(courseDto);
+
             return RedirectToAction("Index");
         }
         /// <summary>

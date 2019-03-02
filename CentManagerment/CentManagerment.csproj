@@ -3130,6 +3130,7 @@
     <Content Include="Areas\Admin\Views\Revenue\RevenueClass.cshtml" />
     <Content Include="Areas\Admin\Views\TeacherManagerment\TimeWork.cshtml" />
     <Content Include="Areas\Admin\Views\Timekeeping\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Revenue\RevenueMonth.cshtml" />
     <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />

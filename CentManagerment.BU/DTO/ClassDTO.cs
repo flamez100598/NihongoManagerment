@@ -12,7 +12,8 @@ namespace CentManagerment.BU.DTO
         public string ClassName { get; set; }
         public Nullable<int> ClassAmountStudent { get; set; }
         public Nullable<int> ClassCourseId { get; set; }
-    
+
         public virtual CourseDTO CourseDTO { get; set; }
+
     }
 }

@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="7611a9ac0f8446b3ac4fa66c470a4642" Name="Diagram1">
+      <Diagram DiagramId="7611a9ac0f8446b3ac4fa66c470a4642" Name="Diagram1" ZoomLevel="74">
         <EntityTypeShape EntityType="CentManagermentModel.Class" Width="1.5" PointX="3" PointY="1.625" IsExpanded="true" />
         <EntityTypeShape EntityType="CentManagermentModel.Course" Width="1.5" PointX="0.75" PointY="1.5" IsExpanded="true" />
         <EntityTypeShape EntityType="CentManagermentModel.Expenditure" Width="1.5" PointX="5.25" PointY="5.75" IsExpanded="true" />
@@ -17,13 +17,15 @@
         <EntityTypeShape EntityType="CentManagermentModel.Timekeeping" Width="1.5" PointX="3" PointY="9.5" IsExpanded="true" />
         <EntityTypeShape EntityType="CentManagermentModel.Transaction" Width="1.5" PointX="7.75" PointY="8.75" IsExpanded="true" />
         <EntityTypeShape EntityType="CentManagermentModel.UserManager" Width="1.5" PointX="7.75" PointY="5" IsExpanded="true" />
-        <EntityTypeShape EntityType="CentManagermentModel.RegisterManagerment" Width="1.5" PointX="9.75" PointY="0.75" IsExpanded="true" />
         <AssociationConnector Association="CentManagermentModel.FK_Classes_Courses" ManuallyRouted="false" />
         <AssociationConnector Association="CentManagermentModel.FK_Students_Classes" ManuallyRouted="false" />
         <AssociationConnector Association="CentManagermentModel.FK_Revenue_Expenditure" ManuallyRouted="false" />
         <AssociationConnector Association="CentManagermentModel.FK_News_Users" ManuallyRouted="false" />
         <AssociationConnector Association="CentManagermentModel.FK_Revenues_Students" ManuallyRouted="false" />
         <AssociationConnector Association="CentManagermentModel.FK_Timekeeping_Teacher" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="CentManagermentModel.RevenueMonth" Width="1.5" PointX="5.25" PointY="11.875" />
+        <AssociationConnector Association="CentManagermentModel.FK_RevenueMonth_Class" />
+        <EntityTypeShape EntityType="CentManagermentModel.RegisterManagerment" Width="1.5" PointX="10.375" PointY="0.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

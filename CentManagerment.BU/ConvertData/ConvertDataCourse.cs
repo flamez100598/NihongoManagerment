@@ -19,7 +19,8 @@ namespace CentManagerment.BU.ConvertData
                 Price = course.Price,
                 StartDate = course.StartDate,
                 EndDate = course.EndDate,
-                IsActive = course.IsActive
+                IsActive = course.IsActive,
+                TotalPeriod = course.TotalPeriod                 
             };
             return courseDTO;
         }
@@ -31,8 +32,8 @@ namespace CentManagerment.BU.ConvertData
                 Price = courseDTO.Price,
                 StartDate = courseDTO.StartDate,
                 EndDate = courseDTO.EndDate,
-                IsActive = courseDTO.IsActive
-
+                IsActive = courseDTO.IsActive,
+                TotalPeriod = courseDTO.TotalPeriod
             };
             if (courseDTO.CourseId > 0)
             {

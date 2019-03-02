@@ -20,7 +20,7 @@ namespace CentManagerment.BU.DataManager
         /// </summary>
         /// <param name="Class"></param>
         /// <returns></returns>
-        public bool ClassManagerInsert(ClassDTO Class)
+        public int ClassManagerInsert(ClassDTO Class)
         {
             try
             {
@@ -29,7 +29,7 @@ namespace CentManagerment.BU.DataManager
             catch (Exception)
             {
 
-                return false;
+                return 0;
             }
         }
         /// <summary>
