@@ -649,5 +649,14 @@ h6 {
 .over {
   overflow: unset;
 }
-
+.register-fix {
+    /* float: right; */
+    position: fixed;
+    /* top: 151px; */
+    bottom: 108px;
+    right: 20px;
+    min-width: 100px;
+    min-height: 100px;
+    border-radius: 100%;
+}
 /*# sourceMappingURL=style.css.map */

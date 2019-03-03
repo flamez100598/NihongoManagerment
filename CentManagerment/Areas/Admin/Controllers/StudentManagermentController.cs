@@ -18,6 +18,7 @@ namespace CentManagerment.Areas.Admin.Controllers
         // GET: Admin/StudentManagerment
         public ActionResult Index(string searchString, int page = 1, int pageSize = 3)
         {
+            ViewBag.searchString = searchString;
             var listStudents = studentMange.GetListStudents(searchString, page, pageSize);
             return View(listStudents);
         }

@@ -10,8 +10,10 @@ using System.Web.Mvc;
 namespace CentManagerment.Areas.Admin.Controllers
 {
     [Role(RoleID = (int)CommonEnum.Role.Quanlykhoahoc)]
+
     public class CourseManagermentController : BaseController
     {
+
         public readonly CourseManager courseManager = new CourseManager();
         // GET: Admin/CourseManagerment
         /// <summary>
@@ -38,7 +40,7 @@ namespace CentManagerment.Areas.Admin.Controllers
         /// <param name="classDto"></param>
         /// <returns></returns>
         public ActionResult Insert(CourseDTO courseDto)
-        {
+        {       
             var model = courseManager.CourseManagerInsert(courseDto);
 
             return RedirectToAction("Index");

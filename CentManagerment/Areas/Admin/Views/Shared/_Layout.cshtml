@@ -69,7 +69,7 @@
     <link rel="stylesheet" href="~/Assets/admin/libs/datepicker/jquery-ui.theme.css" />
     <link rel="stylesheet" href="~/Assets/admin/libs/datepicker/jquery-ui.min.css" />
 </head>
-<body class="hold-transition skin-blue sidebar-mini">
+<body ng-app="" class="hold-transition skin-blue sidebar-mini"  >
     <div id="wrapper">
         <header id="header" class="main-header">
             <!-- Logo--><a class="logo" href="@Url.Action("Index","HomeAdmin")">
@@ -246,10 +246,10 @@
                     </div>
                 </div>
                 <!-- search form-->
-                <form class="sidebar-form" action="#" method="get">
+                <form class="sidebar-form" action="/Admin/StudentManagerment" method="get">
                     <div class="input-group">
-                        <input class="form-control" type="text" name="q" placeholder="Search..." /><span class="input-group-btn">
-                            <button class="btn btn-flat" id="search-btn" type="submit" name="search"><i class="fa fa-search"></i></button>
+                        <input class="form-control" type="text"  placeholder="Search..." name="searchString"/><span class="input-group-btn">
+                            <button class="btn btn-flat" id="search-btn" type="submit" > <i class="fa fa-search"></i></button>
                         </span>
                     </div>
                 </form>
@@ -373,6 +373,8 @@
         immediately after the control sidebar
         -->
     </div>
+    <!--angularjs-->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
     <!--#wrapper-->
     <!--JS-->
     <!-- jQuery 3-->

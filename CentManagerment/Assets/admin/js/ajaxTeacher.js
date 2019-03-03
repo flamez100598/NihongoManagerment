@@ -132,7 +132,15 @@ function CreateTimeWork() {
                 var count = 0;
                 $.each(result.json, function (key, value) {
                     count++;
-                    html += '<tr><td>' + count + '</td><td>' + value.TimeHours + '</td><td>' + value.TimeInStr + '</td><td>' + value.TimeOutStr + '</td><td>' + value.Days + '</td><td><span class=icon-menu><i class="fa fa-plus-circle"></i><ul><li>Thêm</li></ul></span></td></tr><tr><td class="row-edit row-edit2 white disabled" id=tw' + value.ID + ' colspan="14"><div class="text-left"><div class="form__table--content"><div class="form__table-col-6"><label for="">Họ và tên:</label><input type="text" value="1" id="1" /></div><div class="form__table-col-6"><label for="">Tuổi:</label><input type="text" value="1" id="1" /></div><div class="form__table-col-6 inputtwo"><label></label><input type="button" value="Hủy" style="margin-right: 59px;"><input type="submit" value="Lưu chỉnh sửa" class="fixnv"></div></div></div></td></tr>';
+                    html += '<tr><td>' + count + '</td><td>' + value.TimeHours + '</td><td>'
+                        + value.TimeInStr + '</td><td>' + value.TimeOutStr + '</td><td>' + value.Days +
+                        '</td><td><span class="icon-menu"><i class="fa fa-plus-circle"></i><ul><li>Sửa</li></ul></span></td></tr>'
+                        +
+                        '<tr><td class="row-edit row-edit2 white disabled" id=tw' + value.ID + ' colspan="14"><div class="text-left">' +
+                        '<div class="form__table--content"><div class="form__table-col-6"><label for="">Họ và tên:</label><input type="text" value="1" id="1" />' +
+                        '</div><div class="form__table-col-6"><label for="">Tuổi:</label><input type="text" value="1" id="1" /></div>' +
+                        '<div class="form__table-col-6 inputtwo"><label></label><input type="button" value="Hủy" style="margin-right: 59px;">' +
+                        '<input type="submit" value="Lưu chỉnh sửa" class="fixnv"></div></div></div></td></tr>';
                 });
                 $('#tbodytimework').append(html);
                 $("div.teacherchoose select").val(timekeepingDTO.TeacherID);

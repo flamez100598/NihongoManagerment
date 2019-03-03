@@ -7,6 +7,7 @@ namespace CentManagerment.Areas.Admin.Common
 {
     public class CommonEnum
     {
+
         public enum Role
         {
             Quanlysinhvien = 1,

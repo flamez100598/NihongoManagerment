@@ -67,43 +67,52 @@
             </tr>
             @foreach (var item in Model)
             {
-                <tr>
-                    <td>@item.CourseId</td>
-                    <td>@item.CourseName</td>
+            <tr>
+                <td>@item.CourseId</td>
+                <td>@item.CourseName</td>
+                @if (item.StartDate != null && item.EndDate != null)
+                {
+                    <td>@item.StartDate.Value.ToShortDateString()</td>
+                    <td>@item.EndDate.Value.ToShortDateString()</td>
+                }
+                else
+                {
                     <td>@item.StartDate</td>
                     <td>@item.EndDate</td>
-                    <td>@item.Price</td>
-                    <td>
-                        <span class="icon-menu">
-                            <i class="fa fa-plus-circle"></i>
-                            <ul>
-                                <li>@Html.ActionLink("Chỉnh sửa", "UpdateView", new { id = item.CourseId })</li>
-                                <li onclick="DeleteCourse(@item.CourseId)">Bỏ thùng rác</li>
-                                @*xoa khoa hoc*@
-                                <script>
-                                    function DeleteCourse(courseId) {
-                                        var confirms = confirm("Do you want delete it!");
-                                        if (confirms) {
-                                            console.log(confirms)
-                                            console.log(courseId)
-                                            $.ajax({
-                                                type: 'POST',
-                                                url: "/CourseManagerment/Delete",
-                                                data: { courseId },
-                                                success: function (result) {
-                                                    console.log(result)
-                                                    alert("success!");
-                                                    location.reload();
-                                                }
-                                            })
-                                        }
-                                    }
-                                </script>
-                            </ul>
-                        </span>
-                    </td>
+                }
 
-                </tr>
+                <td>@item.Price</td>
+                <td>
+                    <span class="icon-menu">
+                        <i class="fa fa-plus-circle"></i>
+                        <ul>
+                            <li>@Html.ActionLink("Chỉnh sửa", "UpdateView", new { id = item.CourseId })</li>
+                            <li onclick="DeleteCourse(@item.CourseId)">Bỏ thùng rác</li>
+                            @*xoa khoa hoc*@
+                            <script>
+                                function DeleteCourse(courseId) {
+                                    var confirms = confirm("Do you want delete it!");
+                                    if (confirms) {
+                                        console.log(confirms)
+                                        console.log(courseId)
+                                        $.ajax({
+                                            type: 'POST',
+                                            url: "/CourseManagerment/Delete",
+                                            data: { courseId },
+                                            success: function (result) {
+                                                console.log(result)
+                                                alert("success!");
+                                                location.reload();
+                                            }
+                                        })
+                                    }
+                                }
+                            </script>
+                        </ul>
+                    </span>
+                </td>
+
+            </tr>
             }
         </table>
         @Html.PagedListPager(Model, page => Url.Action("Index", new { page, searchString = ViewBag.searchString }))

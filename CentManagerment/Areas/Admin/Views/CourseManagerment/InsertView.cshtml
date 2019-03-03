@@ -16,40 +16,58 @@
         <div class="nhanvien-chinhsua__content">
             <form id="nv-add" action="">
                 <div class="form-group nhanvien-chinhsua__input">
-                    <label class="fleft">Thời gian học</label>
+                    <label class="fleft">Thời gian bắt đầu</label>
                     <div class="input-box fleft">
-                        <input class="form-control" type="date" name="CourseTime" />
+                        <input class="form-control" type="date" name="StartDate" required/>
+                    </div>
+                    <div ng-show="nv-add.StartDate.$touched">
+                        <div ng-show="nv-add.StartDate.$error.required" style="color:red;">Please enter you start date</div>
+                    </div>
+                    <div class="clear-fix"></div>
+                </div>
+                <div class="form-group nhanvien-chinhsua__input">
+                    <label class="fleft">Thời gian kết thúc</label>
+                    <div class="input-box fleft">
+                        <input class="form-control" type="date" name="EndDate" />
                     </div>
                     <div class="clear-fix"></div>
                 </div>
                 <div class="form-group nhanvien-chinhsua__input">
                     <label class="fleft">Tên khóa học</label>
                     <div class="input-box fleft">
-                        <input class="form-control" type="date" name="CourseName" />
+                        <input class="form-control" type="text" name="CourseName" value=""  ng-model="f.CourseName" placeholder="Course Name (ABC)" required />
                     </div>
-                    <div class="clear-fix"></div>
-                </div>
-                <div class="form-group nhanvien-chinhsua__input">
-                    <label class="fleft">Tên khóa học</label>
-                    <div class="input-box fleft">
-                        <input class="form-control" type="text" name="CousePrice" />
+                    <div ng-show="!f.CourseName">
+                        <div  style="color:red;    padding-left: 239px;">Please enter you course name</div>
                     </div>
                     <div class="clear-fix"></div>
                 </div>
                 <div class="form-group nhanvien-chinhsua__input">
                     <label class="fleft">Học phí</label>
                     <div class="input-box fleft">
-                        <input class="form-control" type="text" name="CousePrice" />
+                        <input class="form-control" type="number" name="CousePrice" ng-model="f.CoursePrice" placeholder="Course Price (5$)" required />
+                    </div>
+                    <div ng-show="!f.CoursePrice">
+                        <div style="color:red;    padding-left: 239px;">Please enter you price (Just number) </div>
                     </div>
                     <div class="clear-fix"></div>
                 </div>
                 <div class="nhanvien-chinhsua__btn">
-                    <button class="btn btn-primary btn--luu" type="submit">Thêm khóa học</button>
+                    <button class="btn btn-primary btn--luu" ng-disabled="!f" type="submit">Thêm khóa học</button>
                     <button class="btn btn-primary btn--xoa" type="submit">@Html.ActionLink("Hủy", "Index")</button>
                 </div>
             </form>
         </div>
     </section>
 }
+    <style type="text/css">
+        .form-control .ng-invalid .ng-touched {
+            background-color: #FA787E;
+        }
+
+        .form-control .ng-valid .ng-touched {
+            background-color: #78FA89;
+        }
+    </style>
 
 
