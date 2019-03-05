@@ -210,6 +210,8 @@
     <Content Include="Assets\admin\images\default-50x50.gif" />
     <Content Include="Assets\admin\images\icons.png" />
     <Content Include="Assets\admin\images\imgg.jpg" />
+    <Content Include="Content\PagedList.css" />
+    <Content Include="Logo.png" />
     <Content Include="Assets\admin\images\photo1.png" />
     <Content Include="Assets\admin\images\photo2.png" />
     <Content Include="Assets\admin\images\photo3.jpg" />
@@ -3172,6 +3174,7 @@
     <Folder Include="Areas\Admin\Models\" />
     <Folder Include="Areas\Admin\Views\Base\" />
     <Folder Include="Assets\admin\fonts\" />
+    <Folder Include="Assets\client\logo\" />
     <Folder Include="Assets\content\files\" />
     <Folder Include="Assets\content\images\" />
     <Folder Include="Models\" />
