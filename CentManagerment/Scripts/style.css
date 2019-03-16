@@ -422,8 +422,8 @@ h6 {
 }
 
 .header {
-  background: #f9f9f9;
-  position: relative;
+    background: #7fc4ec;
+    position: relative;
 }
 
 .header__logo {
@@ -619,7 +619,7 @@ h6 {
 .footer {
   background: #2391ea;
   color: #fff;
-  padding: 20px 0;
+  padding: 50px 0;
 }
 
 .footer__box {

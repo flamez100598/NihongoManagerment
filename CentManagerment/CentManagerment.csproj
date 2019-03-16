@@ -192,6 +192,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\401\css\font-awesome.min.css" />
+    <Content Include="Assets\401\css\fontsface.css" />
+    <Content Include="Assets\401\css\style.css" />
+    <Content Include="Assets\401\fonts\fontawesome-webfont.svg" />
+    <Content Include="Assets\401\fonts\OFL.txt" />
+    <Content Include="Assets\401\img\bg.jpg" />
     <Content Include="Assets\admin\images\avatar.png" />
     <Content Include="Assets\admin\images\avatar04.png" />
     <Content Include="Assets\admin\images\avatar2.png" />
@@ -210,6 +216,12 @@
     <Content Include="Assets\admin\images\default-50x50.gif" />
     <Content Include="Assets\admin\images\icons.png" />
     <Content Include="Assets\admin\images\imgg.jpg" />
+    <Content Include="Assets\client\img\course\n2.png" />
+    <Content Include="Assets\client\img\course\n3.png" />
+    <Content Include="Assets\client\img\course\n4.png" />
+    <Content Include="Assets\client\img\course\n4_n5.png" />
+    <Content Include="Assets\client\img\course\n5.png" />
+    <Content Include="Assets\client\img\course\n5_n3.png" />
     <Content Include="bin\CentManagerment.dll" />
     <Content Include="bin\CentManagerment.pdb" />
     <Content Include="Content\PagedList.css" />
@@ -3135,6 +3147,29 @@
     <Content Include="Areas\Admin\Views\TeacherManagerment\TimeWork.cshtml" />
     <Content Include="Areas\Admin\Views\Timekeeping\Index.cshtml" />
     <Content Include="Areas\Admin\Views\Revenue\RevenueMonth.cshtml" />
+    <Content Include="Assets\401\fonts\fontawesome-webfont.eot" />
+    <Content Include="Assets\401\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Assets\401\fonts\fontawesome-webfont.woff" />
+    <Content Include="Assets\401\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Assets\401\fonts\FontAwesome.otf" />
+    <Content Include="Assets\401\fonts\Montserrat-Black.ttf" />
+    <Content Include="Assets\401\fonts\Montserrat-BlackItalic.ttf" />
+    <Content Include="Assets\401\fonts\Montserrat-Bold.ttf" />
+    <Content Include="Assets\401\fonts\Montserrat-BoldItalic.ttf" />
+    <Content Include="Assets\401\fonts\Montserrat-ExtraBold.ttf" />
+    <Content Include="Assets\401\fonts\Montserrat-ExtraBoldItalic.ttf" />
+    <Content Include="Assets\401\fonts\Montserrat-ExtraLight.ttf" />
+    <Content Include="Assets\401\fonts\Montserrat-ExtraLightItalic.ttf" />
+    <Content Include="Assets\401\fonts\Montserrat-Italic.ttf" />
+    <Content Include="Assets\401\fonts\Montserrat-Light.ttf" />
+    <Content Include="Assets\401\fonts\Montserrat-LightItalic.ttf" />
+    <Content Include="Assets\401\fonts\Montserrat-Medium.ttf" />
+    <Content Include="Assets\401\fonts\Montserrat-MediumItalic.ttf" />
+    <Content Include="Assets\401\fonts\Montserrat-Regular.ttf" />
+    <Content Include="Assets\401\fonts\Montserrat-SemiBold.ttf" />
+    <Content Include="Assets\401\fonts\Montserrat-SemiBoldItalic.ttf" />
+    <Content Include="Assets\401\fonts\Montserrat-Thin.ttf" />
+    <Content Include="Assets\401\fonts\Montserrat-ThinItalic.ttf" />
     <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
