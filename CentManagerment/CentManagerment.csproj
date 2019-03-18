@@ -210,6 +210,12 @@
     <Content Include="Assets\admin\images\default-50x50.gif" />
     <Content Include="Assets\admin\images\icons.png" />
     <Content Include="Assets\admin\images\imgg.jpg" />
+    <Content Include="Assets\client\img\course\n2.png" />
+    <Content Include="Assets\client\img\course\n3.png" />
+    <Content Include="Assets\client\img\course\n4.png" />
+    <Content Include="Assets\client\img\course\n4_n5.png" />
+    <Content Include="Assets\client\img\course\n5.png" />
+    <Content Include="Assets\client\img\course\n5_n3.png" />
     <Content Include="bin\CentManagerment.dll" />
     <Content Include="bin\CentManagerment.pdb" />
     <Content Include="Content\PagedList.css" />
