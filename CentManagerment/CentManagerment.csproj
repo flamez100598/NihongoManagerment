@@ -217,10 +217,7 @@
     <Content Include="Assets\admin\images\icons.png" />
     <Content Include="Assets\admin\images\imgg.jpg" />
     <Content Include="Assets\client\img\course\n2.png" />
-<<<<<<< HEAD
-=======
     <Content Include="Assets\client\img\banner.png" />
->>>>>>> d54a9004783f9f2195a5529578813a2af7dbfa3c
     <Content Include="Assets\client\img\course\n3.png" />
     <Content Include="Assets\client\img\course\n4.png" />
     <Content Include="Assets\client\img\course\n4_n5.png" />
