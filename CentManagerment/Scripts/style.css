@@ -653,7 +653,7 @@ h6 {
     position: fixed;
     /* top: 151px; */
     bottom: 108px;
-    right: 20px;
+    left: 20px;
     min-width: 100px;
     min-height: 100px;
     border-radius: 100%;

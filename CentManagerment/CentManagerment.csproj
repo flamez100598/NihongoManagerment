@@ -3165,12 +3165,9 @@
     <Folder Include="Areas\Admin\Models\" />
     <Folder Include="Areas\Admin\Views\Base\" />
     <Folder Include="Assets\admin\fonts\" />
-<<<<<<< HEAD
-=======
     <Folder Include="Assets\client\img\elements\" />
     <Folder Include="Assets\client\img\gallery\" />
     <Folder Include="Assets\client\logo\" />
->>>>>>> 6dd8da9a441212d00d35722a572c0a02e244cf2b
     <Folder Include="Assets\content\files\" />
     <Folder Include="Assets\content\images\" />
     <Folder Include="Models\" />
