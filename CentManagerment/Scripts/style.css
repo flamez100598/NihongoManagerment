@@ -522,8 +522,8 @@ h6 {
 }
 
 .home__process {
-  background: #ec1c24;
-  text-align: center;
+    background: #1b3df3;
+    text-align: center;
 }
 
 .home__document {
@@ -653,9 +653,15 @@ h6 {
     position: fixed;
     /* top: 151px; */
     bottom: 108px;
+<<<<<<< HEAD
     right: 20px;
     width: 80px;
     height: 80px;
+=======
+    left: 20px;
+    min-width: 100px;
+    min-height: 100px;
+>>>>>>> 192afc561aaa5d1b1b24619a2a68e8f376ec4d7b
     border-radius: 100%;
 }
 .btn-primary{
@@ -663,3 +669,93 @@ h6 {
 }
 
 /*# sourceMappingURL=style.css.map */
+
+/*review css*/
+body {
+    background-color: #eee;
+}
+
+.reviews {
+    width: 1300px;
+    height: 400px;
+    overflow: hidden;
+    background-color: #fff;
+    border-radius: 5px;
+    margin: 50px auto;
+    position: relative;
+    box-shadow: 0 0 10px -2px #ddd;
+}
+
+.panel {
+    width: 100%;
+    max-height: 100%;
+    position: absolute;
+}
+
+.PanelAct {
+    left: 0;
+}
+
+.panel img {
+    width: 300px;
+    height: 300px;
+    text-align: center;
+    float: left;
+    margin: 25px;
+}
+/*== Removal Start
+png images background
+==*/
+.panel:nth-of-type(1) img {
+    background: #12aedb;
+}
+
+.panel:nth-of-type(2) img {
+    background: #db4646;
+}
+
+.panel:nth-of-type(3) img {
+    background: #96c465;
+}
+/*== Removal End==*/
+
+.panel p {
+    float: left;
+    width: 900px;
+    clear: right;
+    text-align: justify;
+    margin: 25px 0 10px 0;
+    font-size: 30px;
+    color: #aaa;
+    line-height: 1.2em
+}
+
+.panel h7 {
+    float: left;
+    width: 200px;
+    font-size: 22px;
+    color: #999;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.control {
+    position: absolute;
+    bottom: 20px;
+    right: 30px;
+}
+
+    .control span {
+        background-color: rgba(0,0,0,0.1);
+        padding: 5px;
+        display: inline-block;
+        vertical-align: top;
+        margin-left: 5px;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: 0.3s ease-in
+    }
+
+.ContActive {
+    background-color: #bbb !important;
+}

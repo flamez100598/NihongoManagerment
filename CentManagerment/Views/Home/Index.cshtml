@@ -1,13 +1,148 @@
 ﻿@using CentManagerment.BU.DTO
 @{
-    ViewBag.Title = "3 Chàng Ngốc";
+                /**/
 
-    var ListNews = (List<NewsDTO>)ViewBag.ListNews;
+                ViewBag.Title = "3 Chàng Ngốc";
+
+                var ListNews = (List<NewsDTO>)ViewBag.ListNews;
 }
 
 <!-- Start popular-course Area -->
+<main class="home" id="home">
 
-<!-- End popular-course Area -->
+    
+    <div class="home__banner"> <a href="https://www.facebook.com/nhatngu3changngoc/"><img src="~/Assets/client/img/bannerWithLogo.jpg" /></a> </div>
+    <div class="home__box">
+        <div class="container_1140">
+            <div class="home__box--content">
+                <div class="home__box--each">
+
+                    <div class="home__box--img"><a href="#"><img src="~/Assets/client/logo/pic1.jpg" /></a></div>
+                    <div class="home__box--inner">
+                        <h4> <a href="#">Khai giảng khóa học N5, N4, N3 tháng 11</a></h4>
+                        <p>Khai giảng lớp N5, N4, N3 tháng 11. Giảm 300k cho các bạn nam. Với xu thế hội nhập toàn cầu như hiện này, khi rất nhiều các doanh nghiệp chọn Việt nam hiện nay</p>
+                    </div>
+                </div>
+                <div class="home__box--each">
+
+                    <div class="home__box--img"><a href="#"><img src="~/Assets/client/logo/pic2.jpg" /></a></div>
+                    <div class="home__box--inner">
+                        <h4> <a href="#">Tại sao bạn nên học tiếng nhật</a></h4>
+                        <p>Với xu thế hội nhập toàn cầu như hiện này, khi rất nhiều các doanh nghiệp chọn Việt nam là điểm đến của sự đầu tư thì nhu cầu học tiếng Nhật ngày càng tăng cao hơn bao giờ hết.</p>
+                    </div>
+                </div>
+                <div class="home__box--each">
+                    <div class="home__box--img"><img src="~/Assets/client/logo/doc.png" /></a></div>
+                    <div class="home__box--inner">
+                        <h4> <a href="#">Tài liệu</a></h4>
+                        <p>Với xu thế hội nhập toàn cầu như hiện này, khi rất nhiều các doanh nghiệp chọn Việt nam là điểm đến của sự đầu tư thì nhu cầu học tiếng Nhật ngày càng tăng cao hơn bao giờ hết.</p>
+                    </div>
+                </div>
+                <div class="clear-fix"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="home__process"><img src="~/Assets/client/img/lotrinh.jpg" /></div>
+    <div class="home__document">
+        <div class="container_1140">
+            <div class="home__document--content">
+                <h3>TÀI LIỆU TIẾNG NHẬT</h3>
+                <div class="home__document--inner">
+                    <div class="home__document--wrap">
+                        <div class="home__document--left text-center">
+                            <a class="img_jnpt" href="#"><img src="https://saki.edu.vn/image/document-0-saki.jpg" alt="" /></a><a class="document_title" href="#">TÀI LIỆU NHẬP MÔN</a>
+                            <p>Hướng dẫn học bảng chữ cái Hiragana dành cho người mới bắt đầu. Giúp bạn khởi đầu hành trình tiếng Nhật thật vững chắc.</p>
+                        </div>
+                        <div class="home__document--right">
+                            <div class="home__document--box">
+
+                                <div class="img__box"><a href="#"><img src="~/Assets/client/img/course/n5.png" alt="Khóa học N5" /></a></div>
+                                <div class="box__inner">
+                                    <a class="document_title" href="#">TÀI LIỆU N5</a>
+                                    <p>Hướng dẫn học bảng chữ cái Hiragana dành cho người mới bắt đầu. Giúp bạn khởi đầu hành trình tiếng Nhật thật vững chắc.</p>
+                                </div>
+                                <div class="clear-fix"></div>
+                            </div>
+                            <div class="home__document--box">
+
+                                <div class="img__box"><a href="#"><img src="~/Assets/client/img/course/n4.png" /></a></div>
+                                <div class="box__inner">
+                                    <a class="document_title" href="#">TÀI LIỆU N4</a>
+                                    <p>Hướng dẫn học bảng chữ cái Hiragana dành cho người mới bắt đầu. Giúp bạn khởi đầu hành trình tiếng Nhật thật vững chắc.</p>
+                                </div>
+                                <div class="clear-fix"></div>
+                            </div>
+                            <div class="home__document--box">
+
+                                <div class="img__box"><a href="#"><img src="~/Assets/client/img/course/n3.png" /></a></div>
+                                <div class="box__inner">
+                                    <a class="document_title" href="#">TÀI LIỆU N3</a>
+                                    <p>Hướng dẫn học bảng chữ cái Hiragana dành cho người mới bắt đầu. Giúp bạn khởi đầu hành trình tiếng Nhật thật vững chắc.</p>
+                                </div>
+                                <div class="clear-fix"></div>
+                            </div>
+                        </div>
+                        <div class="clear-fix"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="home__video">
+        <div class="container_1140">
+            <div class="home__video--content">
+                <div class="home__video--each">
+                    <iframe src="https://www.youtube.com/embed/1v5kssWT-DM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+                    <p>Best Friend</p>
+                </div>
+                <div class="home__video--each">
+                    <iframe src="https://www.youtube.com/embed/OrjDwEQTt-A" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+                    <p>Kimi Dattara</p>
+                </div>
+                <div class="home__video--each">
+                    <iframe src="https://www.youtube.com/embed/WAT-Gy6QsTY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+                    <p>Sakura anata ni deaete yokatta</p>
+                </div>
+                <div class="clear-fix"></div>
+            </div>
+        </div>
+    </div>
+</main>
+<!-- start Review section -->
+<section id="review">
+    <div class='reviews'>
+        <!-- Panel one -->
+        <div class='panel'>
+            <img src='http://www.designbolts.com/wp-content/uploads/2014/01/Superman-Flat-Design.png'>
+            <p>
+                Đội ngũ giáo viên là các kĩ sư trẻ, nhiệt tình, tâm huyết và có nhiều kinh nghiệm trong giảng dạy và làm việc tại các tập đoàn của Nhật như: NISSAN, CANON, DENSO....
+            <p>      Phòng học rộng rãi, thoáng mát, số lượng học viên mỗi lớp không quá nhiều </p>
+            </p>
+            <h7>Nguyễn Văn A</h7>
+        </div>
+        <!-- Panel Two -->
+        <div class='panel'>
+            <img src='http://www.designbolts.com/wp-content/uploads/2014/01/Batman-Flat-Design.png'>
+            <p>
+                Tiếng Nhật là vô cùng quan trọng, nó có thể thay đổi cả cuộc đời bạn. Hãy là người thông minh nắm bắt xu hướng và nhu cầu xã hội hiện tại. Chúc các bạn may mắn và thành công với sự lựa chọn đi đến cơ hội cho chính mình !
+            </p>
+            <h7>Nguyễn Văn B</h7>
+        </div>
+        <!-- Panel Three -->
+        <div class='panel'>
+            <img src='http://www.designbolts.com/wp-content/uploads/2014/01/Liz-Sherman-Flat-Design.png'>
+            <p>
+                Với xu thế hội nhập toàn cầu như hiện này, khi rất nhiều các doanh nghiệp chọn Việt nam là điểm đến của sự đầu tư thì nhu cầu học tiếng Nhật ngày càng tăng cao hơn bao giờ hết.
+            </p>
+            <h7>Nguyễn Văn C</h7>
+        </div>
+    </div>
+    <script>
+        speed = 600
+    </script>
+</section>
+<!-- end Review section -->
 <!-- Start blog Area -->
 <section class="blog-area section-gap" id="blog">
     <div class="container">
