@@ -218,7 +218,9 @@
     <Content Include="Assets\admin\images\imgg.jpg" />
     <Content Include="Assets\client\img\20171205-banner-nhat.gif" />
     <Content Include="Assets\client\img\banner.png" />
+    <Content Include="Assets\client\img\bannerTest.jpg" />
     <Content Include="Assets\client\img\bannerWeb.jpg" />
+    <Content Include="Assets\client\img\bannerWithLogo.jpg" />
     <Content Include="Assets\client\img\course\n2.png" />
     <Content Include="Assets\client\img\banner.png" />
     <Content Include="Assets\client\img\course\n3.png" />
@@ -226,6 +228,7 @@
     <Content Include="Assets\client\img\course\n4_n5.png" />
     <Content Include="Assets\client\img\course\n5.png" />
     <Content Include="Assets\client\img\course\n5_n3.png" />
+    <Content Include="Assets\client\img\lotrinh.jpg" />
     <Content Include="Assets\client\logo\calender.png" />
     <Content Include="Assets\client\logo\doc.png" />
     <Content Include="Assets\client\logo\LOGO.png" />
@@ -2940,6 +2943,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Scripts\About.css" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config">
@@ -3167,7 +3171,6 @@
     <Folder Include="Assets\admin\fonts\" />
     <Folder Include="Assets\client\img\elements\" />
     <Folder Include="Assets\client\img\gallery\" />
-    <Folder Include="Assets\client\logo\" />
     <Folder Include="Assets\content\files\" />
     <Folder Include="Assets\content\images\" />
     <Folder Include="Models\" />
