@@ -1,5 +1,8 @@
-﻿@{
-    ViewBag.Title = "About";
+﻿@model CentManagerment.BU.DTO.CourseDTO
+
+@{
+    ViewBag.Title = "CourseOffline";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 <section>
     <article>
@@ -15,7 +18,7 @@
                 </div>
                 <div class="row">
                     <div class="col-lg-7 page-content">
-                        <h1 class="page-title-1">Khóa học tiếng Nhật  N5</h1>
+                        <h1 class="page-title-1">Khóa học</h1>
                         <div class="summary-course">
                             <p class="total-hours">
                                 <img src="https://saki.edu.vn/image/icon/book.png">
@@ -27,7 +30,7 @@
                             </p>
                             <p>
                                 <img src="https://saki.edu.vn/image/icon/currency.png">
-                                Học phí (vnđ): <span class="tuition">3,160,000</span> &nbsp; <span class="second-tuition">3,160,000</span>
+                                Học phí (vnđ): <span class="tuition"><input value="@Model.Price"/></span> &nbsp; <span class="second-tuition">3,160,000</span>
                             </p>
                         </div>
                         <div class="col-lg-10">
@@ -775,3 +778,4 @@
 
     </article>
 </section>
+

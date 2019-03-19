@@ -469,6 +469,7 @@ h6 {
   line-height: unset;
   background: #fff;
   display: none;
+  z-index:999;
 }
 
 .header__menu li li {
@@ -649,18 +650,17 @@ h6 {
   overflow: unset;
 }
 .register-fix {
-    /* float: right; */
     position: fixed;
-    /* top: 151px; */
-    bottom: 108px;
+    bottom: 15px;
     left: 20px;
-    min-width: 100px;
-    min-height: 100px;
+    min-width: 80px;
+    min-height: 80px;
     border-radius: 100%;
 }
 .btn-primary{
     border-color:none;
 }
+
 /*# sourceMappingURL=style.css.map */
 
 /*review css*/

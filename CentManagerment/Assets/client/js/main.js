@@ -420,6 +420,7 @@ $(document).ready(function() {
 
 });
 $(document).ready(function () {
+    var speed = 600;
     $(".reviews").each(function () {
         var This = $(this);
         var Nums = This.find(".panel").size();
@@ -461,3 +462,10 @@ $(document).ready(function () {
         }
     });
 });
+var current = 1;
+setInterval(function () {
+    current = current % 3;
+    $('.control span:nth-child(' + (current + 1) + ')').trigger('click');
+    current++;
+}, 3000)
+

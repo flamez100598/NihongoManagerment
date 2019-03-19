@@ -15,6 +15,7 @@
     <meta charset="UTF-8">
     <!-- Site Title -->
     <title>Nhật Ngữ 3 Chàng Ngốc</title>
+    <link href="~/Assets/client/logo/LOGO.png" rel="shortcut icon" type="image/png" />
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.7/angular.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
@@ -48,12 +49,17 @@
                         <div class="icon__btn"><i class="fas fa-bars"></i></div>
                         <ul class="sub__menu">
                             <li><a href="home.html">Trang chủ</a></li>
-                            <li><a href="gioiThieu.html">Giới thiệu</a></li>
+                            <li><a href="/Home/About">Giới thiệu</a></li>
                             <li>
                                 <a href="khoaHoc.html">Khóa học</a>
                                 <ul>
                                     <li><a href="online.html">Online</a></li>
-                                    <li><a href="offline.html">Offline</a></li>
+                                    <li><a href="/Home/About">Khóa học N5</a></li>
+                                    <li>@Html.ActionLink("Khóa học N4", "CourseOffline", new { id = 19 })</li>
+                                    <li><a href="/Home/CourseOffline/20">Khóa học N3</a></li>
+                                    <li><a href="offline.html">Combo N5 + N4</a></li>
+                                    <li><a href="offline.html">N4 + N3 Combo</a></li>
+                                    <li><a href="offline.html">N3 + N2 Combo</a></li>
                                 </ul>
                             </li>
                             <li>
@@ -96,7 +102,7 @@
     <!-- start footer Area -->
     <footer class="footer" id="footer">
         <!--modal register form  -->
-        <button type="button" class="btn btn-primary register-fix" data-toggle="modal" data-target="#exampleModal"><i class="fas fa-phone" style="font-size: 45px;"></i></button>
+        <button type="button" class="btn btn-primary register-fix" data-toggle="modal" data-target="#exampleModal"><i class="fas fa-phone" style="font-size:40px;line-height: 50px;"></i></button>
         <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" style="color:black">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
@@ -107,22 +113,27 @@
                         </button>
                     </div>
                     <div class="modal-body">
-                        <form>
-                            <div class="form-group">
-                                <label for="recipient-name" class="col-form-label">Họ và tên:</label>
-                                <input type="text" class="form-control" ng-model="fm.name" id="">
+                        <form name="userForm" ng-submit="submitForm(userForm.$valid)" novalidate>
+                            <!-- NAME -->
+                            <div class="form-group" ng-class="{ 'has-error' : userForm.name.$invalid && !userForm.name.$pristine }">
+                                <label>Họ tên*</label>
+                                <input type="text" name="name" class="form-control" ng-model="user.name" required>
+                                <p ng-show="userForm.name.$invalid && !userForm.name.$pristine" class="help-block">Your name is required.</p>
                             </div>
-                            <div class="form-group">
-                                <label for="recipient-name" class="col-form-label">Tuổi :</label>
-                                <input type="text" class="form-control" id="">
+
+                            <!-- USERNAME -->
+                            <div class="form-group" ng-class="{ 'has-error' : userForm.username.$invalid && !userForm.username.$pristine }">
+                                <label>Số điện thoại*</label>
+                                <input type="number" name="phone" class="form-control" ng-model="user.sdt" ng-minlength="7" ng-maxlength="11">
+                                <p ng-show="userForm.phone.$error.minlength" class="help-block" style="color:red">Số điện thoại quá ngắn.</p>
+                                <p ng-show="userForm.phone.$error.maxlength" class="help-block" style="color:red">Đây không phải kiểu số điện thoại!</p>
                             </div>
-                            <div class="form-group">
-                                <label for="recipient-name" class="col-form-label">Số điện thoại :</label>
-                                <input type="text" class="form-control" ng-model="fm.sdt" id="">
-                            </div>
-                            <div class="form-group">
-                                <label for="recipient-name" class="col-form-label" ng-model="fm.email">Email:</label>
-                                <input type="email" class="form-control" id="">
+
+                            <!-- EMAIL -->
+                            <div class="form-group" ng-class="{ 'has-error' : userForm.email.$invalid && !userForm.email.$pristine }">
+                                <label>Email</label>
+                                <input type="email" name="email" class="form-control" ng-model="user.email">
+                                <p ng-show="userForm.email.$invalid && !userForm.email.$pristine" class="help-block">Enter a valid email.</p>
                             </div>
                             <div class="form-group">
                                 <label for="message-text" class="col-form-label">Khóa học:</label>
@@ -137,11 +148,11 @@
                                 <label for="message-text" class="col-form-label">Message:</label>
                                 <textarea class="form-control" id="message-text"></textarea>
                             </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Đóng</button>
+                                <input type="submit" value="Đăng ký ngay!" class="btn-submit btn btn-primary" name="submit" data-toggle="modal" ng-disabled="!user.name || !user.sdt" data-dismiss="modal" href="#myModal2">
+                            </div>
                         </form>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary" data-toggle="modal" href="#myModal2" data-dismiss="modal" ng-disabled="!fm">Send request!</button>
                     </div>
                 </div>
             </div>
@@ -152,7 +163,7 @@
             <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalCenterTitle">Register successfully!</h5>
+                        <h5 class="modal-title" id="exampleModalCenterTitle">Đăng ký thành công!</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
@@ -169,9 +180,9 @@
                 <div class="footer__box">
                     <h4>Nhật ngữ 3 chàng ngốc</h4>
                     <p></p>
-                    <p>Địa chỉ: Số 139 Cầu Diễn,Nam Từ Liêm , Hà Nội</p>
+                    <p>Địa chỉ: Số 140 Cầu Diễn,Nam Từ Liêm , Hà Nội</p>
                     <p>
-                        Hotline: 097 515 96 72
+                        Hotline: 097 515 96 72 & 0966.21.80.21
                     </p>
                     <p>Email: nhatngu3changngoc@gmail.com</p>
                 </div>
@@ -197,10 +208,7 @@
 <script src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.9"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script>$(document).ready(function () { function detectmob() { if (navigator.userAgent.match(/Android/i) || navigator.userAgent.match(/webOS/i) || navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPad/i) || navigator.userAgent.match(/iPod/i) || navigator.userAgent.match(/BlackBerry/i) || navigator.userAgent.match(/Windows Phone/i)) { return true; } else { return false; } } var t = { delay: 125, overlay: $(".fb-overlay"), widget: $(".fb-widget"), button: $(".fb-button") }; setTimeout(function () { $("div.fb-livechat").fadeIn() }, 8 * t.delay); if (!detectmob()) { $(".ctrlq").on("click", function (e) { e.preventDefault(), t.overlay.is(":visible") ? (t.overlay.fadeOut(t.delay), t.widget.stop().animate({ bottom: 0, opacity: 0 }, 2 * t.delay, function () { $(this).hide("slow"), t.button.show() })) : t.button.fadeOut("medium", function () { t.widget.stop().show().animate({ bottom: "30px", opacity: 1 }, 2 * t.delay), t.overlay.fadeIn(t.delay) }) }) } });</script>
-
     <script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v3.2"></script>
-    <script id="cid0020000213638688172" data-cfasync="false" async src="//st.chatango.com/js/gz/emb.js" style="width: 200px;height: 300px;">{ "handle": "3changngocnihongo", "arch": "js", "styles": { "a": "0084ef", "b": 100, "c": "FFFFFF", "d": "FFFFFF", "k": "0084ef", "l": "0084ef", "m": "0084ef", "n": "FFFFFF", "p": "10", "q": "0084ef", "r": 100, "pos": "bl", "cv": 1, "cvfnt": "Consolas, monaco, monospace, sans-serif", "cvbg": "3333ff", "cvfg": "ffffff", "cvw": 200, "cvh": 30, "ticker": 1, "fwtickm": 1 } }</script>
-
     <!-- End footer Area -->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
     <script src="~/Scripts/js/core.js"></script>
