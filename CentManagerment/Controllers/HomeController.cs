@@ -26,7 +26,10 @@ namespace CentManagerment.Controllers
             ViewBag.Message = "Your application description page.";
             return View();
         }
-
+        public ActionResult CourseOffline()
+        {
+            return View();
+        }
         public ActionResult Contact()
         {
             ViewBag.Message = "Your contact page.";

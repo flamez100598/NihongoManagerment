@@ -654,11 +654,12 @@ h6 {
     /* top: 151px; */
     bottom: 108px;
     right: 20px;
-    min-width: 100px;
-    min-height: 100px;
+    width: 80px;
+    height: 80px;
     border-radius: 100%;
 }
 .btn-primary{
     border-color:none;
 }
+
 /*# sourceMappingURL=style.css.map */
