@@ -3128,6 +3128,7 @@
     <Content Include="Assets\401\fonts\Montserrat-SemiBoldItalic.ttf" />
     <Content Include="Assets\401\fonts\Montserrat-Thin.ttf" />
     <Content Include="Assets\401\fonts\Montserrat-ThinItalic.ttf" />
+    <Content Include="libman.json" />
     <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
@@ -3225,7 +3226,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>49808</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:49808/</IISUrl>
+          <IISUrl>http://localhost:49809/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

@@ -11,14 +11,14 @@
                 <div class="row">
                     <div class="col-lg-12 breadcrumb">
                         <div class="col-lg-6">
-                            <a href="#">Trang chủ / Khóa học / N5</a>
+                            <a href="#">Trang chủ / Khóa học / @Model.CourseName</a>
 
                         </div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-lg-7 page-content">
-                        <h1 class="page-title-1">Khóa học</h1>
+                        <h1 class="page-title-1">Khóa học @Model.CourseName</h1>
                         <div class="summary-course">
                             <p class="total-hours">
                                 <img src="https://saki.edu.vn/image/icon/book.png">
@@ -30,7 +30,7 @@
                             </p>
                             <p>
                                 <img src="https://saki.edu.vn/image/icon/currency.png">
-                                Học phí (vnđ): <span class="tuition"><input value="@Model.Price"/></span> &nbsp; <span class="second-tuition">3,160,000</span>
+                                Học phí (vnđ): <span class="tuition">@Model.Price,000</span> &nbsp; <span class="second-tuition">3,160,000</span>
                             </p>
                         </div>
                         <div class="col-lg-10">
@@ -38,7 +38,7 @@
                             <div class="row">
                                 <div class="col-lg-3">
                                     <div class="teacher-box">
-                                        <img src="https://saki.edu.vn/msource/public/uploads/teacher/uyen-saki.jpg">
+                                        <img src="~/Assets/client/img/sensei/ssHong.JPG" style="height: 108px;"/>
                                     </div>
                                     <p class="teacher-name">
                                         Hồng SS
@@ -46,7 +46,7 @@
                                 </div>
                                 <div class="col-lg-3">
                                     <div class="teacher-box">
-                                        <img src="https://saki.edu.vn/msource/public/uploads/teacher/dung-saki.jpg">
+                                        <img src="~/Assets/client/img/sensei/ssDung.JPG" style="height: 108px;"/>
                                     </div>
                                     <p class="teacher-name">
                                         Dũng SS
@@ -54,7 +54,7 @@
                                 </div>
                                 <div class="col-lg-3">
                                     <div class="teacher-box">
-                                        <img src="https://saki.edu.vn/msource/public/uploads/teacher/manh.jpg">
+                                        <img src="~/Assets/client/img/sensei/ssQuyen.JPG" style="height: 108px;"/>
                                     </div>
                                     <p class="teacher-name">
                                         Quyền SS
