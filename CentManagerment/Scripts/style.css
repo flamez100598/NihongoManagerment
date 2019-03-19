@@ -469,6 +469,7 @@ h6 {
   line-height: unset;
   background: #fff;
   display: none;
+  z-index:999;
 }
 
 .header__menu li li {
@@ -649,19 +650,11 @@ h6 {
   overflow: unset;
 }
 .register-fix {
-    /* float: right; */
     position: fixed;
-    /* top: 151px; */
-    bottom: 108px;
-<<<<<<< HEAD
-    right: 20px;
-    width: 80px;
-    height: 80px;
-=======
+    bottom: 15px;
     left: 20px;
-    min-width: 100px;
-    min-height: 100px;
->>>>>>> 192afc561aaa5d1b1b24619a2a68e8f376ec4d7b
+    min-width: 80px;
+    min-height: 80px;
     border-radius: 100%;
 }
 .btn-primary{

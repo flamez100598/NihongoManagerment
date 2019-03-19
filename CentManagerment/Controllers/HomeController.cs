@@ -26,9 +26,10 @@ namespace CentManagerment.Controllers
             ViewBag.Message = "Your application description page.";
             return View();
         }
-        public ActionResult CourseOffline()
+        public ActionResult CourseOffline(int id)
         {
-            return View();
+            var model = new CourseManager().GetCourseById(id);
+            return View(model);
         }
         public ActionResult Contact()
         {
@@ -36,8 +37,6 @@ namespace CentManagerment.Controllers
 
             return View();
         }
-
-
         // Trang chi tiết
         public ActionResult DetailsNew(int? id)
         {
