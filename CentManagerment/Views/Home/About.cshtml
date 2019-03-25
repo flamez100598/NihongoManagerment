@@ -1,79 +1,118 @@
 ﻿@{
     ViewBag.Title = "About";
 }
+
+<div class="news">
+    <div class="container" style="padding:50px 0">
+        <div class="text-center">
+            <h3 class="thread">OUR EXPERIENCE</h3>
+            <img src="images/100x12.png" alt="">
+        </div>
+        <div class="main-news">
+            <div class="row">
+                <div class="col6">
+                    <div class="inner">
+                        <img src="~/Assets/client/img/sensei/ssDung.JPG" />
+                    </div>
+                </div>
+                <div class="col6">
+                    <div class="inner">
+                        <article>
+                            <h4 class="news-title">DONEC VARIUS SODALES ORCI</h4>
+                            <p>Donec varius sodales orci. Class aptent taciti sociosqu torquent, per inceptos himenaeos. End of content. Donec varius sodales orci. Class aptent taciti sociosqu torquent, per inceptos himenaeos. Donec varius sodales orci.Donec varius sodales orci. Class aptent taciti sociosqu torquent, per inceptos himenaeos. End of content. Donec varius sodales orci. Class aptent taciti sociosqu torquent, per inceptos himenaeos. Donec varius sodales orci.</p>
+                            <div class="readmore">
+                                <a href="#">READ MORE</a>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="row">
+                <div class="col6">
+                    <div class="inner">
+                        <article>
+                            <h4 class="news-title">DONEC VARIUS SODALES ORCI</h4>
+                            <p>Donec varius sodales orci. Class aptent taciti sociosqu torquent, per inceptos himenaeos. End of content. Donec varius sodales orci. Class aptent taciti sociosqu torquent, per inceptos himenaeos. Donec varius sodales orci.Donec varius sodales orci. Class aptent taciti sociosqu torquent, per inceptos himenaeos. End of content. Donec varius sodales orci. Class aptent taciti sociosqu torquent, per inceptos himenaeos. Donec varius sodales orci.</p>
+                            <div class="readmore">
+                                <a href="#">READ MORE</a>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+                <div class="col6">
+                    <div class="inner">
+                        <img src="~/Assets/client/img/sensei/ssHong.JPG" />
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="app-screenshot">
+    <div class="container">
+        <div class="text-center">
+            <h3 class="thread">Ảnh hoạt động</h3>
+            <img src="~/Assets/client/img/sensei/100x12.png" />
+        </div>
+        <div class="screenshot">
+            <div class="owl-carousel owl-theme">
+                <div class="item">
+                    <img src="~/Assets/client/img/study/anh1.JPG" />
+                </div>
+                <div class="item">
+                    <img src="~/Assets/client/img/study/anh2.JPG" />
+                </div>
+                <div class="item">
+                    <img src="~/Assets/client/img/study/anh11.JPG" />
+                </div>
+                <div class="item">
+                    <img src="~/Assets/client/img/study/anh4.JPG" />
+                </div>
+                <div class="item">
+                    <img src="~/Assets/client/img/study/anh5.JPG" />
+                </div>
+                <div class="item">
+                    <img src="~/Assets/client/img/study/anh6.jpg" />
+                </div>
+                <div class="item">
+                    <img src="~/Assets/client/img/study/anh7.JPG" />
+                </div>
+                <div class="item">
+                    <img src="~/Assets/client/img/study/anh8.JPG" />
+                </div>
+                <div class="item">
+                    <img src="~/Assets/client/img/study/anh9.JPG" />
+                </div>
+                <div class="item">
+                    <img src="~/Assets/client/img/study/anh10.JPG" />
+                </div>
+                <div class="item">
+                    <img src="~/Assets/client/img/study/anh11.JPG" />
+                </div>
+                <div class="item">
+                    <img src="~/Assets/client/img/study/anh4.JPG" />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@* contact *@
 <section>
     <article>
-        <div class="body-page course-details-page">
+        <div class="body-page" style="font-size:19px">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12 breadcrumb">
-                        <div class="col-lg-6">
-                            <a href="#">Trang chủ / Khóa học / N5</a>
-
-                        </div>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-lg-7 page-content">
-                        <h1 class="page-title-1">Khóa học tiếng Nhật  N5</h1>
-                        <div class="summary-course">
-                            <p class="total-hours">
-                                <img src="https://saki.edu.vn/image/icon/book.png">
-                                Số giờ học: 110 giờ
-                            </p>
-                            <p class="total-date">
-                                <img src="https://saki.edu.vn/image/icon/calenda.png">
-                                Số buổi học: 43 buổi
-                            </p>
-                            <p>
-                                <img src="https://saki.edu.vn/image/icon/currency.png">
-                                Học phí (vnđ): <span class="tuition">3,160,000</span> &nbsp; <span class="second-tuition">3,160,000</span>
-                            </p>
-                        </div>
-                        <div class="col-lg-10">
-                            <h2 class="page-title-1">Giáo viên</h2>
+                <div class="row contact-detail">
+                    <div class="col-lg-6">
+                        <form class="contact-form" action="https://saki.edu.vn/mail.php" method="POST" name='contact-form'>
+                            <input type="hidden" name="_token" value="pgYD4pONX6OMEgH5wj33dObmSD047QAfcKxFwrR0">
                             <div class="row">
-                                <div class="col-lg-3">
-                                    <div class="teacher-box">
-                                        <img src="https://saki.edu.vn/msource/public/uploads/teacher/uyen-saki.jpg">
-                                    </div>
-                                    <p class="teacher-name">
-                                        Hồng SS
-                                    </p>
-                                </div>
-                                <div class="col-lg-3">
-                                    <div class="teacher-box">
-                                        <img src="https://saki.edu.vn/msource/public/uploads/teacher/dung-saki.jpg">
-                                    </div>
-                                    <p class="teacher-name">
-                                        Dũng SS
-                                    </p>
-                                </div>
-                                <div class="col-lg-3">
-                                    <div class="teacher-box">
-                                        <img src="https://saki.edu.vn/msource/public/uploads/teacher/manh.jpg">
-                                    </div>
-                                    <p class="teacher-name">
-                                        Quyền SS
-                                    </p>
-                                </div>
-                                <div class="col-lg-3">
-                                    <div class="teacher-box">
-                                        <img src="https://saki.edu.vn/msource/public/uploads/teacher/cau-saki.jpg">
-                                    </div>
-                                    <p class="teacher-name">
-                                        Cầu SS
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-5">
-                        <form class="contact-form" method="POST" name='contact-form'>
-                            <input type="hidden" name="_token" value="AU8eZQEr5NzLDjh6Mz9eAlgCeYT0nbs0e90Yc0zW">
-                            <div class="row">
-                                <div class="col-lg-12">
-                                    <input type="text" name="title" class="form-control" placeholder="Khóa học - Lớp học" value="N5">
+                                <div class="col-lg-12" style="padding-left: 15px;">
                                     <input type="text" name="full_name" class="form-control" placeholder="Họ tên của bạn *" required>
                                     <input type="text" name="phone" class="form-control" placeholder="Số điện thoại liên hệ *" required>
                                     <input type="email" name="email" class="form-control" placeholder="Email liên hệ *" required>
@@ -83,695 +122,27 @@
                             </div>
                         </form>
                     </div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-12">
-                        <table cellspacing="0" style="border-collapse:collapse; border:none; width:431pt">
-                            <tbody>
-                                <tr>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap; width:431pt">
-                                        <span style="font-size:22px"><strong><span style="color:#2980b9"><span style="font-family:Calibri,sans-serif">LỘ TR&Igrave;NH KH&Oacute;A HỌC N5</span></span></strong></span>
-                                        <hr />
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap">&nbsp;</td>
-                                </tr>
-                                <tr>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap">
-                                        <em><strong><span style="font-size:16px"><span style="color:#ff0000"><span style="font-family:Calibri,sans-serif">MỤC TI&Ecirc;U KH&Oacute;A HỌC</span></span></span></strong></em>
-                                        <hr />
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap">
-                                        <p><span style="font-size:11pt"><span style="color:black"><span style="font-family:Calibri,sans-serif">1. Bảng chữ c&aacute;i</span></span></span></p>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap">
-                                        <ul>
-                                            <li><span style="font-size:11pt"><span style="color:black"><span style="font-family:Calibri,sans-serif">Học vi&ecirc;n nắm được c&aacute;ch đọc, c&aacute;ch viết v&agrave; ph&aacute;t &acirc;m 2 bảng chữ c&aacute;i: Hiragana v&agrave; Katakana</span></span></span></li>
-                                        </ul>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap">
-                                        <ul>
-                                            <li><span style="font-size:11pt"><span style="color:black"><span style="font-family:Calibri,sans-serif">Ngo&agrave;i ra, Học vi&ecirc;n c&oacute; thể nắm chắc c&aacute;ch đọc c&aacute;c biến &acirc;m, &acirc;m gh&eacute;p, trường &acirc;m, &acirc;m ngắt v&agrave; c&aacute;ch ph&aacute;t &acirc;m c&aacute;c chữ đặc biệt</span></span></span></li>
-                                        </ul>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap">
-                                        <p><span style="font-size:11pt"><span style="color:black"><span style="font-family:Calibri,sans-serif">2. Chữ h&aacute;n</span></span></span></p>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap">
-                                        <ul>
-                                            <li><span style="font-size:11pt"><span style="color:black"><span style="font-family:Calibri,sans-serif">Sau khi kết th&uacute;c chương tr&igrave;nh N5, tổng lượng chữ H&aacute;n học vi&ecirc;n c&oacute; thể đọc l&agrave; 200 chữ v&agrave; khoảng 500 biến thể Kanji</span></span></span></li>
-                                        </ul>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap"><span style="font-size:11pt"><span style="color:black"><span style="font-family:Calibri,sans-serif">3. Từ vựng</span></span></span></td>
-                                </tr>
-                                <tr>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap">
-                                        <ul>
-                                            <li><span style="font-size:11pt"><span style="color:black"><span style="font-family:Calibri,sans-serif">600 từ vựng sơ cấp, nhớ bằng mắt v&agrave; tai</span></span></span></li>
-                                        </ul>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap"><span style="font-size:11pt"><span style="color:black"><span style="font-family:Calibri,sans-serif">4. Hội thoại</span></span></span></td>
-                                </tr>
-                                <tr>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap">
-                                        <ul>
-                                            <li><span style="font-size:11pt"><span style="color:black"><span style="font-family:Calibri,sans-serif">Chiếm 40% thời lượng kh&oacute;a học</span></span></span></li>
-                                        </ul>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap">
-                                        <ul>
-                                            <li><span style="font-size:11pt"><span style="color:black"><span style="font-family:Calibri,sans-serif">Giao tiếp phản xạ, học vi&ecirc;n c&oacute; c&aacute;c chủ đề hội thoại theo b&agrave;i gi&uacute;p học vi&ecirc;n c&oacute; thể nhớ được từ vựng l&acirc;u, v&agrave; &aacute;p dụng kiến thức đ&atilde; học v&agrave;o hội thoại</span></span></span></li>
-                                        </ul>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap"><span style="font-size:11pt"><span style="color:black"><span style="font-family:Calibri,sans-serif">5. Nghe &amp; Đọc</span></span></span></td>
-                                </tr>
-                                <tr>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap">
-                                        <ul>
-                                            <li><span style="font-size:11pt"><span style="color:black"><span style="font-family:Calibri,sans-serif">2 kĩ n&acirc;ng được học ở mỗi b&agrave;i gi&uacute;p học vi&ecirc;n c&oacute; được kĩ năng nghe đọc tốt nhất khi đi thi JLPT</span></span></span></li>
-                                        </ul>
-
-                                        <hr />
-                                        <p>&nbsp;</p>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-
-                        <p><em><span style="font-size:16px"><span style="color:#c0392b">&nbsp;TỔNG HỢP NGỮ PH&Aacute;P&nbsp;</span></span></em></p>
-
-                        <hr />
-                        <table cellspacing="0" style="border-collapse:collapse; border:none; width:407pt">
-                            <tbody>
-                                <tr>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap; width:48pt"><span style="font-size:11pt"><span style="color:black"><span style="font-family:Calibri,sans-serif">B&agrave;i 1</span></span></span></td>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap; width:359pt"><span style="font-size:11pt"><span style="color:black"><span style="font-family:Calibri,sans-serif">+ Khẳng định v&agrave; phủ định của một danh từ.</span></span></span></td>
-                                </tr>
-                                <tr>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap">&nbsp;</td>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap"><span style="font-size:11pt"><span style="color:black"><span style="font-family:Calibri,sans-serif">+ Trợ từ は</span></span></span></td>
-                                </tr>
-                                <tr>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap">&nbsp;</td>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap"><span style="font-size:11pt"><span style="color:black"><span style="font-family:Calibri,sans-serif">+ C&acirc;u nghi vấn</span></span></span></td>
-                                </tr>
-                                <tr>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap">&nbsp;</td>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap"><span style="font-size:11pt"><span style="color:black"><span style="font-family:Calibri,sans-serif">+ Trợ từ も</span></span></span></td>
-                                </tr>
-                                <tr>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap">&nbsp;</td>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap"><span style="font-size:11pt"><span style="color:black"><span style="font-family:Calibri,sans-serif">+ Trợ từ の</span></span></span></td>
-                                </tr>
-                                <tr>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap">&nbsp;</td>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap"><span style="font-size:11pt"><span style="color:black"><span style="font-family:Calibri,sans-serif">+ Hỏi tuổi t&aacute;c - Đếm tuổi</span></span></span></td>
-                                </tr>
-                                <tr>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap"><span style="font-size:11pt"><span style="color:black"><span style="font-family:Calibri,sans-serif">B&agrave;i 2</span></span></span></td>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap"><span style="font-size:11pt"><span style="color:black"><span style="font-family:Calibri,sans-serif">+ C&acirc;u hỏi x&aacute;c nhận trả lời với はい hoặc いいえ.</span></span></span></td>
-                                </tr>
-                                <tr>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap">&nbsp;</td>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap"><span style="font-size:11pt"><span style="color:black"><span style="font-family:Calibri,sans-serif">+ C&acirc;u hỏi với nghi vấn từ</span></span></span></td>
-                                </tr>
-                                <tr>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap">&nbsp;</td>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap"><span style="font-size:11pt"><span style="color:black"><span style="font-family:Calibri,sans-serif">+　～ですか、～ですか：C&acirc;u hỏi lựa chọn</span></span></span></td>
-                                </tr>
-                                <tr>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap">&nbsp;</td>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap"><span style="font-size:11pt"><span style="color:black"><span style="font-family:Calibri,sans-serif">+　これ：c&aacute;i n&agrave;y, đ&acirc;y　／　それ：c&aacute;i đ&oacute;, đ&oacute;　／　あれ：c&aacute;i kia, kia</span></span></span></td>
-                                </tr>
-                                <tr>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap">&nbsp;</td>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap"><span style="font-size:11pt"><span style="color:black"><span style="font-family:Calibri,sans-serif">+　Nghi vấn từ なんの：　về c&aacute;i g&igrave;?</span></span></span></td>
-                                </tr>
-                                <tr>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap">&nbsp;</td>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap"><span style="font-size:11pt"><span style="color:black"><span style="font-family:Calibri,sans-serif">+　Nghi vấn từ&nbsp; だれの：Của ai?</span></span></span></td>
-                                </tr>
-                                <tr>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap">&nbsp;</td>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap"><span style="font-size:11pt"><span style="color:black"><span style="font-family:Calibri,sans-serif">+　Nghi vấn từ どこの：D&ugrave;ng để hỏi về xuất xứ</span></span></span></td>
-                                </tr>
-                                <tr>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap"><span style="font-size:11pt"><span style="color:black"><span style="font-family:Calibri,sans-serif">B&agrave;i 3</span></span></span></td>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap"><span style="font-size:11pt"><span style="color:black"><span style="font-family:Calibri,sans-serif">+　ここ、そこ、あそこ：chỗ n&agrave;y, đ&oacute; đ&oacute;, chỗ kia</span></span></span></td>
-                                </tr>
-                                <tr>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap">&nbsp;</td>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap"><span style="font-size:11pt"><span style="color:black"><span style="font-family:Calibri,sans-serif">+　Mẫu c&acirc;u chỉ nơi chốn</span></span></span></td>
-                                </tr>
-                                <tr>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap">&nbsp;</td>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap"><span style="font-size:11pt"><span style="color:black"><span style="font-family:Calibri,sans-serif">+　C&acirc;u hỏi với nghi vấn từ chỉ nơi chốn</span></span></span></td>
-                                </tr>
-                                <tr>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap">&nbsp;</td>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap"><span style="font-size:11pt"><span style="color:black"><span style="font-family:Calibri,sans-serif">+　～なんがい：~ Tầng mấy?</span></span></span></td>
-                                </tr>
-                                <tr>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap">&nbsp;</td>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap"><span style="font-size:11pt"><span style="color:black"><span style="font-family:Calibri,sans-serif">+　~ いくら：gi&aacute; bao nhi&ecirc;u?</span></span></span></td>
-                                </tr>
-                                <tr>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap">&nbsp;</td>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap"><span style="font-size:11pt"><span style="color:black"><span style="font-family:Calibri,sans-serif">+　Nghi vấn từ どちら</span></span></span></td>
-                                </tr>
-                                <tr>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap"><span style="font-size:11pt"><span style="color:black"><span style="font-family:Calibri,sans-serif">B&agrave;i 4</span></span></span></td>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap"><span style="font-size:11pt"><span style="color:black"><span style="font-family:Calibri,sans-serif">+ ~ なんじ：mấy giờ? ~なんぷん：mấy ph&uacute;t?</span></span></span></td>
-                                </tr>
-                                <tr>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap">&nbsp;</td>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap"><span style="font-size:11pt"><span style="color:black"><span style="font-family:Calibri,sans-serif">+ Trợ từ ～に: L&uacute;c ~</span></span></span></td>
-                                </tr>
-                                <tr>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap">&nbsp;</td>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap"><span style="font-size:11pt"><span style="color:black"><span style="font-family:Calibri,sans-serif">+ から&hellip;まで： Từ ... đến</span></span></span></td>
-                                </tr>
-                                <tr>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap">&nbsp;</td>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap"><span style="font-size:11pt"><span style="color:black"><span style="font-family:Calibri,sans-serif">+ Động từ chia ở qu&aacute; khứ, hiện tại, tương lai</span></span></span></td>
-                                </tr>
-                                <tr>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap">&nbsp;</td>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap"><span style="font-size:11pt"><span style="color:black"><span style="font-family:Calibri,sans-serif">+ Hỏi số điện thoại&nbsp;~ なんばん：số mấy?</span></span></span></td>
-                                </tr>
-                                <tr>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap"><span style="font-size:11pt"><span style="color:black"><span style="font-family:Calibri,sans-serif">B&agrave;i 5</span></span></span></td>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap"><span style="font-size:11pt"><span style="color:black"><span style="font-family:Calibri,sans-serif">+ Động từ いきます・きます・かえります</span></span></span></td>
-                                </tr>
-                                <tr>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap">&nbsp;</td>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap"><span style="font-size:11pt"><span style="color:black"><span style="font-family:Calibri,sans-serif">+　Trợ từ へ　d&ugrave;ng để chỉ về phương hướng</span></span></span></td>
-                                </tr>
-                                <tr>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap">&nbsp;</td>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap"><span style="font-size:11pt"><span style="color:black"><span style="font-family:Calibri,sans-serif">+ Trợ từ も trường hợp nhấn mạnh phủ định</span></span></span></td>
-                                </tr>
-                                <tr>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap">&nbsp;</td>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap"><span style="font-size:11pt"><span style="color:black"><span style="font-family:Calibri,sans-serif">+ ~ なんで：Bằng c&aacute;i g&igrave;? Bằng c&aacute;ch n&agrave;o?</span></span></span></td>
-                                </tr>
-                                <tr>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap">&nbsp;</td>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap"><span style="font-size:11pt"><span style="color:black"><span style="font-family:Calibri,sans-serif">+ ~ だれと： C&ugrave;ng với ai?</span></span></span></td>
-                                </tr>
-                                <tr>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap">&nbsp;</td>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap"><span style="font-size:11pt"><span style="color:black"><span style="font-family:Calibri,sans-serif">+ Một số trạng từ chỉ thời gian</span></span></span></td>
-                                </tr>
-                                <tr>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap">&nbsp;</td>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap"><span style="font-size:11pt"><span style="color:black"><span style="font-family:Calibri,sans-serif">+ Đếm ng&agrave;y th&aacute;ng ~ なんがつ：Th&aacute;ng mấy?</span></span></span></td>
-                                </tr>
-                                <tr>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap">&nbsp;</td>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap"><span style="font-size:11pt"><span style="color:black"><span style="font-family:Calibri,sans-serif">+ ~ いつ：Khi n&agrave;o?</span></span></span></td>
-                                </tr>
-                                <tr>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap"><span style="font-size:11pt"><span style="color:black"><span style="font-family:Calibri,sans-serif">B&agrave;i 6</span></span></span></td>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap"><span style="font-size:11pt"><span style="color:black"><span style="font-family:Calibri,sans-serif">+ Chia nh&oacute;m động từ</span></span></span></td>
-                                </tr>
-                                <tr>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap">&nbsp;</td>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap"><span style="font-size:11pt"><span style="color:black"><span style="font-family:Calibri,sans-serif">+ Chia động từ ở thể nguy&ecirc;n mẫu sang thể lịch sự (ます形)</span></span></span></td>
-                                </tr>
-                                <tr>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap">&nbsp;</td>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap"><span style="font-size:11pt"><span style="color:black"><span style="font-family:Calibri,sans-serif">+ Trợ từ&nbsp;を</span></span></span></td>
-                                </tr>
-                                <tr>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap">&nbsp;</td>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap"><span style="font-size:11pt"><span style="color:black"><span style="font-family:Calibri,sans-serif">+ ~ なに： c&aacute;i g&igrave;?</span></span></span></td>
-                                </tr>
-                                <tr>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap">&nbsp;</td>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap"><span style="font-size:11pt"><span style="color:black"><span style="font-family:Calibri,sans-serif">+ Quy tắc nhấn mạnh của trợ từ&nbsp;も</span></span></span></td>
-                                </tr>
-                                <tr>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap">&nbsp;</td>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap"><span style="font-size:11pt"><span style="color:black"><span style="font-family:Calibri,sans-serif">+ ～&nbsp;に&nbsp;会います&nbsp;/&nbsp;～&nbsp;と&nbsp;会います</span></span></span></td>
-                                </tr>
-                                <tr>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap">&nbsp;</td>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap"><span style="font-size:11pt"><span style="color:black"><span style="font-family:Calibri,sans-serif">+ ~ で：Tại, ở</span></span></span></td>
-                                </tr>
-                                <tr>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap">&nbsp;</td>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap"><span style="font-size:11pt"><span style="color:black"><span style="font-family:Calibri,sans-serif">+ ~ と：c&ugrave;ng với</span></span></span></td>
-                                </tr>
-                                <tr>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap">&nbsp;</td>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap"><span style="font-size:11pt"><span style="color:black"><span style="font-family:Calibri,sans-serif">+ Sắp xếp c&aacute;c trợ từ trong c&acirc;u</span></span></span></td>
-                                </tr>
-                                <tr>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap">&nbsp;</td>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap"><span style="font-size:11pt"><span style="color:black"><span style="font-family:Calibri,sans-serif">+ ～Vましょう&nbsp;c&ugrave;ng nhau l&agrave;m ~</span></span></span></td>
-                                </tr>
-                                <tr>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap"><span style="font-size:11pt"><span style="color:black"><span style="font-family:Calibri,sans-serif">B&agrave;i 7</span></span></span></td>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap"><span style="font-size:11pt"><span style="color:black"><span style="font-family:Calibri,sans-serif">+ ~ で：bằng, bằng c&aacute;ch</span></span></span></td>
-                                </tr>
-                                <tr>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap">&nbsp;</td>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap"><span style="font-size:11pt"><span style="color:black"><span style="font-family:Calibri,sans-serif">+ Trợ từ に</span></span></span></td>
-                                </tr>
-                                <tr>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap">&nbsp;</td>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap"><span style="font-size:11pt"><span style="color:black"><span style="font-family:Calibri,sans-serif">+ ～もう　～Vました：~ đ&atilde; ~ rồi</span></span></span></td>
-                                </tr>
-                                <tr>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap">&nbsp;</td>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap"><span style="font-size:11pt"><span style="color:black"><span style="font-family:Calibri,sans-serif">+ ~ あげます：Tặng</span></span></span></td>
-                                </tr>
-                                <tr>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap">&nbsp;</td>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap"><span style="font-size:11pt"><span style="color:black"><span style="font-family:Calibri,sans-serif">+ ~ くれます：cho</span></span></span></td>
-                                </tr>
-                                <tr>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap">&nbsp;</td>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap"><span style="font-size:11pt"><span style="color:black"><span style="font-family:Calibri,sans-serif">+ ~ もらいます：nhận</span></span></span></td>
-                                </tr>
-                                <tr>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap"><span style="font-size:11pt"><span style="color:black"><span style="font-family:Calibri,sans-serif">B&agrave;i 8</span></span></span></td>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap"><span style="font-size:11pt"><span style="color:black"><span style="font-family:Calibri,sans-serif">+ Giới thiệu về t&iacute;nh từ</span></span></span></td>
-                                </tr>
-                                <tr>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap">&nbsp;</td>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap"><span style="font-size:11pt"><span style="color:black"><span style="font-family:Calibri,sans-serif">+ C&aacute;ch chia T&iacute;nh từ</span></span></span></td>
-                                </tr>
-                                <tr>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap">&nbsp;</td>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap"><span style="font-size:11pt"><span style="color:black"><span style="font-family:Calibri,sans-serif">+ Nghi vấn từ&nbsp;どう</span></span></span></td>
-                                </tr>
-                                <tr>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap">&nbsp;</td>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap"><span style="font-size:11pt"><span style="color:black"><span style="font-family:Calibri,sans-serif">+ ~ そして：V&agrave;, vừa ~ vừa, rồi th&igrave;</span></span></span></td>
-                                </tr>
-                                <tr>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap">&nbsp;</td>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap"><span style="font-size:11pt"><span style="color:black"><span style="font-family:Calibri,sans-serif">+ ~ しかし：nhưng</span></span></span></td>
-                                </tr>
-                                <tr>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap">&nbsp;</td>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap"><span style="font-size:11pt"><span style="color:black"><span style="font-family:Calibri,sans-serif">+ ~ どんな　N：như thế n&agrave;o?</span></span></span></td>
-                                </tr>
-                                <tr>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap">&nbsp;</td>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap"><span style="font-size:11pt"><span style="color:black"><span style="font-family:Calibri,sans-serif">+ ～あまり～ない：　kh&ocirc;ng ~ lắm</span></span></span></td>
-                                </tr>
-                                <tr>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap">&nbsp;</td>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap"><span style="font-size:11pt"><span style="color:black"><span style="font-family:Calibri,sans-serif">+ ~ どれ・どのN：　C&aacute;i n&agrave;o?</span></span></span></td>
-                                </tr>
-                                <tr>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap"><span style="font-size:11pt"><span style="color:black"><span style="font-family:Calibri,sans-serif">B&agrave;i 9</span></span></span></td>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap"><span style="font-size:11pt"><span style="color:black"><span style="font-family:Calibri,sans-serif">+ ~ が： đi với c&aacute;c t&iacute;nh từ chỉ cảm x&uacute;c, mức độ</span></span></span></td>
-                                </tr>
-                                <tr>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap">&nbsp;</td>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap"><span style="font-size:11pt"><span style="color:black"><span style="font-family:Calibri,sans-serif">+ ~ NをVること hoặc NをVるの：l&agrave; một cụm danh từ</span></span></span></td>
-                                </tr>
-                                <tr>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap">&nbsp;</td>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap"><span style="font-size:11pt"><span style="color:black"><span style="font-family:Calibri,sans-serif">+ ~ が　あります：　c&oacute;</span></span></span></td>
-                                </tr>
-                                <tr>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap">&nbsp;</td>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap"><span style="font-size:11pt"><span style="color:black"><span style="font-family:Calibri,sans-serif">+ ~ Nが 分かります</span></span></span></td>
-                                </tr>
-                                <tr>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap">&nbsp;</td>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap"><span style="font-size:11pt"><span style="color:black"><span style="font-family:Calibri,sans-serif">+ C&aacute;c từ chỉ mức độ</span></span></span></td>
-                                </tr>
-                                <tr>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap">&nbsp;</td>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap"><span style="font-size:11pt"><span style="color:black"><span style="font-family:Calibri,sans-serif">+ ~ どうして：Tại sao?</span></span></span></td>
-                                </tr>
-                                <tr>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap"><span style="font-size:11pt"><span style="color:black"><span style="font-family:Calibri,sans-serif">B&agrave;i 10</span></span></span></td>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap"><span style="font-size:11pt"><span style="color:black"><span style="font-family:Calibri,sans-serif">+&nbsp;~ あります&nbsp; /&nbsp;&nbsp;~&nbsp;います&nbsp; ： C&oacute;</span></span></span></td>
-                                </tr>
-                                <tr>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap">&nbsp;</td>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap"><span style="font-size:11pt"><span style="color:black"><span style="font-family:Calibri,sans-serif">+ ～は　～に　（あります／います）</span></span></span></td>
-                                </tr>
-                                <tr>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap">&nbsp;</td>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap"><span style="font-size:11pt"><span style="color:black"><span style="font-family:Calibri,sans-serif">+ C&aacute;c từ chỉ vị tr&iacute;: うえ,した,なか,...</span></span></span></td>
-                                </tr>
-                                <tr>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap">&nbsp;</td>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap"><span style="font-size:11pt"><span style="color:black"><span style="font-family:Calibri,sans-serif">+ ~ あいだ: Ở giữa ~</span></span></span></td>
-                                </tr>
-                                <tr>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap">&nbsp;</td>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap"><span style="font-size:11pt"><span style="color:black"><span style="font-family:Calibri,sans-serif">+ ~ N1や　N2や。。。など：　N&agrave;o l&agrave; ~ n&agrave;o l&agrave;~</span></span></span></td>
-                                </tr>
-                                <tr>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap">&nbsp;</td>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap"><span style="font-size:11pt"><span style="color:black"><span style="font-family:Calibri,sans-serif">+ Dạng c&acirc;u hỏi cần c&oacute; sự x&aacute;c nhận: ~ なにか / どこか / だれか</span></span></span></td>
-                                </tr>
-                                <tr>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap"><span style="font-size:11pt"><span style="color:black"><span style="font-family:Calibri,sans-serif">B&agrave;i 11</span></span></span></td>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap"><span style="font-size:11pt"><span style="color:black"><span style="font-family:Calibri,sans-serif">+ C&aacute;ch đếm c&aacute;c loại v&agrave; c&aacute;ch d&ugrave;ng về số lượng, thời lượng</span></span></span></td>
-                                </tr>
-                                <tr>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap">&nbsp;</td>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap"><span style="font-size:11pt"><span style="color:black"><span style="font-family:Calibri,sans-serif">+ C&aacute;ch d&ugrave;ng số lượng, lượng từ</span></span></span></td>
-                                </tr>
-                                <tr>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap">&nbsp;</td>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap"><span style="font-size:11pt"><span style="color:black"><span style="font-family:Calibri,sans-serif">+ なんかい：Mấy lần?</span></span></span></td>
-                                </tr>
-                                <tr>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap">&nbsp;</td>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap"><span style="font-size:11pt"><span style="color:black"><span style="font-family:Calibri,sans-serif">+ Nối nhiều loại c&oacute; số lượng kh&aacute;c nhau trong c&ugrave;ng một c&acirc;u</span></span></span></td>
-                                </tr>
-                                <tr>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap">&nbsp;</td>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap"><span style="font-size:11pt"><span style="color:black"><span style="font-family:Calibri,sans-serif">+ ~ ぐらい：khoảng~</span></span></span></td>
-                                </tr>
-                                <tr>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap">&nbsp;</td>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap"><span style="font-size:11pt"><span style="color:black"><span style="font-family:Calibri,sans-serif">+ どのぐらい：Khoảng bao nhi&ecirc;u?</span></span></span></td>
-                                </tr>
-                                <tr>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap">&nbsp;</td>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap"><span style="font-size:11pt"><span style="color:black"><span style="font-family:Calibri,sans-serif">+ ~ だけ：chỉ</span></span></span></td>
-                                </tr>
-                                <tr>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap">&nbsp;</td>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap"><span style="font-size:11pt"><span style="color:black"><span style="font-family:Calibri,sans-serif">+ ~ で：To&agrave;n bộ, tổng cộng, trong v&ograve;ng</span></span></span></td>
-                                </tr>
-                                <tr>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap"><span style="font-size:11pt"><span style="color:black"><span style="font-family:Calibri,sans-serif">B&agrave;i 12</span></span></span></td>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap"><span style="font-size:11pt"><span style="color:black"><span style="font-family:Calibri,sans-serif">+ Chia Danh từ- t&iacute;nh từ (&Ocirc;n tập)</span></span></span></td>
-                                </tr>
-                                <tr>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap">&nbsp;</td>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap"><span style="font-size:11pt"><span style="color:black"><span style="font-family:Calibri,sans-serif">+ ~ より： hơn</span></span></span></td>
-                                </tr>
-                                <tr>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap">&nbsp;</td>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap"><span style="font-size:11pt"><span style="color:black"><span style="font-family:Calibri,sans-serif">+ ~ ほど～ない：~ kh&ocirc;ng bằng ~</span></span></span></td>
-                                </tr>
-                                <tr>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap">&nbsp;</td>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap"><span style="font-size:11pt"><span style="color:black"><span style="font-family:Calibri,sans-serif">+ ~ おなじ： bằng, giống nhau</span></span></span></td>
-                                </tr>
-                                <tr>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap">&nbsp;</td>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap"><span style="font-size:11pt"><span style="color:black"><span style="font-family:Calibri,sans-serif">+ ~ いちばん：　Nhất</span></span></span></td>
-                                </tr>
-                                <tr>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap">&nbsp;</td>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap"><span style="font-size:11pt"><span style="color:black"><span style="font-family:Calibri,sans-serif">+ c&acirc;u hỏi so s&aacute;nh - ~ どちら：đằng n&agrave;o? về ph&iacute;a n&agrave;o?</span></span></span></td>
-                                </tr>
-                                <tr>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap"><span style="font-size:11pt"><span style="color:black"><span style="font-family:Calibri,sans-serif">B&agrave;i 13</span></span></span></td>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap"><span style="font-size:11pt"><span style="color:black"><span style="font-family:Calibri,sans-serif">+ ～が 欲しい：&nbsp;Muốn c&oacute;&nbsp;～</span></span></span></td>
-                                </tr>
-                                <tr>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap">&nbsp;</td>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap"><span style="font-size:11pt"><span style="color:black"><span style="font-family:Calibri,sans-serif">+ C&aacute;ch chia thể&nbsp;たい</span></span></span></td>
-                                </tr>
-                                <tr>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap">&nbsp;</td>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap"><span style="font-size:11pt"><span style="color:black"><span style="font-family:Calibri,sans-serif">+ ~ Vたい： Muốn l&agrave;m ~</span></span></span></td>
-                                </tr>
-                                <tr>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap">&nbsp;</td>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap"><span style="font-size:11pt"><span style="color:black"><span style="font-family:Calibri,sans-serif">+ ~ いたい：đau</span></span></span></td>
-                                </tr>
-                                <tr>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap">&nbsp;</td>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap"><span style="font-size:11pt"><span style="color:black"><span style="font-family:Calibri,sans-serif">+ Trợ từ&nbsp;に:chỉ mục đ&iacute;ch của h&agrave;nh động</span></span></span></td>
-                                </tr>
-                                <tr>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap">&nbsp;</td>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap"><span style="font-size:11pt"><span style="color:black"><span style="font-family:Calibri,sans-serif">+ ～ に　行きます:~ Đi ~ để ~</span></span></span></td>
-                                </tr>
-                                <tr>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap"><span style="font-size:11pt"><span style="color:black"><span style="font-family:Calibri,sans-serif">B&agrave;i 14</span></span></span></td>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap"><span style="font-size:11pt"><span style="color:black"><span style="font-family:Calibri,sans-serif">+ C&aacute;ch chia động từ ở thể&nbsp;て</span></span></span></td>
-                                </tr>
-                                <tr>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap">&nbsp;</td>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap"><span style="font-size:11pt"><span style="color:black"><span style="font-family:Calibri,sans-serif">+ ～Vてください： Xin h&atilde;y l&agrave;m ~</span></span></span></td>
-                                </tr>
-                                <tr>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap">&nbsp;</td>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap"><span style="font-size:11pt"><span style="color:black"><span style="font-family:Calibri,sans-serif">+ C&aacute;ch chia Vかた</span></span></span></td>
-                                </tr>
-                                <tr>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap">&nbsp;</td>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap"><span style="font-size:11pt"><span style="color:black"><span style="font-family:Calibri,sans-serif">+ ~ Vかた：c&aacute;ch l&agrave;m ~</span></span></span></td>
-                                </tr>
-                                <tr>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap">&nbsp;</td>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap"><span style="font-size:11pt"><span style="color:black"><span style="font-family:Calibri,sans-serif">+ ～Vかた：c&aacute;ch l&agrave;m ~</span></span></span></td>
-                                </tr>
-                                <tr>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap">&nbsp;</td>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap"><span style="font-size:11pt"><span style="color:black"><span style="font-family:Calibri,sans-serif">+ ～Vましょうか：để t&ocirc;i l&agrave;m ~</span></span></span></td>
-                                </tr>
-                                <tr>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap">&nbsp;</td>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap"><span style="font-size:11pt"><span style="color:black"><span style="font-family:Calibri,sans-serif">+ T&oacute;m tắt về Vましょう</span></span></span></td>
-                                </tr>
-                                <tr>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap"><span style="font-size:11pt"><span style="color:black"><span style="font-family:Calibri,sans-serif">B&agrave;i 15</span></span></span></td>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap"><span style="font-size:11pt"><span style="color:black"><span style="font-family:Calibri,sans-serif">+ ~ Vても　いいです：l&agrave;m ~ cũng được</span></span></span></td>
-                                </tr>
-                                <tr>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap">&nbsp;</td>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap"><span style="font-size:11pt"><span style="color:black"><span style="font-family:Calibri,sans-serif">+ ~ Vては　いけません：Kh&ocirc;ng được ph&eacute;p ~</span></span></span></td>
-                                </tr>
-                                <tr>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap">&nbsp;</td>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap"><span style="font-size:11pt"><span style="color:black"><span style="font-family:Calibri,sans-serif">+ Mẫu c&acirc;u xin ph&eacute;p l&agrave;m ~</span></span></span></td>
-                                </tr>
-                                <tr>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap">&nbsp;</td>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap"><span style="font-size:11pt"><span style="color:black"><span style="font-family:Calibri,sans-serif">+ ～Vています：đang~</span></span></span></td>
-                                </tr>
-                                <tr>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap">&nbsp;</td>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap"><span style="font-size:11pt"><span style="color:black"><span style="font-family:Calibri,sans-serif">+ 4 Động từ lu&ocirc;n lu&ocirc;n ở Vています</span></span></span></td>
-                                </tr>
-                                <tr>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap"><span style="font-size:11pt"><span style="color:black"><span style="font-family:Calibri,sans-serif">B&agrave;i 16</span></span></span></td>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap"><span style="font-size:11pt"><span style="color:black"><span style="font-family:Calibri,sans-serif">+ Trợ từ&nbsp;に、を</span></span></span></td>
-                                </tr>
-                                <tr>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap">&nbsp;</td>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap"><span style="font-size:11pt"><span style="color:black"><span style="font-family:Calibri,sans-serif">+ C&aacute;ch thức d&ugrave;ng phương tiện giao th&ocirc;ng</span></span></span></td>
-                                </tr>
-                                <tr>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap">&nbsp;</td>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap"><span style="font-size:11pt"><span style="color:black"><span style="font-family:Calibri,sans-serif">+ Nối c&acirc;u đơn th&agrave;nh c&acirc;u gh&eacute;p</span></span></span></td>
-                                </tr>
-                                <tr>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap">&nbsp;</td>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap"><span style="font-size:11pt"><span style="color:black"><span style="font-family:Calibri,sans-serif">+ ～Vてから</span></span></span></td>
-                                </tr>
-                                <tr>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap">&nbsp;</td>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap"><span style="font-size:11pt"><span style="color:black"><span style="font-family:Calibri,sans-serif">+ Trợ từ&nbsp;が：chi tiết, thuộc t&iacute;nh của một tổng thể</span></span></span></td>
-                                </tr>
-                                <tr>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap">&nbsp;</td>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap"><span style="font-size:11pt"><span style="color:black"><span style="font-family:Calibri,sans-serif">+ どうやって：&nbsp;bằng c&aacute;ch n&agrave;o?</span></span></span></td>
-                                </tr>
-                                <tr>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap"><span style="font-size:11pt"><span style="color:black"><span style="font-family:Calibri,sans-serif">B&agrave;i 17</span></span></span></td>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap"><span style="font-size:11pt"><span style="color:black"><span style="font-family:Calibri,sans-serif">+ C&aacute;ch chia động từ ở thể&nbsp;ない</span></span></span></td>
-                                </tr>
-                                <tr>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap">&nbsp;</td>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap"><span style="font-size:11pt"><span style="color:black"><span style="font-family:Calibri,sans-serif">+ ～&nbsp;Vないでください：Xin đừng ~</span></span></span></td>
-                                </tr>
-                                <tr>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap">&nbsp;</td>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap"><span style="font-size:11pt"><span style="color:black"><span style="font-family:Calibri,sans-serif">+ ~Vなくてもいいです：Kh&ocirc;ng ~ cũng được</span></span></span></td>
-                                </tr>
-                                <tr>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap">&nbsp;</td>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap"><span style="font-size:11pt"><span style="color:black"><span style="font-family:Calibri,sans-serif">+ ~ V なければなりません：phải</span></span></span></td>
-                                </tr>
-                                <tr>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap">&nbsp;</td>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap"><span style="font-size:11pt"><span style="color:black"><span style="font-family:Calibri,sans-serif">+ ~ までに：Trước khi ~</span></span></span></td>
-                                </tr>
-                                <tr>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap"><span style="font-size:11pt"><span style="color:black"><span style="font-family:Calibri,sans-serif">B&agrave;i 18</span></span></span></td>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap"><span style="font-size:11pt"><span style="color:black"><span style="font-family:Calibri,sans-serif">+ ~ ことができます：c&oacute; thể ~</span></span></span></td>
-                                </tr>
-                                <tr>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap">&nbsp;</td>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap"><span style="font-size:11pt"><span style="color:black"><span style="font-family:Calibri,sans-serif">+ ~&nbsp;しゅみ：sở th&iacute;ch ~</span></span></span></td>
-                                </tr>
-                                <tr>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap">&nbsp;</td>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap"><span style="font-size:11pt"><span style="color:black"><span style="font-family:Calibri,sans-serif">+ ~ まえに： Trước khi</span></span></span></td>
-                                </tr>
-                                <tr>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap">&nbsp;</td>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap"><span style="font-size:11pt"><span style="color:black"><span style="font-family:Calibri,sans-serif">+ ～　なかなか　～ない：m&atilde;i m&agrave; ~ cũng kh&ocirc;ng ~</span></span></span></td>
-                                </tr>
-                                <tr>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap">&nbsp;</td>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap"><span style="font-size:11pt"><span style="color:black"><span style="font-family:Calibri,sans-serif">+ ~ Đổi từ N1&nbsp;sang N2</span></span></span></td>
-                                </tr>
-                                <tr>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap"><span style="font-size:11pt"><span style="color:black"><span style="font-family:Calibri,sans-serif">B&agrave;i 19</span></span></span></td>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap"><span style="font-size:11pt"><span style="color:black"><span style="font-family:Calibri,sans-serif">+ C&aacute;ch chia động từ ở thể&nbsp;た</span></span></span></td>
-                                </tr>
-                                <tr>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap">&nbsp;</td>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap"><span style="font-size:11pt"><span style="color:black"><span style="font-family:Calibri,sans-serif">+ ～ ことが　あります：&nbsp;Đ&atilde; từng ~</span></span></span></td>
-                                </tr>
-                                <tr>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap">&nbsp;</td>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap"><span style="font-size:11pt"><span style="color:black"><span style="font-family:Calibri,sans-serif">+ V1たり、V2たり、～ する&nbsp;: N&agrave;o l&agrave;, n&agrave;o l&agrave; ~</span></span></span></td>
-                                </tr>
-                                <tr>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap">&nbsp;</td>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap"><span style="font-size:11pt"><span style="color:black"><span style="font-family:Calibri,sans-serif">+ ~ なる：Trở n&ecirc;n ~</span></span></span></td>
-                                </tr>
-                                <tr>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap"><span style="font-size:11pt"><span style="color:black"><span style="font-family:Calibri,sans-serif">B&agrave;i 20</span></span></span></td>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap"><span style="font-size:11pt"><span style="color:black"><span style="font-family:Calibri,sans-serif">+ Giới thiệu về Thể Lịch sự v&agrave; Thể Th&ocirc;ng thường</span></span></span></td>
-                                </tr>
-                                <tr>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap">&nbsp;</td>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap"><span style="font-size:11pt"><span style="color:black"><span style="font-family:Calibri,sans-serif">+ C&aacute;ch chia Động từ ở Thể Lịch sự v&agrave; Thể Th&ocirc;ng thường</span></span></span></td>
-                                </tr>
-                                <tr>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap">&nbsp;</td>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap"><span style="font-size:11pt"><span style="color:black"><span style="font-family:Calibri,sans-serif">+ C&aacute;ch chia Danh từ ở Thể Lịch sự v&agrave; Thể Th&ocirc;ng thường</span></span></span></td>
-                                </tr>
-                                <tr>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap">&nbsp;</td>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap"><span style="font-size:11pt"><span style="color:black"><span style="font-family:Calibri,sans-serif">+ Một số mẫu ngữ ph&aacute;p ở Thể Lịch sự v&agrave; Thể Th&ocirc;ng thường</span></span></span></td>
-                                </tr>
-                                <tr>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap">&nbsp;</td>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap"><span style="font-size:11pt"><span style="color:black"><span style="font-family:Calibri,sans-serif">+ Một số ch&uacute; &yacute; khi d&ugrave;ng Thể Th&ocirc;ng thường</span></span></span></td>
-                                </tr>
-                                <tr>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap"><span style="font-size:11pt"><span style="color:black"><span style="font-family:Calibri,sans-serif">B&agrave;i 21</span></span></span></td>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap"><span style="font-size:11pt"><span style="color:black"><span style="font-family:Calibri,sans-serif">+ ～と思います：t&ocirc;i nghĩ l&agrave; ~</span></span></span></td>
-                                </tr>
-                                <tr>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap">&nbsp;</td>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap"><span style="font-size:11pt"><span style="color:black"><span style="font-family:Calibri,sans-serif">+ ～と言います：N&oacute;i l&agrave; ~</span></span></span></td>
-                                </tr>
-                                <tr>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap">&nbsp;</td>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap"><span style="font-size:11pt"><span style="color:black"><span style="font-family:Calibri,sans-serif">+ ～でしょう？Đ&uacute;ng kh&ocirc;ng?</span></span></span></td>
-                                </tr>
-                                <tr>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap">&nbsp;</td>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap"><span style="font-size:11pt"><span style="color:black"><span style="font-family:Calibri,sans-serif">+ ~ で: Tại</span></span></span></td>
-                                </tr>
-                                <tr>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap">&nbsp;</td>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap"><span style="font-size:11pt"><span style="color:black"><span style="font-family:Calibri,sans-serif">+ ~ でも: chẳng hạn như</span></span></span></td>
-                                </tr>
-                                <tr>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap"><span style="font-size:11pt"><span style="color:black"><span style="font-family:Calibri,sans-serif">B&agrave;i 22</span></span></span></td>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap"><span style="font-size:11pt"><span style="color:black"><span style="font-family:Calibri,sans-serif">+ Danh từ, t&iacute;nh từ, động từ bổ nghĩa cho danh từ</span></span></span></td>
-                                </tr>
-                                <tr>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap">&nbsp;</td>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap"><span style="font-size:11pt"><span style="color:black"><span style="font-family:Calibri,sans-serif">+ Mệnh đề bổ nghĩa cho Danh từ</span></span></span></td>
-                                </tr>
-                                <tr>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap">&nbsp;</td>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap"><span style="font-size:11pt"><span style="color:black"><span style="font-family:Calibri,sans-serif">+ C&acirc;u c&oacute; Mệnh đề bổ nghĩa l&agrave;m chủ ngữ</span></span></span></td>
-                                </tr>
-                                <tr>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap">&nbsp;</td>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap"><span style="font-size:11pt"><span style="color:black"><span style="font-family:Calibri,sans-serif">+ C&acirc;u c&oacute; Mệnh đề bổ nghĩa l&agrave;m vị ngữ</span></span></span></td>
-                                </tr>
-                                <tr>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap">&nbsp;</td>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap"><span style="font-size:11pt"><span style="color:black"><span style="font-family:Calibri,sans-serif">+ C&acirc;u c&oacute; Mệnh đề bổ nghĩa l&agrave;m chủ ngữ v&agrave; vị ngữ</span></span></span></td>
-                                </tr>
-                                <tr>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap">&nbsp;</td>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap"><span style="font-size:11pt"><span style="color:black"><span style="font-family:Calibri,sans-serif">+ C&aacute;ch dịch c&acirc;u c&oacute; mệnh đề bổ nghĩa từ Nhật sang Việt</span></span></span></td>
-                                </tr>
-                                <tr>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap"><span style="font-size:11pt"><span style="color:black"><span style="font-family:Calibri,sans-serif">B&agrave;i 23</span></span></span></td>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap"><span style="font-size:11pt"><span style="color:black"><span style="font-family:Calibri,sans-serif">+ ～とき：Khi, l&uacute;c &nbsp;~</span></span></span></td>
-                                </tr>
-                                <tr>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap">&nbsp;</td>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap"><span style="font-size:11pt"><span style="color:black"><span style="font-family:Calibri,sans-serif">+ ~ と：Hễ m&agrave; ~</span></span></span></td>
-                                </tr>
-                                <tr>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap">&nbsp;</td>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap"><span style="font-size:11pt"><span style="color:black"><span style="font-family:Calibri,sans-serif">+ ～を：phạm vi kh&ocirc;ng gian m&agrave; người hay vật đi qua</span></span></span></td>
-                                </tr>
-                                <tr>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap"><span style="font-size:11pt"><span style="color:black"><span style="font-family:Calibri,sans-serif">B&agrave;i 24</span></span></span></td>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap"><span style="font-size:11pt"><span style="color:black"><span style="font-family:Calibri,sans-serif">+ ～Vてあげます：&nbsp;~ l&agrave;m cho ~</span></span></span></td>
-                                </tr>
-                                <tr>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap">&nbsp;</td>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap"><span style="font-size:11pt"><span style="color:black"><span style="font-family:Calibri,sans-serif">+ ～Vてもらいます：~ được ~ l&agrave;m cho ~</span></span></span></td>
-                                </tr>
-                                <tr>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap">&nbsp;</td>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap"><span style="font-size:11pt"><span style="color:black"><span style="font-family:Calibri,sans-serif">+ ～Vてくれます： ~ l&agrave;m cho t&ocirc;i</span></span></span></td>
-                                </tr>
-                                <tr>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap">&nbsp;</td>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap"><span style="font-size:11pt"><span style="color:black"><span style="font-family:Calibri,sans-serif">+ C&aacute;ch d&ugrave;ng ～Vてもらいます v&agrave; ～Vてくれます</span></span></span></td>
-                                </tr>
-                                <tr>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap"><span style="font-size:11pt"><span style="color:black"><span style="font-family:Calibri,sans-serif">B&agrave;i 25</span></span></span></td>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap"><span style="font-size:11pt"><span style="color:black"><span style="font-family:Calibri,sans-serif">+ ～たら：nếu ~</span></span></span></td>
-                                </tr>
-                                <tr>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap">&nbsp;</td>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap"><span style="font-size:11pt"><span style="color:black"><span style="font-family:Calibri,sans-serif">+ ～たら：nếu sau khi ~</span></span></span></td>
-                                </tr>
-                                <tr>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap">&nbsp;</td>
-                                    <td style="height:14.4pt; vertical-align:bottom; white-space:nowrap"><span style="font-size:11pt"><span style="color:black"><span style="font-family:Calibri,sans-serif">+ ～ても：Dẫu cho ~</span></span></span></td>
-                                </tr>
-                            </tbody>
-                        </table>
+                    <div class="col-lg-6 contact-info">
+                        <h1 class="page-title-1">
+                            Trung tâm tiếng nhật Nhật ngữ 3 chàng ngốc
+                        </h1>
+                        <p><img src="https://saki.edu.vn/image/icon/location.png"> Địa chỉ: Số 140 Cầu Diễn,Nam Từ Liêm , Hà Nội</p>
+                        <p><img src="https://saki.edu.vn/image/icon/phone.png"> Hotline: 097 515 96 72 & 096 621 80 21</p>
+                        <p><img src="https://saki.edu.vn/image/icon/email.png"> Email: 3changngoc678@gmail.com</p>
+                        <p><em>Điền đăng k&yacute; kh&oacute;a học</em></p>
                     </div>
+
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-12">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d930.8927523432953!2d105.7405969!3d21.0498443!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3134558ccbbba3b3%3A0x34d192032d5e2825!2zTmjhuq10IE5n4buvIDMgQ2jDoG5nIE5n4buRYw!5e0!3m2!1svi!2s!4v1545799495696" width="100%" height="350" frameborder="0" style="border:0" allowfullscreen></iframe>
                 </div>
             </div>
         </div>
 
     </article>
 </section>
+
+@* end contact *@

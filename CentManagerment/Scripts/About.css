@@ -302,7 +302,6 @@ footer {
     }
 
 .course-page-title {
-    font-family: Philosopher;
     display: block;
     text-align: center;
     text-transform: uppercase;
@@ -334,7 +333,6 @@ footer {
     display: block;
     width: 100%;
     color: #fff;
-    font-family: Philosopher;
     font-size: 32px;
     border-bottom: 5px dotted #fff;
     margin: 5px;

@@ -17,7 +17,7 @@ namespace CentManagerment.Controllers
 
         public ActionResult Index()
         {
-            ViewBag.ListNews = newManager.GetListNews(); 
+            ViewBag.ListNews = newManager.GetListNews();
             return View();
         }
 
@@ -37,9 +37,31 @@ namespace CentManagerment.Controllers
 
             return View();
         }
+        public ActionResult AnhHoatDong()
+        {
+            return View();
+        }
+        public ActionResult Knowledge()
+        {
+            return View();
+        }
+        public ActionResult News()
+        {
+            ViewBag.ListNews = newManager.GetListNews();
+            return View();
+        }
+        public ActionResult NhacNhat()
+        {
+            return View();
+        }
+        public ActionResult KinhNghiem()
+        {
+            return View();
+        }
         // Trang chi tiết
         public ActionResult DetailsNew(int? id)
         {
+            ViewBag.ListNews = newManager.GetListNews();
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);

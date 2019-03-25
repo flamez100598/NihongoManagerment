@@ -42,8 +42,8 @@ $(document).ready(function() {
     //------- Datepicker  js --------//  
 
       $( function() {
-        $( "#datepicker" ).datepicker();
-        $( "#datepicker2" ).datepicker();
+        //$( "#datepicker" ).datepicker();
+        //$( "#datepicker2" ).datepicker();
       } );
 
 
@@ -464,7 +464,7 @@ $(document).ready(function () {
 });
 var current = 1;
 setInterval(function () {
-    current = current % 3;
+    current = current % 5;
     $('.control span:nth-child(' + (current + 1) + ')').trigger('click');
     current++;
 }, 3000)

@@ -1,16 +1,15 @@
 ﻿@using CentManagerment.BU.DTO
 @{
-                /**/
+    /**/
 
-                ViewBag.Title = "3 Chàng Ngốc";
+    ViewBag.Title = "3 Chàng Ngốc";
 
-                var ListNews = (List<NewsDTO>)ViewBag.ListNews;
+    var ListNews = (List<NewsDTO>)ViewBag.ListNews;
 }
 
 <!-- Start popular-course Area -->
 <main class="home" id="home">
 
-    
     <div class="home__banner"> <a href="https://www.facebook.com/nhatngu3changngoc/"><img src="~/Assets/client/img/bannerWithLogo.jpg" /></a> </div>
     <div class="home__box">
         <div class="container_1140">
@@ -43,6 +42,120 @@
         </div>
     </div>
 
+    @* our teacher *@
+    <div class="developer background-grey">
+        <div class="container">
+            <div class="text-center">
+                <h3 class="thread">OUR TEACHER</h3>
+                <img src="~/Assets/client/img/sensei/100x12.png" />
+            </div>
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="inner">
+                        <div class="avt">
+                            <img src="~/Assets/client/img/sensei/ssHong.JPG" />
+                        </div>
+                        <div class="about text-center">
+                            <h4 class="name">Hồng Sensei</h4>
+                            <p class="job">Giảng viên N3 Nissan</p>
+                            <div class="link" style="display: inline-flex">
+                                <a href="#"><img src="~/Assets/client/img/40x40x1.png"></a>
+                                <a href="#"><img src="~/Assets/client/img/40x40x2.png" alt=""></a>
+                                <a href="#"><img src="~/Assets/client/img/40x40x3.png" alt=""></a>
+                                <a href="#"><img src="~/Assets/client/img/40x40x4.png" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="inner">
+                        <div class="avt">
+                            <img src="~/Assets/client/img/sensei/ssDung.JPG" alt="">
+                        </div>
+                        <div class="about text-center">
+                            <h4 class="name">Dũng Sensei</h4>
+                            <p class="job">Giảng viên N2 tại Denso</p>
+                            <div class="link" style="display: inline-flex">
+                                <a href="#"><img src="~/Assets/client/img/40x40x1.png"></a>
+                                <a href="#"><img src="~/Assets/client/img/40x40x2.png" alt=""></a>
+                                <a href="#"><img src="~/Assets/client/img/40x40x3.png" alt=""></a>
+                                <a href="#"><img src="~/Assets/client/img/40x40x4.png" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="inner">
+                        <div class="avt">
+                            <img src="~/Assets/client/img/sensei/ssQuyen.JPG" alt="">
+                        </div>
+                        <div class="about text-center">
+                            <h4 class="name">Quyền Sensei</h4>
+                            <p class="job">Giảng viên tại Cannon</p>
+                            <div class="link" style="display: inline-flex">
+                                <a href="#"><img src="~/Assets/client/img/40x40x1.png"></a>
+                                <a href="#"><img src="~/Assets/client/img/40x40x2.png" alt=""></a>
+                                <a href="#"><img src="~/Assets/client/img/40x40x3.png" alt=""></a>
+                                <a href="#"><img src="~/Assets/client/img/40x40x4.png" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </div>
+    @* ebd our teacher *@
+    @* ảnh hoạt động *@
+    <div class="app-screenshot">
+        <div class="container">
+            <div class="text-center">
+                <h3 class="thread">Ảnh hoạt động</h3>
+                <img src="~/Assets/client/img/sensei/100x12.png" />
+            </div>
+            <div class="screenshot">
+                <div class="owl-carousel owl-theme">
+                    <div class="item">
+                        <img src="~/Assets/client/img/study/anh1.JPG" />
+                    </div>
+                    <div class="item">
+                        <img src="~/Assets/client/img/study/anh2.JPG" />
+                    </div>
+                    <div class="item">
+                        <img src="~/Assets/client/img/study/anh11.JPG" />
+                    </div>
+                    <div class="item">
+                        <img src="~/Assets/client/img/study/anh4.JPG" />
+                    </div>
+                    <div class="item">
+                        <img src="~/Assets/client/img/study/anh5.JPG" />
+                    </div>
+                    <div class="item">
+                        <img src="~/Assets/client/img/study/anh6.jpg" />
+                    </div>
+                    <div class="item">
+                        <img src="~/Assets/client/img/study/anh7.JPG" />
+                    </div>
+                    <div class="item">
+                        <img src="~/Assets/client/img/study/anh8.JPG" />
+                    </div>
+                    <div class="item">
+                        <img src="~/Assets/client/img/study/anh9.JPG" />
+                    </div>
+                    <div class="item">
+                        <img src="~/Assets/client/img/study/anh10.JPG" />
+                    </div>
+                    <div class="item">
+                        <img src="~/Assets/client/img/study/anh11.JPG" />
+                    </div>
+                    <div class="item">
+                        <img src="~/Assets/client/img/study/anh4.JPG" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    @* end ảnh hoạt động *@
     <div class="home__process"><img src="~/Assets/client/img/lotrinh.jpg" /></div>
     <div class="home__document">
         <div class="container_1140">
@@ -57,7 +170,7 @@
                         <div class="home__document--right">
                             <div class="home__document--box">
 
-                                <div class="img__box"><a href="#"><img src="~/Assets/client/img/course/n5.png" alt="Khóa học N5" /></a></div>
+                                <div class="img__box"><a href="#"><img src="https://saki.edu.vn/image/document-n5-saki.jpg" alt="Khóa học N5" /></a></div>
                                 <div class="box__inner">
                                     <a class="document_title" href="#">TÀI LIỆU N5</a>
                                     <p>Hướng dẫn học bảng chữ cái Hiragana dành cho người mới bắt đầu. Giúp bạn khởi đầu hành trình tiếng Nhật thật vững chắc.</p>
@@ -66,7 +179,7 @@
                             </div>
                             <div class="home__document--box">
 
-                                <div class="img__box"><a href="#"><img src="~/Assets/client/img/course/n4.png" /></a></div>
+                                <div class="img__box"><a href="#"><img src="https://saki.edu.vn/image/document-n4-saki.jpg" /></a></div>
                                 <div class="box__inner">
                                     <a class="document_title" href="#">TÀI LIỆU N4</a>
                                     <p>Hướng dẫn học bảng chữ cái Hiragana dành cho người mới bắt đầu. Giúp bạn khởi đầu hành trình tiếng Nhật thật vững chắc.</p>
@@ -75,7 +188,7 @@
                             </div>
                             <div class="home__document--box">
 
-                                <div class="img__box"><a href="#"><img src="~/Assets/client/img/course/n3.png" /></a></div>
+                                <div class="img__box"><a href="#"><img src="https://saki.edu.vn/image/document-n3-saki.jpg" /></a></div>
                                 <div class="box__inner">
                                     <a class="document_title" href="#">TÀI LIỆU N3</a>
                                     <p>Hướng dẫn học bảng chữ cái Hiragana dành cho người mới bắt đầu. Giúp bạn khởi đầu hành trình tiếng Nhật thật vững chắc.</p>
@@ -120,6 +233,8 @@
             <p>      Phòng học rộng rãi, thoáng mát, số lượng học viên mỗi lớp không quá nhiều </p>
             </p>
             <h7>Nguyễn Văn A</h7>
+            <p><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></p>
+
         </div>
         <!-- Panel Two -->
         <div class='panel'>
@@ -128,6 +243,8 @@
                 Tiếng Nhật là vô cùng quan trọng, nó có thể thay đổi cả cuộc đời bạn. Hãy là người thông minh nắm bắt xu hướng và nhu cầu xã hội hiện tại. Chúc các bạn may mắn và thành công với sự lựa chọn đi đến cơ hội cho chính mình !
             </p>
             <h7>Nguyễn Văn B</h7>
+            <p><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></p>
+
         </div>
         <!-- Panel Three -->
         <div class='panel'>
@@ -136,7 +253,28 @@
                 Với xu thế hội nhập toàn cầu như hiện này, khi rất nhiều các doanh nghiệp chọn Việt nam là điểm đến của sự đầu tư thì nhu cầu học tiếng Nhật ngày càng tăng cao hơn bao giờ hết.
             </p>
             <h7>Nguyễn Văn C</h7>
+            <p><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></p>
         </div>
+        <!-- Panel Four -->
+        <div class='panel'>
+            <img src='http://www.designbolts.com/wp-content/uploads/2014/01/Liz-Sherman-Flat-Design.png'>
+            <p>
+                Với xu thế hội nhập toàn cầu như hiện này, khi rất nhiều các doanh nghiệp chọn Việt nam là điểm đến của sự đầu tư thì nhu cầu học tiếng Nhật ngày càng tăng cao hơn bao giờ hết.
+            </p>
+            <h7>Nguyễn Văn C</h7>
+            <p><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></p>
+        </div>
+        <!-- Panel Five -->
+        <div class='panel'>
+            <img src='http://www.designbolts.com/wp-content/uploads/2014/01/Liz-Sherman-Flat-Design.png'>
+            <p>
+                Với xu thế hội nhập toàn cầu như hiện này, khi rất nhiều các doanh nghiệp chọn Việt nam là điểm đến của sự đầu tư thì nhu cầu học tiếng Nhật ngày càng tăng cao hơn bao giờ hết.
+            </p>
+            <h7>Nguyễn Văn C</h7>
+            <p><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></p>
+        </div>
+
+
     </div>
 </section>
 <!-- end Review section -->
@@ -186,4 +324,13 @@
         </div>
     </div>
 </section>
+<style>
+    .fa-star {
+        color: #efef06;
+    }
+
+    .fa-star-half-alt {
+        color: #efef06;
+    }
+</style>
 <!-- End blog Area -->
