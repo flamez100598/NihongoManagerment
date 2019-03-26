@@ -216,31 +216,18 @@
     <Content Include="Assets\admin\images\default-50x50.gif" />
     <Content Include="Assets\admin\images\icons.png" />
     <Content Include="Assets\admin\images\imgg.jpg" />
-    <Content Include="Assets\client\img\20171205-banner-nhat.gif" />
+<<<<<<< HEAD
     <Content Include="Assets\client\img\banner.png" />
-    <Content Include="Assets\client\img\bannerTest.jpg" />
-    <Content Include="Assets\client\img\bannerWeb.jpg" />
-    <Content Include="Assets\client\img\bannerWithLogo.jpg" />
+=======
     <Content Include="Assets\client\img\course\n2.png" />
-    <Content Include="Assets\client\img\banner.png" />
     <Content Include="Assets\client\img\course\n3.png" />
     <Content Include="Assets\client\img\course\n4.png" />
     <Content Include="Assets\client\img\course\n4_n5.png" />
     <Content Include="Assets\client\img\course\n5.png" />
     <Content Include="Assets\client\img\course\n5_n3.png" />
-    <Content Include="Assets\client\img\lotrinh.jpg" />
-    <Content Include="Assets\client\img\psd-japanese-style-cartoon-e-commerce-poster-banner-background-heypik-8NU4459.jpg" />
-    <Content Include="Assets\client\img\sensei\ssDung.JPG" />
-    <Content Include="Assets\client\img\sensei\ssHong.JPG" />
-    <Content Include="Assets\client\img\sensei\ssQuyen.JPG" />
-    <Content Include="Assets\client\logo\calender.png" />
-    <Content Include="Assets\client\logo\doc.png" />
-    <Content Include="Assets\client\logo\LOGO.png" />
-    <Content Include="Assets\client\logo\pic1.jpg" />
-    <Content Include="Assets\client\logo\pic2.jpg" />
-    <Content Include="Assets\client\logo\pic3.jpg" />
     <Content Include="bin\CentManagerment.dll" />
     <Content Include="bin\CentManagerment.pdb" />
+>>>>>>> 65b3634331054bffcb98ae31ad056c351b4a2807
     <Content Include="Content\PagedList.css" />
     <Content Include="Logo.png" />
     <Content Include="Assets\admin\images\photo1.png" />
@@ -2947,7 +2934,6 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
-    <Content Include="Scripts\About.css" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config">
@@ -3132,7 +3118,6 @@
     <Content Include="Assets\401\fonts\Montserrat-SemiBoldItalic.ttf" />
     <Content Include="Assets\401\fonts\Montserrat-Thin.ttf" />
     <Content Include="Assets\401\fonts\Montserrat-ThinItalic.ttf" />
-    <Content Include="libman.json" />
     <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
@@ -3168,7 +3153,6 @@
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Home\DetailsNew.cshtml" />
-    <Content Include="Views\Home\CourseOffline.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -3177,6 +3161,7 @@
     <Folder Include="Assets\admin\fonts\" />
     <Folder Include="Assets\client\img\elements\" />
     <Folder Include="Assets\client\img\gallery\" />
+    <Folder Include="Assets\client\logo\" />
     <Folder Include="Assets\content\files\" />
     <Folder Include="Assets\content\images\" />
     <Folder Include="Models\" />
@@ -3230,7 +3215,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>49808</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:49809/</IISUrl>
+          <IISUrl>http://localhost:49808/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
