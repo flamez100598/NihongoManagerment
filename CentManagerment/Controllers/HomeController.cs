@@ -79,9 +79,9 @@ namespace CentManagerment.Controllers
         //send mail
 
         [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult SendEmail(string name, string phone, string email, int course)
+        public JsonResult SendEmail(RegisterManagermentDTO rgdto)
         {
+            var resultCode = false;
             try
             {
                 var fromEmail = "demoproject.3fgroup@gmail.com";
@@ -90,7 +90,8 @@ namespace CentManagerment.Controllers
                 var receiverEmail = new MailAddress(toEmail, "Receiver");
                 var password = "3fk11997";
                 var sub = "Register";
-                var message = " A new register student: <br /> Mail: " + email + ",  Name: " + name + ",  Phone: " + phone + ", Cousre: N" + course;
+                rgdto.register_course = int.Parse(rgdto.register_coursename.Substring(1));
+                var message = " A new register student: <br /> Mail: " + rgdto.register_email + ",  Name: " + rgdto.register_name + ",  Phone: " + rgdto.register_phone + ", Cousre: " + rgdto.register_coursename;
                 var body = message;
                 var smtp = new SmtpClient
                 {
@@ -110,22 +111,15 @@ namespace CentManagerment.Controllers
                 {
                     smtp.Send(mess);
                 }
-                var registerDTO = new RegisterManagermentDTO()
-                {
-                    register_email = email,
-                    register_course = course,
-                    register_name = name,
-                    register_phone = phone,
-                    register_status = 0 //Chưa xác nhận thông tin
-                };
-                var insert = new RegisterManager().StudentManagerInsert(registerDTO);
-                ViewBag.ShowInfo = "Gửi thành công! Hãy tham khảo các khóa học và đăng ký tiếp nhé ^.^";
+                //Chưa xác nhận
+                rgdto.register_status = (int)BU.Common.Enum.StatusRegister.Unconfirmed;
+                resultCode = new RegisterManager().StudentManagerInsert(rgdto);
             }
             catch (Exception)
             {
-                ViewBag.ShowInfo = "Đã xảy ra lỗi! Bạn quay lại đăng ký sau nhé! Hãy thao khảo các khóa học tiếp đi nhé ^.^";
+                resultCode = false;
             }
-            return RedirectToAction("Index");
+            return Json(resultCode, JsonRequestBehavior.AllowGet);
         }
     }
 }

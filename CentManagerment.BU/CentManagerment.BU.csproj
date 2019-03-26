@@ -64,6 +64,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Common\CommonUserLogin.cs" />
+    <Compile Include="Common\Enum.cs" />
     <Compile Include="Common\GenerateUrl.cs" />
     <Compile Include="Common\UserLogin.cs" />
     <Compile Include="ConvertData\ConvertDataClass.cs" />

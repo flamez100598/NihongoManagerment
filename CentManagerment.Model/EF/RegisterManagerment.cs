@@ -20,5 +20,6 @@ namespace CentManagerment.Model.EF
         public string register_email { get; set; }
         public Nullable<int> register_course { get; set; }
         public Nullable<int> register_status { get; set; }
+        public string register_message { get; set; }
     }
 }

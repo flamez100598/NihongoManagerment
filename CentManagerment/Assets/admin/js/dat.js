@@ -19,10 +19,10 @@
             data: { stdto: stdto },
             success: function (resultCode) {
                 if (resultCode === 1) {
-                    alert("Sửa học viên thành công!");
-                    window.location.reload();
+                    $.notify("Sửa học viên thành công!", "success");
+                    window.setTimeout(function () { location.reload(); }, 500);
                 } else {
-                    alert("Đã sảy ra lỗi khi sửa!");
+                    $.notify("Đã sảy ra lỗi khi sửa!", "error");
                     return false;
                 }
             }
@@ -38,10 +38,10 @@
             data: { idStudent: idhs },
             success: function (resultCode) {
                 if (resultCode === 1) {
-                    alert("Xóa học viên thành công!");
-                    window.location.reload();
+                    $.notify("Xóa học viên thành công!", "success");
+                    window.setTimeout(function () { location.reload(); }, 500);
                 } else {
-                    alert("Đã sảy ra lỗi khi xóa!");
+                    $.notify("Đã sảy ra lỗi khi xóa!", "error");
                     return false;
                 }
             }
@@ -66,10 +66,10 @@
             success: function (resultCode) {
                 console.log(stdto)
                 if (resultCode === 1) {
-                    alert("Thêm học viên thành công!");
-                    window.location.reload();
+                    $.notify("Thêm học viên thành công!", "success");
+                    window.setTimeout(function () { location.reload(); }, 500);
                 } else {
-                    alert("Đã sảy ra lỗi khi thêm!");
+                    $.notify("Đã sảy ra lỗi khi thêm!", "error");
                     return false;
                 }
             }
@@ -108,18 +108,18 @@
             success: function (resultCode) {
                 if (type !== null) {
                     if (resultCode === 1) {
-                        alert("Sửa thành công!");
-                        window.location.reload();
+                        $.notify("Sửa thành công!", "success");
+                        window.setTimeout(function () { location.reload(); }, 500);
                     } else {
-                        alert("Đã sảy ra lỗi khi sửa!");
+                        $.notify("Đã sảy ra lỗi khi sửa!", "error");
                         return false;
                     }
                 } else {
                     if (resultCode === 1) {
-                        alert("Thêm tin tức thành công!");
-                        window.location.reload();
+                        $.notify("Thêm tin tức thành công!", "success");
+                        window.setTimeout(function () { location.reload(); }, 500);
                     } else {
-                        alert("Đã sảy ra lỗi khi thêm!");
+                        $.notify("Đã sảy ra lỗi khi thêm!", "error");
                         return false;
                     }
                 }
@@ -139,10 +139,10 @@
             data: { idnew: idnew },
             success: function (resultCode) {
                 if (resultCode === 1) {
-                    alert("Xóa tin tức thành công!");
-                    window.location.reload();
+                    $.notify("Xóa tin tức thành công!", "success");
+                    window.setTimeout(function () { location.reload(); }, 500);
                 } else {
-                    alert("Đã sảy ra lỗi khi xóa!");
+                    $.notify("Đã sảy ra lỗi khi xóa!", "error");
                     return false;
                 }
             }
@@ -163,10 +163,10 @@
     //        data: { stdto: stdto },
     //        success: function (resultCode) {
     //            if (resultCode === 1) {
-    //                alert("Thêm học viên thành công!");
-    //                window.location.reload();
+    //                $.notify("Thêm học viên thành công!");
+    //                                    window.setTimeout(function () { location.reload(); }, 500);
     //            } else {
-    //                alert("Đã sảy ra lỗi khi thêm!");
+    //                $.notify("Đã sảy ra lỗi khi thêm!");
     //                return false;
     //            }
     //        }
@@ -179,7 +179,7 @@ $('#avatar-button').on('change', function () {
     if ($(this)[0].files.length > 0) {
         var dungluong = (this.files[0].size / 1024 / 1024).toFixed(3);
         if (parseInt(dungluong) > 3) {
-            alert("Ảnh có dụng lượng tối đa 3MB. Hãy chọn ảnh khác nhé bạn!");
+            $.notify("Ảnh có dụng lượng tối đa 3MB. Hãy chọn ảnh khác nhé bạn!", "error");
         } else {
             if (ValidateImage($(this)[0].files[0].name)) {
                 GetFileImage($(this));
@@ -194,7 +194,7 @@ function ValidateImage(classdiv) {
     if (classdiv != '') {
         var checkimg = classdiv.toLowerCase();
         if (!checkimg.match(/(\.jpg|\.png|\.JPG|\.PNG|\.gif|\.GIF|\.jpeg|\.JPEG)$/)) {
-            alert("Vui lòng chọn hình ảnh đúng định dạng .jpg,.png,.jpeg,.gif");
+            $.notify("Vui lòng chọn hình ảnh đúng định dạng .jpg,.png,.jpeg,.gif", "error");
             return false;
         }
     }
@@ -239,7 +239,7 @@ function GetFileImage(btn) {
             //} else { }
         },
         error: function (err) {
-            alert("Có lỗi!");
+            $.notify("Có lỗi!", "error");
         }
     });
 }
@@ -250,3 +250,43 @@ function GetFileImage(btn) {
 //$('#teacherId').change(function () {
 //    console.log($(this).val());
 //});
+
+//reply mail register 3F.DatDT 26/03/2019
+$('.updateregistermanager').click(function () {
+    var idRegister = $(this).attr('id').substring(22);
+    var Message = $('textarea#rgname-' + idRegister).val();
+    var status = $('#rgstatus-' + idRegister).children("option:selected").val();
+    $.ajax({
+        url: "/Admin/RegisterManagerment/UpdateStatus",
+        type: "POST",
+        data: { id: idRegister, status: status },
+        success: function (result) {
+            if (result) {
+                $.notify("Thay đổi thành công!", "success");
+                window.setTimeout(function () { location.reload(); }, 1000);
+            } else {
+                $.notify("Thay đổi không thành công!", "error");
+                return false;
+            }
+        }
+    });
+});
+
+
+$('.deleteregister').click(function () {
+    var idRegister = $(this).attr('id').substring(9);
+    $.ajax({
+        url: "/Admin/RegisterManagerment/DeleteRegister",
+        type: "POST",
+        data: { id: idRegister },
+        success: function (result) {
+            if (result) {
+                $.notify("Xóa thành công!", "success");
+                window.setTimeout(function () { location.reload(); }, 1000);
+            } else {
+                $.notify("Xóa không thành công!", "error");
+                return false;
+            }
+        }
+    });
+});
