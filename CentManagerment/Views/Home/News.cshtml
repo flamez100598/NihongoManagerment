@@ -1,0 +1,52 @@
+﻿@using CentManagerment.BU.DTO
+@{
+    ViewBag.Title = "News";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var ListNews = (List<NewsDTO>)ViewBag.ListNews;
+}
+
+<section class="blog-area section-gap" id="blog">
+    <div class="container">
+        <div class="row d-flex justify-content-center">
+            <div class="menu-content pb-70 col-lg-8">
+                <div class="title text-center">
+                    <h1 class="mb-10">Các tin tức mới nhất</h1>
+                    <p>In the history of modern astronomy there is.</p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="active-popular-carusel">
+                @if (ListNews != null)
+                {
+                    foreach (var newdto in ListNews)
+                    {
+                        <div class="single-blog single-popular-carusel">
+                            <div class="thumb">
+                                @if (string.IsNullOrEmpty(newdto.NewsAvatar))
+                                {
+
+                                    <img class="img-fluid" src=" ~/Assets/client/img/b1.jpg" alt="" style="height: 180px;">
+                                }
+                                else
+                                {
+                                    <img class="img-fluid" src="@newdto.NewsAvatar" alt="" style="height: 180px;">
+                                }
+                            </div>
+                            <p class="meta">@newdto.NewsPostDate || By @newdto.NewsNameUserPost</p>
+                            <a href="@Url.Action("DetailsNew", "Home", new { id = Common.GenerateUrl.GenerateSlug(newdto.NewsTitle, newdto.NewsId) })">
+                                <h5>@newdto.NewsTitle</h5>
+                            </a>
+                            <p>
+                                @newdto.NewsShortContent
+                            </p>
+                            <a href="@Url.Action("DetailsNew", "Home", new { id = Common.GenerateUrl.GenerateSlug(newdto.NewsTitle, newdto.NewsId) })" class="details-btn d-flex justify-content-center align-items-center">
+                                <span class="details">Chi tiết</span><span class="lnr lnr-arrow-right"></span>
+                            </a>
+                        </div>
+                    }
+                }
+            </div>
+        </div>
+    </div>
+</section>
