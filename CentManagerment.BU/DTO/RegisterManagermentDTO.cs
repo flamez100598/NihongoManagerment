@@ -14,5 +14,10 @@ namespace CentManagerment.BU.DTO
         public string register_email { get; set; }
         public int? register_course { get; set; }
         public int? register_status { get; set; }
+        public string register_message { get; set; }
+
+        //
+        public string register_coursename { get; set; }
+        public string register_statusname { get; set; }
     }
 }

@@ -56,6 +56,7 @@
           <Property Name="register_email" Type="nvarchar" MaxLength="69" />
           <Property Name="register_course" Type="int" />
           <Property Name="register_status" Type="int" />
+          <Property Name="register_message" Type="ntext" />
         </EntityType>
         <EntityType Name="Revenue">
           <Key>
@@ -592,6 +593,7 @@
           <Property Name="register_email" Type="String" MaxLength="69" FixedLength="false" Unicode="true" />
           <Property Name="register_course" Type="Int32" />
           <Property Name="register_status" Type="Int32" />
+          <Property Name="register_message" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -753,6 +755,7 @@
           <EntitySetMapping Name="RegisterManagerments">
             <EntityTypeMapping TypeName="CentManagermentModel.RegisterManagerment">
               <MappingFragment StoreEntitySet="RegisterManagerment">
+                <ScalarProperty Name="register_message" ColumnName="register_message" />
                 <ScalarProperty Name="register_status" ColumnName="register_status" />
                 <ScalarProperty Name="register_course" ColumnName="register_course" />
                 <ScalarProperty Name="register_email" ColumnName="register_email" />

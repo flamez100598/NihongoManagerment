@@ -25,7 +25,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>03/06/2019 09:16:57</publishTime>
     </File>
     <File Include="Areas/Admin/Views/CourseManagerment/InsertView.cshtml">
-      <publishTime>03/06/2019 09:16:57</publishTime>
+      <publishTime>03/19/2019 22:29:37</publishTime>
     </File>
     <File Include="Areas/Admin/Views/CourseManagerment/UpdateView.cshtml">
       <publishTime>03/06/2019 09:16:57</publishTime>
@@ -46,7 +46,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>03/02/2019 15:00:29</publishTime>
     </File>
     <File Include="Areas/Admin/Views/HomeAdmin/Index.cshtml">
-      <publishTime>03/02/2019 15:00:29</publishTime>
+      <publishTime>03/26/2019 10:57:59</publishTime>
     </File>
     <File Include="Areas/Admin/Views/Login/Index.cshtml">
       <publishTime>03/02/2019 15:00:29</publishTime>
@@ -63,6 +63,9 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="Areas/Admin/Views/News/UpdateNew.cshtml">
       <publishTime>03/02/2019 15:00:29</publishTime>
     </File>
+    <File Include="Areas/Admin/Views/RegisterManagerment/Index.cshtml">
+      <publishTime>03/26/2019 10:53:16</publishTime>
+    </File>
     <File Include="Areas/Admin/Views/Revenue/RevenueClass.cshtml">
       <publishTime>03/02/2019 15:00:29</publishTime>
     </File>
@@ -70,7 +73,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>03/02/2019 18:47:32</publishTime>
     </File>
     <File Include="Areas/Admin/Views/Shared/_Layout.cshtml">
-      <publishTime>03/06/2019 09:16:57</publishTime>
+      <publishTime>03/26/2019 10:04:02</publishTime>
     </File>
     <File Include="Areas/Admin/Views/StudentManagerment/AddStudent.cshtml">
       <publishTime>03/02/2019 15:00:29</publishTime>
@@ -298,7 +301,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>03/06/2019 09:16:57</publishTime>
     </File>
     <File Include="Assets/admin/js/dat.js">
-      <publishTime>03/02/2019 15:00:29</publishTime>
+      <publishTime>03/26/2019 10:54:00</publishTime>
     </File>
     <File Include="Assets/admin/js/moment.js">
       <publishTime>03/02/2019 15:00:29</publishTime>
@@ -5166,6 +5169,12 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="Assets/client/css/owl.carousel.css">
       <publishTime>03/02/2019 15:00:30</publishTime>
     </File>
+    <File Include="Assets/client/css/res.css">
+      <publishTime>03/26/2019 08:43:12</publishTime>
+    </File>
+    <File Include="Assets/client/css/style.css">
+      <publishTime>03/26/2019 08:43:12</publishTime>
+    </File>
     <File Include="Assets/client/fonts/fontawesome-webfont.eot">
       <publishTime>03/02/2019 15:00:30</publishTime>
     </File>
@@ -5202,6 +5211,21 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="Assets/client/img/.DS_Store">
       <publishTime>03/02/2019 15:00:30</publishTime>
     </File>
+    <File Include="Assets/client/img/20171205-banner-nhat.gif">
+      <publishTime>03/16/2019 18:17:49</publishTime>
+    </File>
+    <File Include="Assets/client/img/40x40x1.png">
+      <publishTime>03/26/2019 08:43:12</publishTime>
+    </File>
+    <File Include="Assets/client/img/40x40x2.png">
+      <publishTime>03/26/2019 08:43:12</publishTime>
+    </File>
+    <File Include="Assets/client/img/40x40x3.png">
+      <publishTime>03/26/2019 08:43:12</publishTime>
+    </File>
+    <File Include="Assets/client/img/40x40x4.png">
+      <publishTime>03/26/2019 08:43:12</publishTime>
+    </File>
     <File Include="Assets/client/img/about-img.jpg">
       <publishTime>03/02/2019 15:00:30</publishTime>
     </File>
@@ -5222,6 +5246,15 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     </File>
     <File Include="Assets/client/img/banner.png">
       <publishTime>03/06/2019 09:16:57</publishTime>
+    </File>
+    <File Include="Assets/client/img/bannerTest.jpg">
+      <publishTime>03/19/2019 22:29:37</publishTime>
+    </File>
+    <File Include="Assets/client/img/bannerWeb.jpg">
+      <publishTime>03/16/2019 18:17:49</publishTime>
+    </File>
+    <File Include="Assets/client/img/bannerWithLogo.jpg">
+      <publishTime>03/26/2019 08:43:12</publishTime>
     </File>
     <File Include="Assets/client/img/blog/.DS_Store">
       <publishTime>03/02/2019 15:00:30</publishTime>
@@ -5303,6 +5336,24 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     </File>
     <File Include="Assets/client/img/blog/user-info.png">
       <publishTime>03/02/2019 15:00:30</publishTime>
+    </File>
+    <File Include="Assets/client/img/course/n2.png">
+      <publishTime>03/16/2019 18:17:49</publishTime>
+    </File>
+    <File Include="Assets/client/img/course/n3.png">
+      <publishTime>03/16/2019 18:17:49</publishTime>
+    </File>
+    <File Include="Assets/client/img/course/n4.png">
+      <publishTime>03/16/2019 18:17:49</publishTime>
+    </File>
+    <File Include="Assets/client/img/course/n4_n5.png">
+      <publishTime>03/16/2019 18:17:49</publishTime>
+    </File>
+    <File Include="Assets/client/img/course/n5.png">
+      <publishTime>03/16/2019 18:17:49</publishTime>
+    </File>
+    <File Include="Assets/client/img/course/n5_n3.png">
+      <publishTime>03/16/2019 18:17:49</publishTime>
     </File>
     <File Include="Assets/client/img/cta-bg.jpg">
       <publishTime>03/02/2019 15:00:30</publishTime>
@@ -5427,6 +5478,9 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="Assets/client/img/logo1.png">
       <publishTime>03/02/2019 15:00:30</publishTime>
     </File>
+    <File Include="Assets/client/img/lotrinh.jpg">
+      <publishTime>03/19/2019 22:29:37</publishTime>
+    </File>
     <File Include="Assets/client/img/m-img.jpg">
       <publishTime>03/02/2019 15:00:30</publishTime>
     </File>
@@ -5445,11 +5499,62 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="Assets/client/img/play.png">
       <publishTime>03/02/2019 15:00:30</publishTime>
     </File>
+    <File Include="Assets/client/img/psd-japanese-style-cartoon-e-commerce-poster-banner-background-heypik-8NU4459.jpg">
+      <publishTime>03/19/2019 22:29:37</publishTime>
+    </File>
     <File Include="Assets/client/img/s-bg.jpg">
       <publishTime>03/02/2019 15:00:30</publishTime>
     </File>
     <File Include="Assets/client/img/search-bg.jpg">
       <publishTime>03/02/2019 15:00:30</publishTime>
+    </File>
+    <File Include="Assets/client/img/sensei/100x12.png">
+      <publishTime>03/26/2019 08:43:12</publishTime>
+    </File>
+    <File Include="Assets/client/img/sensei/ssDung.JPG">
+      <publishTime>03/19/2019 22:29:37</publishTime>
+    </File>
+    <File Include="Assets/client/img/sensei/ssHong.JPG">
+      <publishTime>03/19/2019 22:29:37</publishTime>
+    </File>
+    <File Include="Assets/client/img/sensei/ssQuyen.JPG">
+      <publishTime>03/19/2019 22:29:37</publishTime>
+    </File>
+    <File Include="Assets/client/img/study/anh1.jpg">
+      <publishTime>03/26/2019 08:43:12</publishTime>
+    </File>
+    <File Include="Assets/client/img/study/anh10.JPG">
+      <publishTime>03/26/2019 08:43:12</publishTime>
+    </File>
+    <File Include="Assets/client/img/study/anh11.JPG">
+      <publishTime>03/26/2019 08:43:12</publishTime>
+    </File>
+    <File Include="Assets/client/img/study/anh12.jpg">
+      <publishTime>03/26/2019 08:43:12</publishTime>
+    </File>
+    <File Include="Assets/client/img/study/anh2.JPG">
+      <publishTime>03/26/2019 08:43:12</publishTime>
+    </File>
+    <File Include="Assets/client/img/study/anh3.JPG">
+      <publishTime>03/26/2019 08:43:12</publishTime>
+    </File>
+    <File Include="Assets/client/img/study/anh4.JPG">
+      <publishTime>03/26/2019 08:43:12</publishTime>
+    </File>
+    <File Include="Assets/client/img/study/anh5.JPG">
+      <publishTime>03/26/2019 08:43:12</publishTime>
+    </File>
+    <File Include="Assets/client/img/study/anh6.jpg">
+      <publishTime>03/26/2019 08:43:12</publishTime>
+    </File>
+    <File Include="Assets/client/img/study/anh7.JPG">
+      <publishTime>03/26/2019 08:43:12</publishTime>
+    </File>
+    <File Include="Assets/client/img/study/anh8.JPG">
+      <publishTime>03/26/2019 08:43:12</publishTime>
+    </File>
+    <File Include="Assets/client/img/study/anh9.JPG">
+      <publishTime>03/26/2019 08:43:12</publishTime>
     </File>
     <File Include="Assets/client/img/top-banner.jpg">
       <publishTime>03/02/2019 15:00:30</publishTime>
@@ -5485,10 +5590,13 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>03/02/2019 15:00:30</publishTime>
     </File>
     <File Include="Assets/client/js/main.js">
-      <publishTime>03/02/2019 15:00:30</publishTime>
+      <publishTime>03/26/2019 08:43:12</publishTime>
     </File>
     <File Include="Assets/client/js/owl.carousel.min.js">
       <publishTime>03/02/2019 15:00:30</publishTime>
+    </File>
+    <File Include="Assets/client/js/script.js">
+      <publishTime>03/26/2019 10:52:17</publishTime>
     </File>
     <File Include="Assets/client/js/superfish.min.js">
       <publishTime>03/02/2019 15:00:30</publishTime>
@@ -5498,6 +5606,24 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     </File>
     <File Include="Assets/client/js/vendor/jquery-2.2.4.min.js">
       <publishTime>03/02/2019 15:00:30</publishTime>
+    </File>
+    <File Include="Assets/client/logo/calender.png">
+      <publishTime>03/16/2019 18:17:49</publishTime>
+    </File>
+    <File Include="Assets/client/logo/doc.png">
+      <publishTime>03/16/2019 18:17:49</publishTime>
+    </File>
+    <File Include="Assets/client/logo/LOGO.png">
+      <publishTime>03/06/2019 09:16:57</publishTime>
+    </File>
+    <File Include="Assets/client/logo/pic1.jpg">
+      <publishTime>03/16/2019 18:17:49</publishTime>
+    </File>
+    <File Include="Assets/client/logo/pic2.jpg">
+      <publishTime>03/16/2019 18:17:49</publishTime>
+    </File>
+    <File Include="Assets/client/logo/pic3.jpg">
+      <publishTime>03/16/2019 18:17:49</publishTime>
     </File>
     <File Include="Assets/content/ckeditor/adapters/jquery.js">
       <publishTime>03/02/2019 15:00:30</publishTime>
@@ -8917,25 +9043,25 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>03/02/2019 15:00:29</publishTime>
     </File>
     <File Include="bin/CentManagerment.BU.dll">
-      <publishTime>03/02/2019 18:38:22</publishTime>
+      <publishTime>03/26/2019 10:58:59</publishTime>
     </File>
     <File Include="bin/CentManagerment.BU.pdb">
-      <publishTime>03/02/2019 18:38:22</publishTime>
+      <publishTime>03/26/2019 10:58:59</publishTime>
     </File>
     <File Include="bin/CentManagerment.dll">
-      <publishTime>03/06/2019 09:26:35</publishTime>
+      <publishTime>03/26/2019 10:59:00</publishTime>
     </File>
     <File Include="bin/CentManagerment.Model.dll">
-      <publishTime>03/02/2019 18:38:21</publishTime>
+      <publishTime>03/26/2019 10:58:58</publishTime>
     </File>
     <File Include="bin/CentManagerment.Model.dll.config">
       <publishTime>03/02/2019 15:00:29</publishTime>
     </File>
     <File Include="bin/CentManagerment.Model.pdb">
-      <publishTime>03/02/2019 18:38:21</publishTime>
+      <publishTime>03/26/2019 10:58:58</publishTime>
     </File>
     <File Include="bin/CentManagerment.pdb">
-      <publishTime>03/06/2019 09:26:35</publishTime>
+      <publishTime>03/26/2019 10:59:00</publishTime>
     </File>
     <File Include="bin/CKFinder.dll">
       <publishTime>03/02/2019 15:00:30</publishTime>
@@ -9234,8 +9360,14 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="Global.asax">
       <publishTime>03/02/2019 15:00:30</publishTime>
     </File>
+    <File Include="libman.json">
+      <publishTime>03/19/2019 22:29:37</publishTime>
+    </File>
     <File Include="Logo.png">
       <publishTime>03/06/2019 09:16:57</publishTime>
+    </File>
+    <File Include="Scripts/About.css">
+      <publishTime>03/26/2019 08:43:12</publishTime>
     </File>
     <File Include="Scripts/bootstrap.js">
       <publishTime>03/02/2019 15:00:30</publishTime>
@@ -9292,25 +9424,43 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>03/02/2019 15:00:30</publishTime>
     </File>
     <File Include="Scripts/style.css">
-      <publishTime>03/06/2019 09:16:57</publishTime>
+      <publishTime>03/19/2019 22:29:37</publishTime>
     </File>
     <File Include="Views/Home/About.cshtml">
-      <publishTime>03/02/2019 15:00:30</publishTime>
+      <publishTime>03/26/2019 08:43:12</publishTime>
+    </File>
+    <File Include="Views/Home/AnhHoatDong.cshtml">
+      <publishTime>03/26/2019 08:43:12</publishTime>
     </File>
     <File Include="Views/Home/Contact.cshtml">
-      <publishTime>03/02/2019 15:00:30</publishTime>
+      <publishTime>03/26/2019 08:43:12</publishTime>
+    </File>
+    <File Include="Views/Home/CourseOffline.cshtml">
+      <publishTime>03/19/2019 22:29:37</publishTime>
     </File>
     <File Include="Views/Home/DetailsNew.cshtml">
-      <publishTime>03/02/2019 15:00:30</publishTime>
+      <publishTime>03/26/2019 08:43:12</publishTime>
     </File>
     <File Include="Views/Home/Index.cshtml">
-      <publishTime>03/02/2019 15:00:30</publishTime>
+      <publishTime>03/26/2019 09:07:54</publishTime>
+    </File>
+    <File Include="Views/Home/KinhNghiem.cshtml">
+      <publishTime>03/26/2019 08:43:12</publishTime>
+    </File>
+    <File Include="Views/Home/Knowledge.cshtml">
+      <publishTime>03/26/2019 08:43:12</publishTime>
+    </File>
+    <File Include="Views/Home/News.cshtml">
+      <publishTime>03/26/2019 08:43:12</publishTime>
+    </File>
+    <File Include="Views/Home/NhacNhat.cshtml">
+      <publishTime>03/26/2019 08:43:12</publishTime>
     </File>
     <File Include="Views/Shared/Error.cshtml">
       <publishTime>03/02/2019 15:00:30</publishTime>
     </File>
     <File Include="Views/Shared/_Layout.cshtml">
-      <publishTime>03/06/2019 09:16:57</publishTime>
+      <publishTime>03/26/2019 09:41:35</publishTime>
     </File>
     <File Include="Views/Web.config">
       <publishTime>03/02/2019 15:00:30</publishTime>

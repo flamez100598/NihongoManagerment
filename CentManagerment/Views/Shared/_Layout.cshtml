@@ -121,14 +121,14 @@
                             <!-- NAME -->
                             <div class="form-group" ng-class="{ 'has-error' : userForm.name.$invalid && !userForm.name.$pristine }">
                                 <label>Họ tên*</label>
-                                <input type="text" name="name" class="form-control" ng-model="user.name" required>
+                                <input type="text" name="name" class="form-control" ng-model="user.name" required id="register_name">
                                 <p ng-show="userForm.name.$invalid && !userForm.name.$pristine" class="help-block">Your name is required.</p>
                             </div>
 
                             <!-- USERNAME -->
                             <div class="form-group" ng-class="{ 'has-error' : userForm.username.$invalid && !userForm.username.$pristine }">
                                 <label>Số điện thoại*</label>
-                                <input type="number" name="phone" class="form-control" ng-model="user.sdt" ng-minlength="7" ng-maxlength="11">
+                                <input type="number" name="phone" class="form-control" ng-model="user.sdt" ng-minlength="7" ng-maxlength="11" id="register_phone">
                                 <p ng-show="userForm.phone.$error.minlength" class="help-block" style="color:red">Số điện thoại quá ngắn.</p>
                                 <p ng-show="userForm.phone.$error.maxlength" class="help-block" style="color:red">Đây không phải kiểu số điện thoại!</p>
                             </div>
@@ -136,12 +136,12 @@
                             <!-- EMAIL -->
                             <div class="form-group" ng-class="{ 'has-error' : userForm.email.$invalid && !userForm.email.$pristine }">
                                 <label>Email</label>
-                                <input type="email" name="email" class="form-control" ng-model="user.email">
+                                <input type="email" name="email" class="form-control" ng-model="user.email" id="register_email">
                                 <p ng-show="userForm.email.$invalid && !userForm.email.$pristine" class="help-block">Enter a valid email.</p>
                             </div>
                             <div class="form-group">
                                 <label for="message-text" class="col-form-label">Khóa học:</label>
-                                <select class="form-control" id="message-text">
+                                <select class="form-control" id="register_course">
                                     <option selected>N5</option>
                                     <option>N4</option>
                                     <option>N3</option>
@@ -154,7 +154,7 @@
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Đóng</button>
-                                <input type="submit" value="Đăng ký ngay!" class="btn-submit btn btn-primary" name="submit" data-toggle="modal" ng-disabled="!user.name || !user.sdt" data-dismiss="modal" href="#myModal2">
+                                <input type="submit" value="Đăng ký ngay!" class="btn-submit btn btn-primary" name="submit" data-toggle="modal" ng-disabled="!user.name || !user.sdt" data-dismiss="modal" href="#myModal2" id="registerCourse">
                             </div>
                         </form>
                     </div>
@@ -167,13 +167,12 @@
             <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalCenterTitle">Đăng ký thành công!</h5>
+                        <h5 class="modal-title" id="exampleModalCenterTitle">Đăng ký hỗ trợ</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
-                    <div class="modal-body">
-                        Thank you for register!
+                    <div class="modal-body" id="bodymessage">
                     </div>
                 </div>
             </div>

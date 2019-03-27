@@ -28,5 +28,47 @@ namespace CentManagerment.Model.DAO
             }
 
         }
+        public bool Update(int id, int status)
+        {
+            using (db = new CentManagermentEntities())
+            {
+                try
+                {
+                    var get = db.RegisterManagerments.Find(id);
+
+                    get.register_status = status;
+                    
+                    db.SaveChanges();
+                    return true;
+
+                }
+                catch (Exception)
+                {
+                    return false;
+                }
+            }
+
+        }
+
+        public bool Delete(int id)
+        {
+            using (db = new CentManagermentEntities())
+            {
+                try
+                {
+                    var get = db.RegisterManagerments.Find(id);
+                    db.RegisterManagerments.Remove(get);
+                    db.SaveChanges();
+                    return true;
+
+                }
+                catch (Exception)
+                {
+                    return false;
+                }
+            }
+
+        }
+
     }
 }

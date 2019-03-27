@@ -1,0 +1,15 @@
+diff a/CentManagerment/Views/Home/Index.cshtml b/CentManagerment/Views/Home/Index.cshtml	(rejected hunks)
+@@ -110,6 +110,13 @@
+                                 </div>
+                             </article>
+                         </div>
++=======
++                <div class="home__box--each">
++                    <div class="home__box--img"><a href="#"><img src="~/Assets/client/logo/doc.png" /></a></div>
++                    <div class="home__box--inner">
++                        <h4> <a href="#">Tài liệu</a></h4>
++                        <p>Với xu thế hội nhập toàn cầu như hiện này, khi rất nhiều các doanh nghiệp chọn Việt nam là điểm đến của sự đầu tư thì nhu cầu học tiếng Nhật ngày càng tăng cao hơn bao giờ hết.</p>
++>>>>>>> 2bbf427fe5040c024624c53ca1286020e58d6a3b
+                     </div>
+                     <div class="col6">
+                         <div class="inner">
