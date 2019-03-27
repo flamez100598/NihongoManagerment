@@ -219,6 +219,7 @@
     <Content Include="Assets\client\css\bootstrap\bootstrap-grid.css" />
     <Content Include="Assets\client\css\bootstrap\bootstrap-reboot.css" />
     <Content Include="Assets\client\css\bootstrap\bootstrap.css" />
+    <Content Include="Assets\client\css\owl.theme.default.min.css" />
     <Content Include="Assets\client\css\res.css" />
     <Content Include="Assets\client\css\style.css" />
     <Content Include="Assets\client\img\20171205-banner-nhat.gif" />
