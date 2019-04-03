@@ -1,47 +1,71 @@
-﻿$(document).ready(function(){
+﻿$(document).ready(function () {
     $('.owl-carousel').owlCarousel({
-        margin:10,
+        margin: 10,
         autoplay: true,
         autoplayTimeout: 5000,
         rewind: true,
-        responsive:{
-            0:{
-                items:1
+        responsive: {
+            0: {
+                items: 1
             },
-            600:{
-                items:3
+            600: {
+                items: 3
             },
-            1000:{
-                items:4
+            1000: {
+                items: 4
             }
         }
     });
+    //click modal img
+    // Get the modal
+    for (var i = 1; i < 4; i++) {
+        var modal = document.getElementById('myModal'+i);
 
+        // Get the image and insert it inside the modal - use its "alt" text as a caption
+        var img = document.getElementById('myImg'+i);
+        var modalImg = document.getElementById("img0"+i);
+        var captionText = document.getElementById("caption"+i);
+        img.onclick = function () {
+            modal.style.display = "block";
+            modalImg.src = this.src;
+            captionText.innerHTML = this.alt;
+        }
+        var span = document.getElementsByClassName("close")[i-1];
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
+    }
+
+    // Get the <span> element that closes the modal
+
+    //end click modal img
     // $('.owl-carousel').ready(function(){
     //     $('.owl-carousel').owlCarousel();
     // });
     var currentScroll;
-    $(".menu-icon").click(function(){
+    $(".menu-icon").click(function () {
         $(".navbar-wrap .menu").slideToggle();
-        currentScroll=$(window).scrollTop();
+        currentScroll = $(window).scrollTop();
     });
 
-    $(window).scroll(function(){
+    $(window).scroll(function () {
         console.log(currentScroll);
-        var afterscroll=$(window).scrollTop();
-        if(afterscroll>currentScroll){
+        var afterscroll = $(window).scrollTop();
+        if (afterscroll > currentScroll) {
             $(".navbar-wrap .menu").slideUp();
         }
     });
-    
-    $(".scroll-totop").click(function(){
-         $('html,body').animate({ scrollTop: 0 }, 'slow');
+
+    $(".scroll-totop").click(function () {
+        $('html,body').animate({ scrollTop: 0 }, 'slow');
     });
 
 });
 //đăng ký khóa học
 $('#registerCourse').click(function () {
-    $('#bodymessage').after('<img src="/Assets/client/img/loading.gif" class="loader" alt="loading" style="width:100px;height:100px;">').fadeIn(); 
+    $('#bodymessage').after('<img src="/Assets/client/img/loading.gif" class="loader" alt="loading" style="width:100px;height:100px;">').fadeIn();
     var Course = {
         register_name: $('#register_name').val(),
         register_phone: $('#register_phone').val(),

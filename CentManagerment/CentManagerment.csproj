@@ -228,6 +228,12 @@
     <Content Include="Assets\client\img\course\n4_n5.png" />
     <Content Include="Assets\client\img\course\n5.png" />
     <Content Include="Assets\client\img\course\n5_n3.png" />
+    <Content Include="Assets\client\img\DonXuatKhau\1.jpg" />
+    <Content Include="Assets\client\img\DonXuatKhau\2.jpg" />
+    <Content Include="Assets\client\img\DonXuatKhau\3.png" />
+    <Content Include="Assets\client\img\DonXuatKhau\4.png" />
+    <Content Include="Assets\client\img\DonXuatKhau\chi phi du hoc nhat vua hoc vua lam.jpg" />
+    <Content Include="Assets\client\img\DonXuatKhau\co-nen-du-hoc-nhat-ban-vua-hoc-vua-lam-hay-khong-10717392715b936078479c0.jpg" />
     <Content Include="Assets\client\img\lotrinh.jpg" />
     <Content Include="Assets\client\img\sensei\100x12.png" />
     <Content Include="Assets\client\img\sensei\ssDung.JPG" />
@@ -3135,6 +3141,7 @@
     <Content Include="Views\Home\News.cshtml" />
     <Content Include="Views\Home\NhacNhat.cshtml" />
     <Content Include="Views\Home\KinhNghiem.cshtml" />
+    <Content Include="Views\Home\TuyenKySu.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
