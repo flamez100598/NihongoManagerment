@@ -75,6 +75,10 @@ namespace CentManagerment.Controllers
             return View(getTinTuc);
         }
 
+        public ActionResult TuyenKySu()
+        {
+            return View();
+        }
 
         //send mail
 
