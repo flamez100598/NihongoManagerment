@@ -91,10 +91,12 @@ $('#registerCourse').click(function () {
             if (result) {
                 $('#bodymessage').text("Gửi thông tin thành công! Hãy tham khảo các khóa học và đăng ký tiếp nhé!");
                 $('#bodymessage').attr('style', 'display: block; color: green; text-align: center; padding: 50px;');
+                alert("Successfully!")
             }
             else {
                 $('#bodymessage').text("Đã xảy ra lỗi! Bạn quay lại đăng ký sau nhé! Hãy thao khảo các khóa học tiếp đi nhé!");
                 $('#bodymessage').attr('style', 'display: block; color: red; text-align: center; padding: 50px;');
+                alert("fail!")
             }
         }
     });

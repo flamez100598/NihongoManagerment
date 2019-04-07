@@ -86,7 +86,7 @@ a {
 	margin-top: 80px;
 }
 .more-features {
-	background-color: #F7F7F7;
+	background-color: #FFF;
 	padding: 40px 0;
 }
 .more-features .row {
@@ -289,7 +289,7 @@ div.buy {
 article p {
 	font-size: 14px;
 	line-height: 24px;
-	font-weight: 400;
+	font-weight: 600;
 	color: #4C4C4C;
 }
 .readmore a {
@@ -454,7 +454,23 @@ footer p {
     animation-duration: 0.6s;
 }
 
+/*modal custom*/
+.modal-dialog.container .col-6 {
+    padding: 0;
+    margin: 0;
+    border: none;
+}
 
+.modal-dialog {
+    margin-top:100px;
+    background: white;
+    padding: 30px;
+}
+
+.modal-dialog.container .modal-content {
+    border: none;
+    box-shadow: none;
+}
 /* The Close Button */
 .close {
     position: absolute;
@@ -476,7 +492,7 @@ footer p {
 
 /* 100% Image Width on Smaller Screens */
 @media only screen and (max-width: 700px) {
-    .modal-content {
+    .modal-contentImg {
         width: 100%;
     }
 }
@@ -523,3 +539,12 @@ footer p {
     .footer__box span.custom-span i {
         padding-right: 13px;
     }
+/*img box*/
+.home__box--img img {
+    height: 234px;
+}
+.custom-icon {
+    color: #007bff;
+    font-size: 25px;
+    padding-right: 11px;
+}
