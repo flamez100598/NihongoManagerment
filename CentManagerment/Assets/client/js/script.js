@@ -36,6 +36,14 @@
         span.onclick = function () {
             modal.style.display = "none";
         }
+        modal.onclick = function () {
+            img.className += " out";
+            setTimeout(function () {
+                modal.style.display = "none";
+                img.className = "modal-contentImg";
+            }, 400);
+
+        }
     }
 
     // Get the <span> element that closes the modal

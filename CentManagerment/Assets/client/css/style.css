@@ -405,7 +405,10 @@ footer p {
     }
 
 /* The Modal (background) */
-.modal {
+.modal-content {
+    margin-top: 45px !important;
+}
+.modalImg {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
@@ -417,10 +420,14 @@ footer p {
     overflow: auto; /* Enable scroll if needed */
     background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+    animation:0.4s;
 }
-
+.out {
+    animation-name: zoom-out;
+    animation-duration: 0.6s;
+}
 /* Modal Content (image) */
-.modal-content {
+.modal-contentImg {
     margin: auto;
     display: block;
     width: 80%;
@@ -440,7 +447,7 @@ footer p {
 }
 
 /* Add Animation */
-.modal-content, .caption {
+.modal-contentImg .caption {
     -webkit-animation-name: zoom;
     -webkit-animation-duration: 0.6s;
     animation-name: zoom;
@@ -466,9 +473,53 @@ footer p {
         cursor: pointer;
     }
 
+
 /* 100% Image Width on Smaller Screens */
 @media only screen and (max-width: 700px) {
     .modal-content {
         width: 100%;
     }
 }
+#header {
+    margin-top: 45px;
+    background: #d7f3ff;
+}
+
+.fixed-nav-bar {
+    position: fixed;
+    top: 0;
+    z-index: 9999;
+    width: 100%;
+    height: 45px;
+    background-color: #2391ea;
+    box-shadow: 0px 0px 10px grey;
+    color: #f9f9ff;
+    font-weight: 500;
+}
+
+.brand {
+    display: -webkit-inline-box;
+    float: left;
+    padding-left: 10px;
+    line-height: 40px;
+}
+
+    .brand i {
+        padding-right: 7px;
+    }
+
+.link {
+    float: right;
+    padding-left: 20px;
+    line-height: 30px;
+}
+
+.footer__box span.custom-span {
+    display: block;
+    padding-left: 10px;
+    font-size: 16px;
+}
+
+    .footer__box span.custom-span i {
+        padding-right: 13px;
+    }
