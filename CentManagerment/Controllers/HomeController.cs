@@ -89,7 +89,7 @@ namespace CentManagerment.Controllers
             try
             {
                 var fromEmail = "demoproject.3fgroup@gmail.com";
-                var toEmail = "mrvvip10@gmail.com";
+                var toEmail = "mrvvip11@gmail.com";
                 var senderEmail = new MailAddress(fromEmail, "Jamil");
                 var receiverEmail = new MailAddress(toEmail, "Receiver");
                 var password = "3fk11997";

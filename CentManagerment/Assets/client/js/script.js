@@ -16,6 +16,9 @@
             }
         }
     });
+    setTimeout(function () {
+        $("#exampleModal").modal('show');
+    },500)
     //click modal img
     // Get the modal
     for (var i = 1; i < 4; i++) {
@@ -35,6 +38,14 @@
         // When the user clicks on <span> (x), close the modal
         span.onclick = function () {
             modal.style.display = "none";
+        }
+        modal.onclick = function () {
+            img.className += " out";
+            setTimeout(function () {
+                modal.style.display = "none";
+                img.className = "modal-contentImg";
+            }, 400);
+
         }
     }
 
@@ -83,10 +94,12 @@ $('#registerCourse').click(function () {
             if (result) {
                 $('#bodymessage').text("Gửi thông tin thành công! Hãy tham khảo các khóa học và đăng ký tiếp nhé!");
                 $('#bodymessage').attr('style', 'display: block; color: green; text-align: center; padding: 50px;');
+                alert("Successfully!")
             }
             else {
                 $('#bodymessage').text("Đã xảy ra lỗi! Bạn quay lại đăng ký sau nhé! Hãy thao khảo các khóa học tiếp đi nhé!");
                 $('#bodymessage').attr('style', 'display: block; color: red; text-align: center; padding: 50px;');
+                alert("fail!")
             }
         }
     });
