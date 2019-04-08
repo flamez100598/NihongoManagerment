@@ -266,8 +266,6 @@
     <Content Include="Assets\client\logo\pic1.jpg" />
     <Content Include="Assets\client\logo\pic2.jpg" />
     <Content Include="Assets\client\logo\pic3.jpg" />
-    <Content Include="bin\CentManagerment.dll" />
-    <Content Include="bin\CentManagerment.pdb" />
     <Content Include="Content\PagedList.css" />
     <Content Include="Logo.png" />
     <Content Include="Assets\admin\images\photo1.png" />
@@ -3163,6 +3161,7 @@
     <Folder Include="Assets\client\img\gallery\" />
     <Folder Include="Assets\content\files\" />
     <Folder Include="Assets\content\images\" />
+    <Folder Include="bin\" />
     <Folder Include="Models\" />
     <Folder Include="Views\Course\" />
   </ItemGroup>
