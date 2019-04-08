@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="f410d33c46494911af8103997e90f3b4" Name="Diagram1">
+        <EntityTypeShape EntityType="CentManagermentModel.Class" Width="1.5" PointX="3" PointY="3" IsExpanded="true" />
+        <EntityTypeShape EntityType="CentManagermentModel.Course" Width="1.5" PointX="0.75" PointY="2.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="CentManagermentModel.Expenditure" Width="1.5" PointX="5.25" PointY="8.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="CentManagermentModel.News" Width="1.5" PointX="10" PointY="8" IsExpanded="true" />
+        <EntityTypeShape EntityType="CentManagermentModel.RegisterManagerment" Width="1.5" PointX="0.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CentManagermentModel.Revenue" Width="1.5" PointX="7.5" PointY="4.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="CentManagermentModel.RevenueMonth" Width="1.5" PointX="5.25" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="CentManagermentModel.Role" Width="1.5" PointX="9.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CentManagermentModel.RoleManager" Width="1.5" PointX="0.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CentManagermentModel.Student" Width="1.5" PointX="5.25" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="CentManagermentModel.Teacher" Width="1.5" PointX="9.75" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="CentManagermentModel.Timekeeping" Width="1.5" PointX="12" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CentManagermentModel.Transaction" Width="1.5" PointX="2.75" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CentManagermentModel.UserManager" Width="1.5" PointX="7.75" PointY="8" IsExpanded="true" />
+        <AssociationConnector Association="CentManagermentModel.FK_Classes_Courses" ManuallyRouted="false" />
+        <AssociationConnector Association="CentManagermentModel.FK_RevenueMonth_Class" ManuallyRouted="false" />
+        <AssociationConnector Association="CentManagermentModel.FK_Students_Classes" ManuallyRouted="false" />
+        <AssociationConnector Association="CentManagermentModel.FK_Revenue_Expenditure" ManuallyRouted="false" />
+        <AssociationConnector Association="CentManagermentModel.FK_News_Users" ManuallyRouted="false" />
+        <AssociationConnector Association="CentManagermentModel.FK_Revenues_Students" ManuallyRouted="false" />
+        <AssociationConnector Association="CentManagermentModel.FK_Timekeeping_Teacher" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-    <Schema Namespace="CentManagermentModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="CentManagermentModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Class">
           <Key>
             <PropertyRef Name="ClassId" />
@@ -291,7 +291,8 @@
             <End Role="Timekeeping" EntitySet="Timekeeping" />
           </AssociationSet>
         </EntityContainer>
-      </Schema></edmx:StorageModels>
+      </Schema>
+    </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="CentManagermentModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -304,8 +305,8 @@
           <Property Name="ClassAmountStudent" Type="Int32" />
           <Property Name="ClassCourseId" Type="Int32" />
           <NavigationProperty Name="Course" Relationship="Self.FK_Classes_Courses" FromRole="Class" ToRole="Course" />
+          <NavigationProperty Name="RevenueMonths" Relationship="Self.FK_RevenueMonth_Class" FromRole="Class" ToRole="RevenueMonth" />
           <NavigationProperty Name="Students" Relationship="Self.FK_Students_Classes" FromRole="Class" ToRole="Student" />
-          <NavigationProperty Name="RevenueMonths" Relationship="CentManagermentModel.FK_RevenueMonth_Class" FromRole="Class" ToRole="RevenueMonth" />
         </EntityType>
         <EntityType Name="Course">
           <Key>
@@ -317,8 +318,8 @@
           <Property Name="StartDate" Type="DateTime" Precision="0" />
           <Property Name="EndDate" Type="DateTime" Precision="0" />
           <Property Name="IsActive" Type="Boolean" />
-          <NavigationProperty Name="Classes" Relationship="Self.FK_Classes_Courses" FromRole="Course" ToRole="Class" />
           <Property Name="TotalPeriod" Type="Int32" />
+          <NavigationProperty Name="Classes" Relationship="Self.FK_Classes_Courses" FromRole="Course" ToRole="Class" />
         </EntityType>
         <EntityType Name="Expenditure">
           <Key>
@@ -342,6 +343,18 @@
           <Property Name="NewsAvatar" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="UserManager" Relationship="Self.FK_News_Users" FromRole="News" ToRole="UserManager" />
         </EntityType>
+        <EntityType Name="RegisterManagerment">
+          <Key>
+            <PropertyRef Name="register_id" />
+          </Key>
+          <Property Name="register_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="register_name" Type="String" MaxLength="69" FixedLength="false" Unicode="true" />
+          <Property Name="register_phone" Type="String" MaxLength="16" FixedLength="false" Unicode="true" />
+          <Property Name="register_email" Type="String" MaxLength="69" FixedLength="false" Unicode="true" />
+          <Property Name="register_course" Type="Int32" />
+          <Property Name="register_status" Type="Int32" />
+          <Property Name="register_message" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
         <EntityType Name="Revenue">
           <Key>
             <PropertyRef Name="RevenueId" />
@@ -353,6 +366,16 @@
           <Property Name="ExpenditureId" Type="Int32" />
           <NavigationProperty Name="Expenditure" Relationship="Self.FK_Revenue_Expenditure" FromRole="Revenue" ToRole="Expenditure" />
           <NavigationProperty Name="Student" Relationship="Self.FK_Revenues_Students" FromRole="Revenue" ToRole="Student" />
+        </EntityType>
+        <EntityType Name="RevenueMonth">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ClassId" Type="Int32" />
+          <Property Name="Period" Type="Int32" />
+          <Property Name="Time" Type="DateTime" Precision="0" />
+          <NavigationProperty Name="Class" Relationship="Self.FK_RevenueMonth_Class" FromRole="RevenueMonth" ToRole="Class" />
         </EntityType>
         <EntityType Name="Role">
           <Key>
@@ -451,6 +474,18 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_RevenueMonth_Class">
+          <End Role="Class" Type="Self.Class" Multiplicity="0..1" />
+          <End Role="RevenueMonth" Type="Self.RevenueMonth" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Class">
+              <PropertyRef Name="ClassId" />
+            </Principal>
+            <Dependent Role="RevenueMonth">
+              <PropertyRef Name="ClassId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_Students_Classes">
           <End Role="Class" Type="Self.Class" Multiplicity="0..1">
             <OnDelete Action="Cascade" />
@@ -522,7 +557,9 @@
           <EntitySet Name="Courses" EntityType="Self.Course" />
           <EntitySet Name="Expenditures" EntityType="Self.Expenditure" />
           <EntitySet Name="News" EntityType="Self.News" />
+          <EntitySet Name="RegisterManagerments" EntityType="Self.RegisterManagerment" />
           <EntitySet Name="Revenues" EntityType="Self.Revenue" />
+          <EntitySet Name="RevenueMonths" EntityType="Self.RevenueMonth" />
           <EntitySet Name="Roles" EntityType="Self.Role" />
           <EntitySet Name="RoleManagers" EntityType="Self.RoleManager" />
           <EntitySet Name="Students" EntityType="Self.Student" />
@@ -533,6 +570,10 @@
           <AssociationSet Name="FK_Classes_Courses" Association="Self.FK_Classes_Courses">
             <End Role="Course" EntitySet="Courses" />
             <End Role="Class" EntitySet="Classes" />
+          </AssociationSet>
+          <AssociationSet Name="FK_RevenueMonth_Class" Association="Self.FK_RevenueMonth_Class">
+            <End Role="Class" EntitySet="Classes" />
+            <End Role="RevenueMonth" EntitySet="RevenueMonths" />
           </AssociationSet>
           <AssociationSet Name="FK_Students_Classes" Association="Self.FK_Students_Classes">
             <End Role="Class" EntitySet="Classes" />
@@ -554,47 +595,7 @@
             <End Role="Teacher" EntitySet="Teachers" />
             <End Role="Timekeeping" EntitySet="Timekeepings" />
           </AssociationSet>
-          <EntitySet Name="RevenueMonths" EntityType="CentManagermentModel.RevenueMonth" />
-          <AssociationSet Name="FK_RevenueMonth_Class" Association="CentManagermentModel.FK_RevenueMonth_Class">
-            <End Role="Class" EntitySet="Classes" />
-            <End Role="RevenueMonth" EntitySet="RevenueMonths" />
-          </AssociationSet>
-          <EntitySet Name="RegisterManagerments" EntityType="CentManagermentModel.RegisterManagerment" />
         </EntityContainer>
-        <EntityType Name="RevenueMonth">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="ClassId" Type="Int32" />
-          <Property Name="Period" Type="Int32" />
-          <Property Name="Time" Type="DateTime" Precision="0" />
-          <NavigationProperty Name="Class" Relationship="CentManagermentModel.FK_RevenueMonth_Class" FromRole="RevenueMonth" ToRole="Class" />
-        </EntityType>
-        <Association Name="FK_RevenueMonth_Class">
-          <End Type="CentManagermentModel.Class" Role="Class" Multiplicity="0..1" />
-          <End Type="CentManagermentModel.RevenueMonth" Role="RevenueMonth" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Class">
-              <PropertyRef Name="ClassId" />
-            </Principal>
-            <Dependent Role="RevenueMonth">
-              <PropertyRef Name="ClassId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <EntityType Name="RegisterManagerment">
-          <Key>
-            <PropertyRef Name="register_id" />
-          </Key>
-          <Property Name="register_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="register_name" Type="String" MaxLength="69" FixedLength="false" Unicode="true" />
-          <Property Name="register_phone" Type="String" MaxLength="16" FixedLength="false" Unicode="true" />
-          <Property Name="register_email" Type="String" MaxLength="69" FixedLength="false" Unicode="true" />
-          <Property Name="register_course" Type="Int32" />
-          <Property Name="register_status" Type="Int32" />
-          <Property Name="register_message" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -614,13 +615,13 @@
           <EntitySetMapping Name="Courses">
             <EntityTypeMapping TypeName="CentManagermentModel.Course">
               <MappingFragment StoreEntitySet="Course">
-                <ScalarProperty Name="TotalPeriod" ColumnName="TotalPeriod" />
                 <ScalarProperty Name="CourseId" ColumnName="CourseId" />
                 <ScalarProperty Name="CourseName" ColumnName="CourseName" />
                 <ScalarProperty Name="Price" ColumnName="Price" />
                 <ScalarProperty Name="StartDate" ColumnName="StartDate" />
                 <ScalarProperty Name="EndDate" ColumnName="EndDate" />
                 <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="TotalPeriod" ColumnName="TotalPeriod" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -646,6 +647,19 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <EntitySetMapping Name="RegisterManagerments">
+            <EntityTypeMapping TypeName="CentManagermentModel.RegisterManagerment">
+              <MappingFragment StoreEntitySet="RegisterManagerment">
+                <ScalarProperty Name="register_id" ColumnName="register_id" />
+                <ScalarProperty Name="register_name" ColumnName="register_name" />
+                <ScalarProperty Name="register_phone" ColumnName="register_phone" />
+                <ScalarProperty Name="register_email" ColumnName="register_email" />
+                <ScalarProperty Name="register_course" ColumnName="register_course" />
+                <ScalarProperty Name="register_status" ColumnName="register_status" />
+                <ScalarProperty Name="register_message" ColumnName="register_message" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="Revenues">
             <EntityTypeMapping TypeName="CentManagermentModel.Revenue">
               <MappingFragment StoreEntitySet="Revenue">
@@ -654,6 +668,16 @@
                 <ScalarProperty Name="RevenuePrice" ColumnName="RevenuePrice" />
                 <ScalarProperty Name="RevenueStudentId" ColumnName="RevenueStudentId" />
                 <ScalarProperty Name="ExpenditureId" ColumnName="ExpenditureId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="RevenueMonths">
+            <EntityTypeMapping TypeName="CentManagermentModel.RevenueMonth">
+              <MappingFragment StoreEntitySet="RevenueMonth">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="ClassId" ColumnName="ClassId" />
+                <ScalarProperty Name="Period" ColumnName="Period" />
+                <ScalarProperty Name="Time" ColumnName="Time" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -739,29 +763,6 @@
                 <ScalarProperty Name="UserType" ColumnName="UserType" />
                 <ScalarProperty Name="FullName" ColumnName="FullName" />
                 <ScalarProperty Name="UserPhoneNumber" ColumnName="UserPhoneNumber" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="RevenueMonths">
-            <EntityTypeMapping TypeName="CentManagermentModel.RevenueMonth">
-              <MappingFragment StoreEntitySet="RevenueMonth">
-                <ScalarProperty Name="Time" ColumnName="Time" />
-                <ScalarProperty Name="Period" ColumnName="Period" />
-                <ScalarProperty Name="ClassId" ColumnName="ClassId" />
-                <ScalarProperty Name="Id" ColumnName="Id" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="RegisterManagerments">
-            <EntityTypeMapping TypeName="CentManagermentModel.RegisterManagerment">
-              <MappingFragment StoreEntitySet="RegisterManagerment">
-                <ScalarProperty Name="register_message" ColumnName="register_message" />
-                <ScalarProperty Name="register_status" ColumnName="register_status" />
-                <ScalarProperty Name="register_course" ColumnName="register_course" />
-                <ScalarProperty Name="register_email" ColumnName="register_email" />
-                <ScalarProperty Name="register_phone" ColumnName="register_phone" />
-                <ScalarProperty Name="register_name" ColumnName="register_name" />
-                <ScalarProperty Name="register_id" ColumnName="register_id" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

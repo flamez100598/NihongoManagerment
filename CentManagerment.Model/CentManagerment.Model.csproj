@@ -78,88 +78,88 @@
     <Compile Include="DAO\TeacherDAO.cs" />
     <Compile Include="DAO\TimekeepingDAO.cs" />
     <Compile Include="DAO\UserManagerDAO.cs" />
-    <Compile Include="EF\CentManagerment.Context.cs">
+    <Compile Include="EF\CentManagementDbContext.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>CentManagerment.Context.tt</DependentUpon>
+      <DependentUpon>CentManagementDbContext.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="EF\CentManagerment.cs">
+    <Compile Include="EF\CentManagementDbContext.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>CentManagerment.tt</DependentUpon>
+      <DependentUpon>CentManagementDbContext.tt</DependentUpon>
     </Compile>
-    <Compile Include="EF\CentManagerment.Designer.cs">
+    <Compile Include="EF\CentManagementDbContext.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>CentManagerment.edmx</DependentUpon>
+      <DependentUpon>CentManagementDbContext.edmx</DependentUpon>
     </Compile>
     <Compile Include="EF\Class.cs">
-      <DependentUpon>CentManagerment.tt</DependentUpon>
+      <DependentUpon>CentManagementDbContext.tt</DependentUpon>
     </Compile>
     <Compile Include="EF\Course.cs">
-      <DependentUpon>CentManagerment.tt</DependentUpon>
+      <DependentUpon>CentManagementDbContext.tt</DependentUpon>
     </Compile>
     <Compile Include="EF\Expenditure.cs">
-      <DependentUpon>CentManagerment.tt</DependentUpon>
+      <DependentUpon>CentManagementDbContext.tt</DependentUpon>
     </Compile>
     <Compile Include="EF\News.cs">
-      <DependentUpon>CentManagerment.tt</DependentUpon>
+      <DependentUpon>CentManagementDbContext.tt</DependentUpon>
     </Compile>
     <Compile Include="EF\RegisterManagerment.cs">
-      <DependentUpon>CentManagerment.tt</DependentUpon>
+      <DependentUpon>CentManagementDbContext.tt</DependentUpon>
     </Compile>
     <Compile Include="EF\Revenue.cs">
-      <DependentUpon>CentManagerment.tt</DependentUpon>
+      <DependentUpon>CentManagementDbContext.tt</DependentUpon>
     </Compile>
     <Compile Include="EF\RevenueMonth.cs">
-      <DependentUpon>CentManagerment.tt</DependentUpon>
+      <DependentUpon>CentManagementDbContext.tt</DependentUpon>
     </Compile>
     <Compile Include="EF\Role.cs">
-      <DependentUpon>CentManagerment.tt</DependentUpon>
+      <DependentUpon>CentManagementDbContext.tt</DependentUpon>
     </Compile>
     <Compile Include="EF\RoleManager.cs">
-      <DependentUpon>CentManagerment.tt</DependentUpon>
+      <DependentUpon>CentManagementDbContext.tt</DependentUpon>
     </Compile>
     <Compile Include="EF\Student.cs">
-      <DependentUpon>CentManagerment.tt</DependentUpon>
+      <DependentUpon>CentManagementDbContext.tt</DependentUpon>
     </Compile>
     <Compile Include="EF\Teacher.cs">
-      <DependentUpon>CentManagerment.tt</DependentUpon>
+      <DependentUpon>CentManagementDbContext.tt</DependentUpon>
     </Compile>
     <Compile Include="EF\Timekeeping.cs">
-      <DependentUpon>CentManagerment.tt</DependentUpon>
+      <DependentUpon>CentManagementDbContext.tt</DependentUpon>
     </Compile>
     <Compile Include="EF\Transaction.cs">
-      <DependentUpon>CentManagerment.tt</DependentUpon>
+      <DependentUpon>CentManagementDbContext.tt</DependentUpon>
     </Compile>
     <Compile Include="EF\UserManager.cs">
-      <DependentUpon>CentManagerment.tt</DependentUpon>
+      <DependentUpon>CentManagementDbContext.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\PagedList.css" />
-    <Content Include="EF\CentManagerment.Context.tt">
+    <Content Include="EF\CentManagementDbContext.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>CentManagerment.edmx</DependentUpon>
-      <LastGenOutput>CentManagerment.Context.cs</LastGenOutput>
+      <DependentUpon>CentManagementDbContext.edmx</DependentUpon>
+      <LastGenOutput>CentManagementDbContext.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="EF\CentManagerment.tt">
+    <Content Include="EF\CentManagementDbContext.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>CentManagerment.edmx</DependentUpon>
-      <LastGenOutput>CentManagerment.cs</LastGenOutput>
+      <DependentUpon>CentManagementDbContext.edmx</DependentUpon>
+      <LastGenOutput>CentManagementDbContext.cs</LastGenOutput>
     </Content>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.Config">
       <SubType>Designer</SubType>
     </None>
-    <EntityDeploy Include="EF\CentManagerment.edmx">
+    <EntityDeploy Include="EF\CentManagementDbContext.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>CentManagerment.Designer.cs</LastGenOutput>
+      <LastGenOutput>CentManagementDbContext.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="EF\CentManagerment.edmx.diagram">
-      <DependentUpon>CentManagerment.edmx</DependentUpon>
+    <None Include="EF\CentManagementDbContext.edmx.diagram">
+      <DependentUpon>CentManagementDbContext.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
   </ItemGroup>

@@ -29,7 +29,9 @@ namespace CentManagerment.Model.EF
         public virtual DbSet<Course> Courses { get; set; }
         public virtual DbSet<Expenditure> Expenditures { get; set; }
         public virtual DbSet<News> News { get; set; }
+        public virtual DbSet<RegisterManagerment> RegisterManagerments { get; set; }
         public virtual DbSet<Revenue> Revenues { get; set; }
+        public virtual DbSet<RevenueMonth> RevenueMonths { get; set; }
         public virtual DbSet<Role> Roles { get; set; }
         public virtual DbSet<RoleManager> RoleManagers { get; set; }
         public virtual DbSet<Student> Students { get; set; }
@@ -37,7 +39,5 @@ namespace CentManagerment.Model.EF
         public virtual DbSet<Timekeeping> Timekeepings { get; set; }
         public virtual DbSet<Transaction> Transactions { get; set; }
         public virtual DbSet<UserManager> UserManagers { get; set; }
-        public virtual DbSet<RevenueMonth> RevenueMonths { get; set; }
-        public virtual DbSet<RegisterManagerment> RegisterManagerments { get; set; }
     }
 }
