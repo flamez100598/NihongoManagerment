@@ -16,6 +16,9 @@
             }
         }
     });
+    setTimeout(function () {
+        $("#exampleModal").modal('show');
+    },500)
     //click modal img
     // Get the modal
     for (var i = 1; i < 4; i++) {

@@ -405,12 +405,9 @@ footer p {
     }
 
 /* The Modal (background) */
-<<<<<<< HEAD
-=======
 .modal-content {
     margin-top: 45px !important;
 }
->>>>>>> f025b4ba54d5621449cb469b95efcb73e1d96706
 .modalImg {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
