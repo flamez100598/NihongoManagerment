@@ -45,7 +45,39 @@
     @*-- about css *@
 </head>
 <body ng-app="">
+<<<<<<< HEAD
 
+=======
+    <div class="fixed-nav-bar container-fluid">
+        <div class="row">
+            <div class="col-6">
+                <span class="brand">
+                    <i class="fas fa-mobile-phone"></i><a href="tel:+8475159672">097 515 96 72</a>
+                </span>
+                <span class="brand">
+                    <a href="tel:+8475159672">096 621 80 21</a>
+                </span>
+                <span class="brand">
+                    <i class="fas fa-envelope"></i><a href="#">3changngoc678@gmail.com</a>
+                </span>
+            </div>
+            <div class="col-6">
+                <a class="link">
+                    <i class="fa fa-facebook" aria-hidden="true"></i>
+                </a>
+                <a class="link">
+                    <i class="fa fa-twitter" aria-hidden="true"></i>
+                </a>
+                <a class="link">
+                    <i class="fa fa-google-plus" aria-hidden="true"></i>
+                </a>
+                <a class="link">
+                    <i class="fa fa-youtube-play" aria-hidden="true"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+>>>>>>> f025b4ba54d5621449cb469b95efcb73e1d96706
     <header class="header" id="header" style="padding: 15px 0 !important; position:unset !important;">
         <div class="container_1140">
             <div class="header__wrap">
@@ -63,10 +95,12 @@
                                     <li><a href="/Home/CourseOffline/20">Khóa học N5</a></li>
                                     <li><a href="/Home/CourseOffline/21">Khóa học N4</a></li>
                                     <li><a href="/Home/CourseOffline/22">Khóa học N3</a></li>
+                                    <li><a href="/Home/CourseOffline/19">Khóa học N2</a></li>
+                                    <li><a href="/Home/CourseOffline/18">Khóa học Combo N5+N4</a></li>
                                 </ul>
                             </li>
                             <li>
-                                <a href="hocTap.html">Góc học tập</a>
+                                <a>Góc học tập</a>
                                 <ul>
                                     <li><a href="/Home/News">Kiến thức</a></li>
                                     <li><a href="/Home/Knowledge">Tài liệu</a></li>
@@ -101,67 +135,132 @@
     <!-- End feature Area -->
     @RenderBody()
 
+    <section >
+        <article>
+            <div class="body-page" style="font-size:19px;padding:20px">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12  text-center" style="text-align:center !important; padding-bottom:40px;border-bottom: 1px solid #bdbdbd;margin: 20px 0;">
+                            <h2> Liên hệ với chúng tôi</h2>
+                        </div>
+                    </div>
+                    <div class="row contact-detail">
+                        <div class="col-lg-6">
+                            <form class="contact-form">
+                                <input type="hidden" >
+                                <div class="row">
+                                    <div class="col-lg-12" style="padding-left: 15px;">
+                                        <input type="text" name="title" class="form-control" placeholder="Khóa học - Lớp học" id="register_course">
+                                        <input type="text" name="full_name" class="form-control" placeholder="Họ tên của bạn *" required id="register_name">
+                                        <input type="text" name="phone" class="form-control" placeholder="Số điện thoại liên hệ *" required id="register_phone">
+                                        <input type="email" name="email" class="form-control" placeholder="Email liên hệ *" required id="register_email">
+                                        <textarea class="form-control" rows="3" cols="100" name="content" placeholder="Nội dung"></textarea>
+                                        <input type="button" value="Gửi thông tin" class="btn-submit"  id="registerCourse">
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="col-lg-6 contact-info">
+                            <h1 class="page-title-1">
+                                Trung tâm Nhật ngữ 3 chàng ngốc
+                            </h1>
+                            <p><i class="fas fa-map-marker-alt custom-icon"></i> Địa chỉ: Số 140 Cầu Diễn,Nam Từ Liêm , Hà Nội</p>
+                            <p><i class="fas fa-phone-volume custom-icon"></i> Hotline: 097 515 96 72 & 096 621 80 21</p>
+                            <p><i class="fas fa-envelope-open-text custom-icon"></i> Email: 3changngoc678@gmail.com</p>
+                            <p><em>Điền đăng k&yacute; kh&oacute;a học</em></p>
+                        </div>
 
+                    </div>
+                </div>
+
+            </div>
+
+        </article>
+    </section>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d930.8927523432953!2d105.7405969!3d21.0498443!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3134558ccbbba3b3%3A0x34d192032d5e2825!2zTmjhuq10IE5n4buvIDMgQ2jDoG5nIE5n4buRYw!5e0!3m2!1svi!2s!4v1545799495696" width="100%" height="350" frameborder="0" style="border:0" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
     <!-- start footer Area -->
     <footer class="footer" id="footer">
         <!--modal register form  -->
         <button type="button" class="btn btn-primary register-fix" data-toggle="modal"><i class="fas fa-phone" style="font-size:40px;line-height: 50px;"></i></button>
         <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" style="color:black">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Đăng ký ngay</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
+            <div class="modal-dialog container" role="document">
+                <div class="row">
+                    <div class="col-6">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Chinh phục tiếng Nhật cùng 3 chàng ngốc</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body" style="padding: 0; padding-right: 15px;">
+                                <img src="~/Assets/client/img/threeIdiots.jpg" style="height:50%" />
+                            </div>
+                        </div>
                     </div>
-                    <div class="modal-body">
-                        <form name="userForm" ng-submit="submitForm(userForm.$valid)" novalidate>
-                            <!-- NAME -->
-                            <div class="form-group" ng-class="{ 'has-error' : userForm.name.$invalid && !userForm.name.$pristine }">
-                                <label>Họ tên*</label>
-                                <input type="text" name="name" class="form-control" ng-model="user.name" required id="register_name">
-                                <p ng-show="userForm.name.$invalid && !userForm.name.$pristine" class="help-block">Your name is required.</p>
+                    <div class="col-6">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Đăng ký ngay</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
                             </div>
+                            <div class="modal-body">
+                                <form name="userForm" ng-submit="submitForm(userForm.$valid)" novalidate>
+                                    <!-- NAME -->
+                                    <div class="form-group" ng-class="{ 'has-error' : userForm.name.$invalid && !userForm.name.$pristine }">
+                                        <label>Họ tên*</label>
+                                        <input type="text" name="name" class="form-control" ng-model="user.name" required id="register_name">
+                                        <p ng-show="userForm.name.$invalid && !userForm.name.$pristine" class="help-block">Your name is required.</p>
+                                    </div>
 
-                            <!-- USERNAME -->
-                            <div class="form-group" ng-class="{ 'has-error' : userForm.username.$invalid && !userForm.username.$pristine }">
-                                <label>Số điện thoại*</label>
-                                <input type="number" name="phone" class="form-control" ng-model="user.sdt" ng-minlength="7" ng-maxlength="11" id="register_phone">
-                                <p ng-show="userForm.phone.$error.minlength" class="help-block" style="color:red">Số điện thoại quá ngắn.</p>
-                                <p ng-show="userForm.phone.$error.maxlength" class="help-block" style="color:red">Đây không phải kiểu số điện thoại!</p>
-                            </div>
+                                    <!-- USERNAME -->
+                                    <div class="form-group" ng-class="{ 'has-error' : userForm.username.$invalid && !userForm.username.$pristine }">
+                                        <label>Số điện thoại*</label>
+                                        <input type="number" name="phone" class="form-control" ng-model="user.sdt" ng-minlength="7" ng-maxlength="11" id="register_phone">
+                                        <p ng-show="userForm.phone.$error.minlength" class="help-block" style="color:red">Số điện thoại quá ngắn.</p>
+                                        <p ng-show="userForm.phone.$error.maxlength" class="help-block" style="color:red">Đây không phải kiểu số điện thoại!</p>
+                                    </div>
 
-                            <!-- EMAIL -->
-                            <div class="form-group" ng-class="{ 'has-error' : userForm.email.$invalid && !userForm.email.$pristine }">
-                                <label>Email</label>
-                                <input type="email" name="email" class="form-control" ng-model="user.email" id="register_email">
-                                <p ng-show="userForm.email.$invalid && !userForm.email.$pristine" class="help-block">Enter a valid email.</p>
+                                    <!-- EMAIL -->
+                                    <div class="form-group" ng-class="{ 'has-error' : userForm.email.$invalid && !userForm.email.$pristine }">
+                                        <label>Email</label>
+                                        <input type="email" name="email" class="form-control" ng-model="user.email" id="register_email">
+                                        <p ng-show="userForm.email.$invalid && !userForm.email.$pristine" class="help-block">Enter a valid email.</p>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="message-text" class="col-form-label">Khóa học:</label>
+                                        <select class="form-control" id="register_course">
+                                            <option selected>N5</option>
+                                            <option>N4</option>
+                                            <option>N3</option>
+                                            <option>N2</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="message-text" class="col-form-label">Message:</label>
+                                        <textarea class="form-control" id="message-text"></textarea>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Đóng</button>
+                                        <input type="submit" value="Đăng ký ngay!" class="btn-submit btn btn-primary" name="submit" data-toggle="modal" ng-disabled="!user.name || !user.sdt" data-dismiss="modal" href="#myModal2" id="registerCourse">
+                                    </div>
+                                </form>
                             </div>
-                            <div class="form-group">
-                                <label for="message-text" class="col-form-label">Khóa học:</label>
-                                <select class="form-control" id="register_course">
-                                    <option selected>N5</option>
-                                    <option>N4</option>
-                                    <option>N3</option>
-                                    <option>N2</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label for="message-text" class="col-form-label">Message:</label>
-                                <textarea class="form-control" id="message-text"></textarea>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Đóng</button>
-                                <input type="submit" value="Đăng ký ngay!" class="btn-submit btn btn-primary" name="submit" data-toggle="modal" ng-disabled="!user.name || !user.sdt" data-dismiss="modal" href="#myModal2" id="registerCourse">
-                            </div>
-                        </form>
+                        </div>
                     </div>
                 </div>
+
             </div>
         </div>
         <!--thank you modal-->
-
         <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModal2" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
@@ -181,12 +280,12 @@
             <div class="footer__content">
                 <div class="footer__box">
                     <h4>Nhật ngữ 3 chàng ngốc</h4>
-                    <p></p>
-                    <p>Địa chỉ: Số 140 Cầu Diễn,Nam Từ Liêm , Hà Nội</p>
-                    <p>
-                        Hotline: 097 515 96 72 & 096 621 80 21
-                    </p>
-                    <p>Email: 3changngoc678@gmail.com</p>
+                    <br />
+                    <span style="display:block;padding-bottom:15px"><i class="fas fa-map-marker-alt custom-icon" style="color:white"></i>Địa chỉ: Số 140 Cầu Diễn,Nam Từ Liêm , Hà Nội</span>
+                    <span style="display:block;padding-bottom:15px">
+                        <i class="fas fa-phone-volume custom-icon" style="color:white"></i> Hotline: 097 515 96 72 & 096 621 80 21
+                    </span>
+                    <span style="display:block"><i class="fas fa-envelope-open-text custom-icon" style="color:white"></i>Email: 3changngoc678@gmail.com</span>
                 </div>
                 <div class="footer__box">
                     <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d930.8927523432953!2d105.7405969!3d21.0498443!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3134558ccbbba3b3%3A0x34d192032d5e2825!2zTmjhuq10IE5n4buvIDMgQ2jDoG5nIE5n4buRYw!5e0!3m2!1svi!2s!4v1545799495696" width="100%" height="250" frameborder="0" style="border:0" allowfullscreen></iframe>
@@ -207,7 +306,6 @@
         </div>
     </footer>
     <div class="fb-livechat"> <div class="ctrlq fb-overlay"></div><div class="fb-widget"> <div class="ctrlq fb-close"></div><div class="fb-page" data-href="https://www.facebook.com/nhatngu3changngoc" data-tabs="messages" data-width="360" data-height="400" data-small-header="true" data-hide-cover="true" data-show-facepile="false"> </div><div class="fb-credit"> <a href="https://fb.com/dunghorn.net" target="_blank">Powered by Dũng horn</a> </div><div id="fb-root"></div></div><a href="https://m.me/sakinihongo" title="Gửi tin nhắn cho chúng tôi qua Facebook" class="ctrlq fb-button"> <div class="bubble">1</div><div class="bubble-msg">Bạn cần hỗ trợ?</div></a></div>
-    <script src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.9"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script>$(document).ready(function () { function detectmob() { if (navigator.userAgent.match(/Android/i) || navigator.userAgent.match(/webOS/i) || navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPad/i) || navigator.userAgent.match(/iPod/i) || navigator.userAgent.match(/BlackBerry/i) || navigator.userAgent.match(/Windows Phone/i)) { return true; } else { return false; } } var t = { delay: 125, overlay: $(".fb-overlay"), widget: $(".fb-widget"), button: $(".fb-button") }; setTimeout(function () { $("div.fb-livechat").fadeIn() }, 8 * t.delay); if (!detectmob()) { $(".ctrlq").on("click", function (e) { e.preventDefault(), t.overlay.is(":visible") ? (t.overlay.fadeOut(t.delay), t.widget.stop().animate({ bottom: 0, opacity: 0 }, 2 * t.delay, function () { $(this).hide("slow"), t.button.show() })) : t.button.fadeOut("medium", function () { t.widget.stop().show().animate({ bottom: "30px", opacity: 1 }, 2 * t.delay), t.overlay.fadeIn(t.delay) }) }) } });</script>
     <script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v3.2"></script>

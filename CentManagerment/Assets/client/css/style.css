@@ -86,7 +86,7 @@ a {
 	margin-top: 80px;
 }
 .more-features {
-	background-color: #F7F7F7;
+	background-color: #FFF;
 	padding: 40px 0;
 }
 .more-features .row {
@@ -289,7 +289,7 @@ div.buy {
 article p {
 	font-size: 14px;
 	line-height: 24px;
-	font-weight: 400;
+	font-weight: 600;
 	color: #4C4C4C;
 }
 .readmore a {
@@ -405,6 +405,12 @@ footer p {
     }
 
 /* The Modal (background) */
+<<<<<<< HEAD
+=======
+.modal-content {
+    margin-top: 45px !important;
+}
+>>>>>>> f025b4ba54d5621449cb469b95efcb73e1d96706
 .modalImg {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
@@ -417,10 +423,14 @@ footer p {
     overflow: auto; /* Enable scroll if needed */
     background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+    animation:0.4s;
 }
-
+.out {
+    animation-name: zoom-out;
+    animation-duration: 0.6s;
+}
 /* Modal Content (image) */
-.modal-content {
+.modal-contentImg {
     margin: auto;
     display: block;
     width: 80%;
@@ -440,14 +450,30 @@ footer p {
 }
 
 /* Add Animation */
-.modal-content, .caption {
+.modal-contentImg .caption {
     -webkit-animation-name: zoom;
     -webkit-animation-duration: 0.6s;
     animation-name: zoom;
     animation-duration: 0.6s;
 }
 
+/*modal custom*/
+.modal-dialog.container .col-6 {
+    padding: 0;
+    margin: 0;
+    border: none;
+}
 
+.modal-dialog {
+    margin-top:100px;
+    background: white;
+    padding: 30px;
+}
+
+.modal-dialog.container .modal-content {
+    border: none;
+    box-shadow: none;
+}
 /* The Close Button */
 .close {
     position: absolute;
@@ -466,9 +492,62 @@ footer p {
         cursor: pointer;
     }
 
+
 /* 100% Image Width on Smaller Screens */
 @media only screen and (max-width: 700px) {
-    .modal-content {
+    .modal-contentImg {
         width: 100%;
     }
+}
+#header {
+    margin-top: 45px;
+    background: #d7f3ff;
+}
+
+.fixed-nav-bar {
+    position: fixed;
+    top: 0;
+    z-index: 9999;
+    width: 100%;
+    height: 45px;
+    background-color: #2391ea;
+    box-shadow: 0px 0px 10px grey;
+    color: #f9f9ff;
+    font-weight: 500;
+}
+
+.brand {
+    display: -webkit-inline-box;
+    float: left;
+    padding-left: 10px;
+    line-height: 40px;
+}
+
+    .brand i {
+        padding-right: 7px;
+    }
+
+.link {
+    float: right;
+    padding-left: 20px;
+    line-height: 30px;
+}
+
+.footer__box span.custom-span {
+    display: block;
+    padding-left: 10px;
+    font-size: 16px;
+}
+
+    .footer__box span.custom-span i {
+        padding-right: 13px;
+    }
+/*img box*/
+.home__box--img img {
+    height: 234px;
+}
+.custom-icon {
+    color: #007bff;
+    font-size: 25px;
+    padding-right: 11px;
 }
