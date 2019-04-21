@@ -34,7 +34,6 @@ namespace CentManagerment.Controllers
         public ActionResult Contact()
         {
             ViewBag.Message = "Your contact page.";
-
             return View();
         }
         public ActionResult AnhHoatDong()
@@ -58,6 +57,14 @@ namespace CentManagerment.Controllers
         {
             return View();
         }
+        public ActionResult DanhSachTruong()
+        {
+            return View();
+        }
+        public ActionResult Courses()
+        {
+            return View();
+        }
         // Trang chi tiết
         public ActionResult DetailsNew(int? id)
         {
@@ -74,7 +81,10 @@ namespace CentManagerment.Controllers
 
             return View(getTinTuc);
         }
-
+        public ActionResult KienThuc()
+        {
+            return View();
+        }
         public ActionResult TuyenKySu()
         {
             return View();
@@ -89,7 +99,7 @@ namespace CentManagerment.Controllers
             try
             {
                 var fromEmail = "demoproject.3fgroup@gmail.com";
-                var toEmail = "mrvvip11@gmail.com";
+                var toEmail = "mrvvip11@gmail.com.com";
                 var senderEmail = new MailAddress(fromEmail, "Jamil");
                 var receiverEmail = new MailAddress(toEmail, "Receiver");
                 var password = "3fk11997";

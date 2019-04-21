@@ -39,9 +39,13 @@
     <link href="~/Scripts/style.css" rel="stylesheet" />
     <link href="~/Scripts/About.css" rel="stylesheet" />
     @*css new*@
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css" rel="stylesheet" />
+    <link href="~/Assets/client/css/bootstrap/StyleBootstrap.css" rel="stylesheet" />
     <link href="~/Assets/client/css/style.css" rel="stylesheet" />
     <link href="~/Assets/client/css/owl.theme.default.min.css" rel="stylesheet" />
     <link href="~/Assets/client/css/res.css" rel="stylesheet" />
+
     @*-- about css *@
 </head>
 <body ng-app="">
@@ -49,10 +53,10 @@
         <div class="row">
             <div class="col-6">
                 <span class="brand">
-                    <i class="fas fa-mobile-phone"></i><a href="tel:+8475159672">097 515 96 72</a>
+                    <i class="fas fa-mobile-phone"></i><a href="tel:+8475159672">0975.159.672</a>
                 </span>
                 <span class="brand">
-                    <a href="tel:+8475159672">096 621 80 21</a>
+                    <a href="tel:+8475159672">0966.218.021</a>
                 </span>
                 <span class="brand">
                     <i class="fas fa-envelope"></i><a href="#">3changngoc678@gmail.com</a>
@@ -87,18 +91,19 @@
                             <li>
                                 <a href="/Home/AnhHoatDong">Khóa học</a>
                                 <ul>
-                                    <li><a href="#">Online</a></li>
+                                    <li><a href="/Home/Courses">Offline</a></li>
                                     <li><a href="/Home/CourseOffline/20">Khóa học N5</a></li>
                                     <li><a href="/Home/CourseOffline/21">Khóa học N4</a></li>
                                     <li><a href="/Home/CourseOffline/22">Khóa học N3</a></li>
                                     <li><a href="/Home/CourseOffline/19">Khóa học N2</a></li>
                                     <li><a href="/Home/CourseOffline/18">Khóa học Combo N5+N4</a></li>
+                                    <li><a href="/Home/CourseOffline/18">Khóa học Combo N3</a></li>
                                 </ul>
                             </li>
                             <li>
                                 <a>Góc học tập</a>
                                 <ul>
-                                    <li><a href="/Home/News">Kiến thức</a></li>
+                                    <li><a href="/Home/KienThuc">Kiến thức</a></li>
                                     <li><a href="/Home/Knowledge">Tài liệu</a></li>
                                 </ul>
                             </li>
@@ -131,7 +136,7 @@
     <!-- End feature Area -->
     @RenderBody()
 
-    <section >
+    <section>
         <article>
             <div class="body-page" style="font-size:19px;padding:20px">
                 <div class="container">
@@ -143,15 +148,22 @@
                     <div class="row contact-detail">
                         <div class="col-lg-6">
                             <form class="contact-form">
-                                <input type="hidden" >
+                                <input type="hidden">
                                 <div class="row">
                                     <div class="col-lg-12" style="padding-left: 15px;">
-                                        <input type="text" name="title" class="form-control" placeholder="Khóa học - Lớp học" >
-                                        <input type="text" name="full_name" class="form-control" placeholder="Họ tên của bạn *" required >
-                                        <input type="text" name="phone" class="form-control" placeholder="Số điện thoại liên hệ *" required >
-                                        <input type="email" name="email" class="form-control" placeholder="Email liên hệ *" required >
-                                        <textarea class="form-control" rows="3" cols="100" name="content" placeholder="Nội dung"></textarea>
-                                        <input type="button" value="Gửi thông tin" class="btn-submit">
+
+                                        <input type="text" name="full_name" class="form-control register_name" placeholder="Họ tên của bạn *" required>
+                                        <input type="text" name="phone" class="form-control register_phone" placeholder="Số điện thoại liên hệ *" required>
+                                        <input type="email" name="email" class="form-control register_email" placeholder="Email liên hệ" required>
+                                        <textarea class="form-control message-text" rows="3" cols="100" name="content" placeholder="Nội dung"></textarea>
+                                        <p><p></p></p>
+                                        <select class="form-control register_course">
+                                            <option selected>N5</option>
+                                            <option>N4</option>
+                                            <option>N3</option>
+                                            <option>N2</option>
+                                        </select>
+                                        <input type="button" value="Gửi thông tin" class="btn-submit registerCourse">
                                     </div>
                                 </div>
                             </form>
@@ -199,9 +211,7 @@
                         <div class="modal-content">
                             <div class="modal-header">
                                 <h5 class="modal-title" id="exampleModalLabel">Chinh phục tiếng Nhật cùng 3 chàng ngốc</h5>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
+
                             </div>
                             <div class="modal-body" style="padding: 0; padding-right: 15px;">
                                 <img src="~/Assets/client/img/threeIdiots.jpg" style="height:50%" />
@@ -212,9 +222,6 @@
                         <div class="modal-content">
                             <div class="modal-header">
                                 <h5 class="modal-title" id="exampleModalLabel">Đăng ký ngay</h5>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
                             </div>
                             <div class="modal-body">
                                 <form name="userForm" ng-submit="submitForm(userForm.$valid)" novalidate>
@@ -246,6 +253,8 @@
                                             <option>N4</option>
                                             <option>N3</option>
                                             <option>N2</option>
+                                            @*<option>Khóa học Combo N5+N4</option>
+                                            <option>Khóa học Combo N3</option>*@
                                         </select>
                                     </div>
                                     <div class="form-group">
@@ -282,23 +291,24 @@
 
         <div class="container_1140">
             <div class="footer__content" style="overflow:hidden">
-                <div class="col-lg-4 col-xl-4 col-md-4 col-sm-4">
+                <div class="col-lg-4 col-xl-4 col-md-12 col-sm-12">
                     <div class="inner">
                         <h4 style="color:white">Nhật ngữ 3 chàng ngốc</h4>
                         <br />
-                        <span style="display:block;padding-bottom:15px"><i class="fas fa-map-marker-alt custom-icon" style="color:white"></i>Địa chỉ: Số 140 Cầu Diễn,Nam Từ Liêm , Hà Nội</span>
-                        <span style="display:block;padding-bottom:15px">
-                            <i class="fas fa-phone-volume custom-icon" style="color:white"></i> Hotline: 097 515 96 72 & 096 621 80 21
+                        <span style="display:block;padding-bottom:20px"><i class="fas fa-map-marker-alt custom-icon" style="color:white"></i>Địa chỉ: Số 140 Cầu Diễn,Nam Từ Liêm , Hà Nội</span>
+                        <span style="display:block;padding-bottom:20px">
+                            <i class="fas fa-phone-volume custom-icon" style="color:white"></i> Hotline: 0975.159.672 & 0966.218.021
                         </span>
-                        <span style="display:block"><i class="fas fa-envelope-open-text custom-icon" style="color:white"></i>Email: 3changngoc678@gmail.com</span>
+                        <span style="display:block;padding-bottom:20px"><i class="fas fa-envelope-open-text custom-icon" style="color:white"></i>Email: 3changngoc678@gmail.com</span>
+                        <span style="display:block"><i class="fa fa-facebook custom-icon" style="color:white"></i>Facebook: facebook.com/nhatngu3changngoc</span>
                     </div>
                 </div>
-                <div class="col-lg-4 col-xl-4 col-md-4 col-sm-4">
+                <div class="col-lg-4 col-xl-4 col-md-6 col-sm-6">
                     <div class="inner">
                         <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d930.8927523432953!2d105.7405969!3d21.0498443!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3134558ccbbba3b3%3A0x34d192032d5e2825!2zTmjhuq10IE5n4buvIDMgQ2jDoG5nIE5n4buRYw!5e0!3m2!1svi!2s!4v1545799495696" width="350" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
                     </div>
                 </div>
-                <div class="col-lg-4 col-xl-4 col-md-4 col-sm-4">
+                <div class="col-lg-4 col-xl-4 col-md-6 col-sm-6">
                     <div class="inner">
                         <div id="fb-root">
                             <div class="fb-page"
@@ -334,8 +344,10 @@
     <script src="~/Assets/client/js/jquery.tabs.min.js"></script>
     <script src="~/Assets/client/js/jquery.nice-select.min.js"></script>
     <script src="~/Assets/client/js/owl.carousel.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.js"></script>
     <script src="~/Assets/client/js/mail-script.js"></script>
     <script src="~/Assets/client/js/main.js"></script>
     <script src="~/Assets/client/js/script.js"></script>
+    <script src="~/Assets/client/js/freelancer.js"></script>
 </body>
 </html>

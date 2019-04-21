@@ -1,4 +1,18 @@
 ﻿$(document).ready(function () {
+    var slider_single_image = $('.slider-single-image');
+    if (slider_single_image.length) {
+        //select box
+        slider_single_image.slick({
+            dots: true,
+            infinite: true,
+            speed: 300,
+            slidesToShow: 1,
+            autoplay: true,
+            arrows: true,
+            autoplaySpeed: 1000000,
+            adaptiveHeight: true
+        });
+    }
     $('.owl-carousel').owlCarousel({
         margin: 10,
         autoplay: true,
@@ -12,10 +26,11 @@
                 items: 3
             },
             1000: {
-                items: 4
+                items: 3
             }
         }
     });
+
     setTimeout(function () {
         $("#exampleModal").modal('show');
     },500)
@@ -48,7 +63,21 @@
 
         }
     }
-
+    // slider slick
+    var slider_single_image = $('.slider-single-image');
+    if (slider_single_image.length) {
+        //select box
+        slider_single_image.slick({
+            dots: true,
+            infinite: true,
+            speed: 300,
+            slidesToShow: 1,
+            autoplay: true,
+            arrows: true,
+            autoplaySpeed: 3000,
+            adaptiveHeight: true
+        });
+    }
     // Get the <span> element that closes the modal
 
     //end click modal img
@@ -74,7 +103,7 @@
     });
 
 });
-//đăng ký khóa học
+//đăng ký khóa học by id
 $('#registerCourse').click(function () {
     $('#bodymessage').after('<img src="/Assets/client/img/loading.gif" class="loader" alt="loading" style="width:100px;height:100px;">').fadeIn();
     var Course = {
@@ -83,6 +112,36 @@ $('#registerCourse').click(function () {
         register_email: $('#register_email').val(),
         register_coursename: $('#register_course').children("option:selected").val(),
         register_message: $('#message-text').val()
+    };
+    console.log(Course);
+    $.ajax({
+        type: "POST",
+        url: "/Home/SendEmail",
+        data: { rgdto: Course },
+        success: function (result) {
+            $('.modal-content img.loader').fadeOut('fast', function () { $(this).remove(); });
+            if (result) {
+                $('#bodymessage').text("Gửi thông tin thành công! Hãy tham khảo các khóa học và đăng ký tiếp nhé!");
+                $('#bodymessage').attr('style', 'display: block; color: green; text-align: center; padding: 50px;');
+                alert("Successfully!")
+            }
+            else {
+                $('#bodymessage').text("Đã xảy ra lỗi! Bạn quay lại đăng ký sau nhé! Hãy thao khảo các khóa học tiếp đi nhé!");
+                $('#bodymessage').attr('style', 'display: block; color: red; text-align: center; padding: 50px;');
+                alert("fail!")
+            }
+        }
+    });
+});
+//đăng ký khóa học by class
+$('.registerCourse').click(function () {
+    $('#bodymessage').after('<img src="/Assets/client/img/loading.gif" class="loader" alt="loading" style="width:100px;height:100px;">').fadeIn();
+    var Course = {
+        register_name: $('.register_name').val(),
+        register_phone: $('.register_phone').val(),
+        register_email: $('.register_email').val(),
+        register_coursename: $('.register_course').children("option:selected").val(),
+        register_message: $('.message-text').val()
     };
     console.log(Course);
     $.ajax({
