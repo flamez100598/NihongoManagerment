@@ -423,7 +423,6 @@ h6 {
 
 .header {
   background: #f9f9f9;
-  border-bottom: 1px solid #ec1c24;
   position: relative;
 }
 
@@ -485,7 +484,7 @@ h6 {
 
 .header__menu li:hover > ul {
   display: block;
-  border-top: 3px solid #fe0000;
+  border-top: 0.5px solid black;
 }
 
 .header .icon__btn {
@@ -618,7 +617,7 @@ h6 {
 }
 
 .footer {
-  background: #ec1c24;
+  background: #2391ea;
   color: #fff;
   padding: 20px 0;
 }
@@ -658,5 +657,8 @@ h6 {
     min-width: 100px;
     min-height: 100px;
     border-radius: 100%;
+}
+.btn-primary{
+    border-color:none;
 }
 /*# sourceMappingURL=style.css.map */
