@@ -218,10 +218,6 @@
     <Content Include="Assets\client\css\owl.theme.default.min.css" />
     <Content Include="Assets\client\css\res.css" />
     <Content Include="Assets\client\css\style.css" />
-    <Content Include="Assets\client\img\40x40x1.png" />
-    <Content Include="Assets\client\img\40x40x2.png" />
-    <Content Include="Assets\client\img\40x40x3.png" />
-    <Content Include="Assets\client\img\40x40x4.png" />
     <Content Include="Assets\client\img\64x64x1.png" />
     <Content Include="Assets\client\img\64x64x2.png" />
     <Content Include="Assets\client\img\64x64x3.png" />
@@ -295,7 +291,6 @@
     <Content Include="Assets\client\logo\LOGO.png" />
     <Content Include="Assets\client\logo\pic1.jpg" />
     <Content Include="Assets\client\logo\pic2.jpg" />
-    <Content Include="Assets\client\logo\pic3.jpg" />
     <Content Include="Assets\client\logo\Sale.jpg" />
     <Content Include="bin\CentManagerment.dll" />
     <Content Include="bin\CentManagerment.pdb" />
@@ -1848,7 +1843,6 @@
     <Content Include="Assets\client\css\owl.carousel.css" />
     <Content Include="Assets\client\fonts\fontawesome-webfont.svg" />
     <Content Include="Assets\client\fonts\Linearicons-Free.svg" />
-    <Content Include="Assets\client\img\logo1.png" />
     <Content Include="Assets\client\js\easing.min.js" />
     <Content Include="Assets\client\js\hoverIntent.js" />
     <Content Include="Assets\client\js\jquery-ui.js" />
