@@ -20,7 +20,7 @@ namespace CentManagerment.BU.ConvertData
                 StartDate = course.StartDate,
                 EndDate = course.EndDate,
                 IsActive = course.IsActive,
-                TotalPeriod = course.TotalPeriod                 
+                TotalPeriod = course.TotalPeriod   
             };
             return courseDTO;
         }
