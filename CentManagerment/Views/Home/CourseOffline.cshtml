@@ -3,6 +3,7 @@
 @{
     ViewBag.Title = "CourseOffline";
     Layout = "~/Views/Shared/_Layout.cshtml";
+    var totalHour = Model.TotalPeriod * 3;
 }
 <section>
     <article>
@@ -22,11 +23,11 @@
                         <div class="summary-course">
                             <p class="total-hours">
                                 <img src="https://saki.edu.vn/image/icon/book.png">
-                                Số giờ học: 110 giờ
+                                Số giờ học: @totalHour giờ
                             </p>
                             <p class="total-date">
                                 <img src="https://saki.edu.vn/image/icon/calenda.png">
-                                Số buổi học: 42 buổi
+                                Số buổi học: @Model.TotalPeriod buổi
                             </p>
                             <p>
                                 <img src="https://saki.edu.vn/image/icon/currency.png">

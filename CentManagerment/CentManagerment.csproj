@@ -223,6 +223,7 @@
     <Content Include="Assets\client\img\64x64x3.png" />
     <Content Include="Assets\client\img\64x64x4.png" />
     <Content Include="Assets\client\img\banner2.jpg" />
+    <Content Include="Assets\client\img\bannerBackGroundImg.jpg" />
     <Content Include="Assets\client\img\bannerWithLogo.jpg" />
     <Content Include="Assets\client\img\course\kinhnghiem.jpg" />
     <Content Include="Assets\client\img\course\n2.png" />
@@ -233,11 +234,11 @@
     <Content Include="Assets\client\img\course\n5_n3.png" />
     <Content Include="Assets\client\img\DonXuatKhau\1.jpg" />
     <Content Include="Assets\client\img\DonXuatKhau\2.jpg" />
-    <Content Include="Assets\client\img\DonXuatKhau\3.png" />
-    <Content Include="Assets\client\img\DonXuatKhau\4.png" />
+    <Content Include="Assets\client\img\DonXuatKhau\3.jpg" />
+    <Content Include="Assets\client\img\DonXuatKhau\4.jpg" />
     <Content Include="Assets\client\img\DonXuatKhau\chi phi du hoc nhat vua hoc vua lam.jpg" />
     <Content Include="Assets\client\img\DonXuatKhau\co-nen-du-hoc-nhat-ban-vua-hoc-vua-lam-hay-khong-10717392715b936078479c0.jpg" />
-    <Content Include="Assets\client\img\Intro\Intro3.png" />
+    <Content Include="Assets\client\img\Intro\Intro3.jpg" />
     <Content Include="Assets\client\img\Intro\IntroImg.jpg" />
     <Content Include="Assets\client\img\Intro\IntroImg2.png" />
     <Content Include="Assets\client\img\kientri.png" />

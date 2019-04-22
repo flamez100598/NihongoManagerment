@@ -35,7 +35,6 @@ namespace CentManagerment.Model.EF
         public virtual DbSet<Role> Roles { get; set; }
         public virtual DbSet<RoleManager> RoleManagers { get; set; }
         public virtual DbSet<Student> Students { get; set; }
-        public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
         public virtual DbSet<Teacher> Teachers { get; set; }
         public virtual DbSet<Timekeeping> Timekeepings { get; set; }
         public virtual DbSet<Transaction> Transactions { get; set; }

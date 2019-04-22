@@ -27,6 +27,7 @@ namespace CentManagerment.Model.EF
         public Nullable<System.DateTime> EndDate { get; set; }
         public Nullable<bool> IsActive { get; set; }
         public Nullable<int> TotalPeriod { get; set; }
+        public Nullable<int> HourPerPeriod { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Class> Classes { get; set; }
