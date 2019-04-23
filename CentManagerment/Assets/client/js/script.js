@@ -30,7 +30,14 @@
             }
         }
     });
-
+    // lazy load
+    $(function () {
+        $('.lazy').lazy({
+            effect: "fadeIn",
+            effectTime: 5000,
+            threshold: 0
+        });
+    });
     setTimeout(function () {
         $("#exampleModal").modal('show');
     },500)
