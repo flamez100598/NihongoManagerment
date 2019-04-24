@@ -34,7 +34,7 @@
     $(function () {
         $('.lazy').lazy({
             effect: "fadeIn",
-            effectTime: 5000,
+            effectTime: 2000,
             threshold: 0
         });
     });
